@@ -2,7 +2,7 @@
 # -----------------------------------------------------------------------------
 # Arch System Settings TUI Engine
 # Target: Arch Linux, systemd (timedatectl/localectl), Wayland/UWSM sessions
-# Derived from the Dusky TUI Engine blueprint.
+# Derived from the Horizon TUI Engine blueprint.
 # Based on Tui 5.2
 # -----------------------------------------------------------------------------
 
@@ -13,7 +13,7 @@ shopt -s extglob
 # USER CONFIGURATION
 # =============================================================================
 
-declare -r APP_TITLE="Dusky System Region Manager"
+declare -r APP_TITLE="Horizon System Region Manager"
 declare -r APP_VERSION="v1.1.0"
 
 # Dimensions & layout.

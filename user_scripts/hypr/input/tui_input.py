@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 ===============================================================================
-DUSKY TUI: INPUT CONFIGURATION SCHEMA
+HORIZON TUI: INPUT CONFIGURATION SCHEMA
 ===============================================================================
 Target: ~/.config/hypr/edit_here/source/input.lua
 Engine: LUA AST Mapper
@@ -15,13 +15,13 @@ from python.frontend.core_types import ConfigItem
 # =============================================================================
 ENGINE_TYPE = "lua"
 TARGET_FILE = "~/.config/hypr/edit_here/source/input.lua"
-APP_TITLE = "Dusky Input Configuration"
+APP_TITLE = "Horizon Input Configuration"
 
 # =============================================================================
 # 2. UI & ENVIRONMENT BEHAVIOR
 # =============================================================================
 DEFAULT_MODE = "auto"
-THEME_FILE = "~/.config/matugen/generated/dusky_tui.json"
+THEME_FILE = "~/.config/matugen/generated/horizon_tui.json"
 ENABLE_USER_PRESETS = True
 USER_PRESETS_TAB = "Profiles"
 

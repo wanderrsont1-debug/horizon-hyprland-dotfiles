@@ -35,7 +35,7 @@ clear_screen() {
 
 print_header() {
     printf "\n${C_CYAN}================================================================\n"
-    printf "                  DUSKY AUTOMATED INSTALLER\n"
+    printf "                  HORIZON AUTOMATED INSTALLER\n"
     printf "================================================================${RESET}\n\n"
 }
 

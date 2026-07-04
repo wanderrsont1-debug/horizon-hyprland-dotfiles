@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Application
+Name=Horizon Waybar Swap
+GenericName=Bar Config Switcher
+Comment=Toggle between Waybar configurations
+Exec=uwsm-app -- foot --app-id=waybar_tui python /home/dusk/user_scripts/horizon_tui/python/main/main.py /home/dusk/user_scripts/waybar/tui_waybars.py
+Terminal=false
+Categories=Settings;DesktopSettings;
+Keywords=horizon;waybar;panel;bar;toggle;switch;
+Icon=image-x-generic
+StartupNotify=true

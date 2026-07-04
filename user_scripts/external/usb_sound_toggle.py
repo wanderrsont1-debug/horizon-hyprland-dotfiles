@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Toggle USB sound notifications on/off via a user-owned flag file.
 
-The flag file at ~/.config/dusky/settings/usb_udev_toggle is checked by
+The flag file at ~/.config/horizon/settings/usb_udev_toggle is checked by
 usb_sound.sh (both copies) before playing any USB connect/disconnect sounds.
 No root privileges needed — the udev rule always stays active.
 """
@@ -12,7 +12,7 @@ import argparse
 from pathlib import Path
 
 
-FLAG_FILE = Path.home() / ".config" / "dusky" / "settings" / "usb_udev_toggle"
+FLAG_FILE = Path.home() / ".config" / "horizon" / "settings" / "usb_udev_toggle"
 
 
 def cmd_status() -> str:

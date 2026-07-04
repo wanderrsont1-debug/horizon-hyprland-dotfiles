@@ -31,13 +31,13 @@ log_err()  { printf "%s[ERROR]%s %s\n" "${C_RED}${C_BOLD}" "${C_RESET}" "${*:-}"
 
 readonly -a PAYLOADS=(
     # 1. Target autostart.conf (Spaces around the pipe are completely safe now)
-    '.config/hypr/source/autostart.conf | exec-once = foot --hold --title "Dusky Orchestra" bash -c "~/user_scripts/arch_setup_scripts/ORCHESTRA.sh"'
+    '.config/hypr/source/autostart.conf | exec-once = foot --hold --title "Horizon Orchestra" bash -c "~/user_scripts/arch_setup_scripts/ORCHESTRA.sh"'
 
     # 2. Target the exact same file with another line
 #    '.config/hypr/source/autostart.conf | exec-once = echo "Running | logging" > /tmp/log'
 
     # 3. Target a completely different file
-#    '.bash_profile                      | # Dusky auto-injection test line'
+#    '.bash_profile                      | # Horizon auto-injection test line'
 )
 
 # ==============================================================================

@@ -126,7 +126,7 @@ res_mon() {
     fi
 
     # 3. Secure State Context & Alternate Screen Management
-    local state_dir="$HOME/.config/dusky/settings/res_mon"
+    local state_dir="$HOME/.config/horizon/settings/res_mon"
     local state_file="$state_dir/state"
     command mkdir -p "$state_dir"
     export __RES_MON_STATE="$state_file"
@@ -241,7 +241,7 @@ res_mon() {
             
             --style=full
             --border=rounded
-            --border-label=" 󰒓 Dusky Resource Monitor "
+            --border-label=" 󰒓 Horizon Resource Monitor "
             --border-label-pos=center
             --header-border=horizontal
             --list-border=none

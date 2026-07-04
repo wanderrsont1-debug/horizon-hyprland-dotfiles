@@ -1,5 +1,5 @@
 ---
-title: Dusky Network Limiter - How to Use
+title: Horizon Network Limiter - How to Use
 tags:
   - networking
   - linux
@@ -7,10 +7,10 @@ tags:
   - guide
 ---
 
-# Dusky Network Limiter
+# Horizon Network Limiter
 
 > [!info] Overview
-> **Dusky Network Limiter** is an eBPF-powered, kernel-level traffic shaping and firewall daemon. It intercepts network traffic at the socket level to provide pinpoint-accurate bandwidth limits and application blocking, complete with a graphical terminal interface.
+> **Horizon Network Limiter** is an eBPF-powered, kernel-level traffic shaping and firewall daemon. It intercepts network traffic at the socket level to provide pinpoint-accurate bandwidth limits and application blocking, complete with a graphical terminal interface.
 
 ---
 

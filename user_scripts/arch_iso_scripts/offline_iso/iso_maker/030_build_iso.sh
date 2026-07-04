@@ -33,7 +33,7 @@ fi
 # ==============================================================================
 readonly FINAL_DEST_DIR="/mnt/zram1"
 readonly SOURCE_DIR="${REAL_HOME}/user_scripts/arch_iso_scripts/offline_iso"
-readonly WORKSPACE="${FINAL_DEST_DIR}/dusky_iso"
+readonly WORKSPACE="${FINAL_DEST_DIR}/horizon_iso"
 readonly PROFILE_DIR="${WORKSPACE}/profile"
 readonly WORK_DIR="${WORKSPACE}/work"
 readonly OUT_DIR="${WORKSPACE}/out"
@@ -42,9 +42,9 @@ readonly OFFLINE_REPO_BASE="/srv/offline-repo"
 readonly OFFLINE_REPO_OFFICIAL="${OFFLINE_REPO_BASE}/official"
 readonly OFFLINE_REPO_AUR="${OFFLINE_REPO_BASE}/aur"
 
-readonly MKARCHISO_CUSTOM="${WORKSPACE}/mkarchiso_dusky"
+readonly MKARCHISO_CUSTOM="${WORKSPACE}/mkarchiso_horizon"
 readonly PATCH_FILE="${WORKSPACE}/repo_inject.patch"
-readonly FINAL_ISO_NAME="dusky_$(date +%m_%y).iso"
+readonly FINAL_ISO_NAME="horizon_$(date +%m_%y).iso"
 
 declare -g INTERACTIVE_MODE=1
 declare -g REPO_MODE=0  # 1 = Standard Arch, 2 = CachyOS
@@ -92,7 +92,7 @@ _wait_for_pacman_lock() {
 _print_logo() {
   printf '\n%s' "${BOLD}${CYAN}"
   printf '╔══════════════════════════════════════════════════════════════╗\n'
-  printf '║       Dusky Arch ISO Factory Builder  (Dual-Arch)            ║\n'
+  printf '║       Horizon Arch ISO Factory Builder  (Dual-Arch)            ║\n'
   printf '╚══════════════════════════════════════════════════════════════╝\n'
   printf '%s\n' "${RESET}"
 }
@@ -214,7 +214,7 @@ _setup_clean_room() {
   log_info "Configuring Archiso Clean Room"
 
   [[ -d "${WORKSPACE}" ]] && rm -rf "${WORKSPACE}"
-  rm -f "${FINAL_DEST_DIR}/dusky_"*.iso
+  rm -f "${FINAL_DEST_DIR}/horizon_"*.iso
 
   mkdir -p "${WORKSPACE}"
   log_step "Cloning 'releng' blueprint to workspace..."
@@ -271,7 +271,7 @@ if [[ "$(tty)" == "/dev/tty1" ]]; then
     
     clear
     cd /root/arch_install/
-    ./000_dusky_arch_install.sh
+    ./000_horizon_arch_install.sh
 fi
 EOF
   chmod +x "${PROFILE_DIR}/airootfs/root/.automated_script.sh"
@@ -286,24 +286,24 @@ _inject_dotfiles() {
   local SKEL_DIR="${PROFILE_DIR}/airootfs/etc/skel"
   rm -rf "${SKEL_DIR}" && mkdir -p "${SKEL_DIR}"
 
-  sed -i '/^# --- DUSKY PERMISSIONS START ---/,/^# --- DUSKY PERMISSIONS END ---/d' "${PROFILE_DIR}/profiledef.sh"
+  sed -i '/^# --- HORIZON PERMISSIONS START ---/,/^# --- HORIZON PERMISSIONS END ---/d' "${PROFILE_DIR}/profiledef.sh"
   sed -i '/^grml-zsh-config$/d' "${PROFILE_DIR}/packages.x86_64" || true
 
-  rm -rf "/tmp/dusky_dots" 
+  rm -rf "/tmp/horizon_dots" 
   local attempt
   for attempt in {1..3}; do
-      if git clone --depth 1 "https://github.com/dusklinux/dusky" "/tmp/dusky_dots" 2>/dev/null; then
+      if git clone --depth 1 "https://github.com/dusklinux/horizon" "/tmp/horizon_dots" 2>/dev/null; then
           log_step "Clone successful."
           break
       fi
       if (( attempt == 3 )); then die "Git clone failed."; fi
       log_warn "Git clone failed. Retrying in 5s..."
-      rm -rf "/tmp/dusky_dots"
+      rm -rf "/tmp/horizon_dots"
       sleep 5
   done
 
-  cp -a /tmp/dusky_dots/. "${SKEL_DIR}/"
-  rm -rf "${SKEL_DIR}/.git" "/tmp/dusky_dots"
+  cp -a /tmp/horizon_dots/. "${SKEL_DIR}/"
+  rm -rf "${SKEL_DIR}/.git" "/tmp/horizon_dots"
 
   log_step "Injecting default editor exports and Yazi wrapper..."
   # We inject into both 'skel' (for new users) and 'root' (for the live environment)
@@ -340,12 +340,12 @@ EOF
   cp -a "${SOURCE_DIR}/assets/hyprland/hyprland.lua" "${SKEL_DIR}/.config/hypr/hyprland.lua"
 
   log_step "Locking executable permissions in profiledef.sh..."
-  echo "# --- DUSKY PERMISSIONS START ---" >> "${PROFILE_DIR}/profiledef.sh"
+  echo "# --- HORIZON PERMISSIONS START ---" >> "${PROFILE_DIR}/profiledef.sh"
   while IFS= read -r -d '' exec_file; do
       local rel_path="/${exec_file#${PROFILE_DIR}/airootfs/}"
       echo "file_permissions+=([\"${rel_path}\"]=\"0:0:0755\")" >> "${PROFILE_DIR}/profiledef.sh"
   done < <(find "${SKEL_DIR}" -type f -executable -print0)
-  echo "# --- DUSKY PERMISSIONS END ---" >> "${PROFILE_DIR}/profiledef.sh"
+  echo "# --- HORIZON PERMISSIONS END ---" >> "${PROFILE_DIR}/profiledef.sh"
   
   log_ok "Dotfiles and shell variables secured."
 }

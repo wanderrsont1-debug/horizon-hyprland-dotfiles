@@ -17,8 +17,8 @@ shopt -s inherit_errexit
 
 # --- CONFIGURATION ---
 readonly THEME_CTL="${HOME}/user_scripts/theme_matugen/theme_ctl.sh"
-readonly PRESETS_FILE="${HOME}/.config/dusky/settings/dusky_theme/rofi_theme_presets"
-readonly MEMORY_FILE="${HOME}/.config/dusky/settings/dusky_theme/rofi_theme_memory"
+readonly PRESETS_FILE="${HOME}/.config/horizon/settings/horizon_theme/rofi_theme_presets"
+readonly MEMORY_FILE="${HOME}/.config/horizon/settings/horizon_theme/rofi_theme_memory"
 readonly APP_NAME="theme-ui"
 readonly ROFI_THEME_STR='window { width: 500px; } listview { lines: 12; }'
 
@@ -583,7 +583,7 @@ main() {
         get_current_state
         last_main=$(read_memory "main_menu")
 
-        choice=$(run_menu "Dusky Theme Manager" false "$last_main" "${main_opts[@]}") || exit 0
+        choice=$(run_menu "Horizon Theme Manager" false "$last_main" "${main_opts[@]}") || exit 0
         
         [[ -n "$choice" && "$choice" != "  Exit" ]] && write_memory "main_menu" "$choice"
 

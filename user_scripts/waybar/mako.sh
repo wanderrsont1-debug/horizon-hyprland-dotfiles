@@ -58,9 +58,9 @@ jq -c -n \
 
     # SAFELY define all the apps and modules we want to ignore
     def is_ignored:
-        . == "OSD" or . == "dusky-keys" or . == "dusky-cava" or . == "dusky-cava-alert" or 
-        . == "dusky-glance-narrow" or . == "dusky-glance-wide" or . == "dusky-glance-timer" or 
-        . == "dusky-glance-alert" or . == "Spotify";
+        . == "OSD" or . == "horizon-keys" or . == "horizon-cava" or . == "horizon-cava-alert" or 
+        . == "horizon-glance-narrow" or . == "horizon-glance-wide" or . == "horizon-glance-timer" or 
+        . == "horizon-glance-alert" or . == "Spotify";
         
     # Helper for vertical alignment centering
     def pad3:

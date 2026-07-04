@@ -18,7 +18,7 @@ from src.firewall import FirewallManager
 from src.quota_manager import QuotaManager
 from src.ipc import IPCServer
 
-class DuskyDaemon:
+class HorizonDaemon:
     """Core daemon managing background threads, eBPF telemetry, tc bandwidth shaping, nftables, and IPC."""
     
     def __init__(self):
@@ -66,7 +66,7 @@ class DuskyDaemon:
         self.task2 = asyncio.create_task(self.database_flush_loop())
         self.task3 = asyncio.create_task(self.retention_cleanup_loop())
         
-        logger.info("Dusky Network Limiter daemon started successfully.")
+        logger.info("Horizon Network Limiter daemon started successfully.")
 
     async def stop(self) -> None:
         """Gracefully release kernel hooks, flush memory databases, and close unix sockets."""
@@ -444,13 +444,13 @@ import time
 # Script entrypoint for running as systemd daemon
 def main():
     if os.geteuid() != 0:
-        print("Dusky Network Limiter daemon must be run as root.")
+        print("Horizon Network Limiter daemon must be run as root.")
         sys.exit(1)
         
     loop = asyncio.new_event_loop()
     asyncio.set_event_loop(loop)
     
-    daemon = DuskyDaemon()
+    daemon = HorizonDaemon()
     
     async def handle_stop():
         try:

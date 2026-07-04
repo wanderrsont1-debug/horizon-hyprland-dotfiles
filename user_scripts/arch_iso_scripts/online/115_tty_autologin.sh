@@ -3,7 +3,7 @@
 # Script Name: tty_autologin_manager.sh
 # Description: Manages systemd TTY1 autologin for Arch Linux (Hyprland/UWSM).
 #              Surgically idempotent, non-interactive capable, chroot-safe,
-#              safe against sudo stripping, and maintains state for dusky.
+#              safe against sudo stripping, and maintains state for horizon.
 #              Context-aware user targeting (Silent single-user/live fallback).
 # ==============================================================================
 
@@ -91,7 +91,7 @@ sync_state_file() {
         exit 1
     fi
 
-    local state_dir="${user_home}/.config/dusky/settings"
+    local state_dir="${user_home}/.config/horizon/settings"
     local state_file="${state_dir}/auto_login_tty"
 
     # Drop privileges to target user using 'su' instead of 'sudo'.
@@ -100,7 +100,7 @@ sync_state_file() {
     su -s /bin/bash "${user}" -c "mkdir -p '${state_dir}'"
     su -s /bin/bash "${user}" -c "echo '${state}' > '${state_file}'"
 
-    log_info "Dusky state synced: ${state_file} -> [${state}]"
+    log_info "Horizon state synced: ${state_file} -> [${state}]"
 }
 
 # --- Interactivity ---

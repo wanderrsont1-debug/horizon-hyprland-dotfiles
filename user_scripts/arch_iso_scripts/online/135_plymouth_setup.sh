@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Arch Linux (EFI + Btrfs root) | Dusky Graphical Boot & LUKS Setup
+# Arch Linux (EFI + Btrfs root) | Horizon Graphical Boot & LUKS Setup
 # CHROOT DEPLOYMENT EDITION - FORENSICALLY AUDITED (POSITION-INDEPENDENT)
 
 set -Eeuo pipefail
@@ -11,7 +11,7 @@ export LC_ALL=C
 readonly SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" &>/dev/null && pwd)"
 
 # --- Configuration ---
-readonly THEME_NAME="dusky"
+readonly THEME_NAME="horizon"
 readonly THEME_DIR="/usr/share/plymouth/themes/${THEME_NAME}"
 readonly ASSETS_DIR="${SCRIPT_DIR}/assets/plymouth"
 readonly MKINITCPIO_CONF="/etc/mkinitcpio.conf.d/10-arch-btrfs-luks.conf"
@@ -54,7 +54,7 @@ fi
 info "Validating Plymouth binaries..."
 require_cmd plymouth-set-default-theme
 
-info "Verifying Dusky assets directory..."
+info "Verifying Horizon assets directory..."
 if [[ ! -d "$ASSETS_DIR" ]]; then
     fatal "Assets directory '$ASSETS_DIR' not found. Ensure the 'assets' folder is next to this script."
 fi
@@ -76,8 +76,8 @@ cp "$ASSETS_DIR"/*.png "$THEME_DIR/" || fatal "Failed to copy PNG assets to $THE
 # Generate .plymouth configuration
 cat << EOF > "${THEME_DIR}/${THEME_NAME}.plymouth"
 [Plymouth Theme]
-Name=Dusky
-Description=Dusky custom graphical LUKS prompt and splash.
+Name=Horizon
+Description=Horizon custom graphical LUKS prompt and splash.
 ModuleName=script
 
 [script]
@@ -263,5 +263,5 @@ else
     warn "$LIMINE_SCRIPT not found. Kernel command line parameters were not updated."
 fi
 
-info "Dusky Plymouth deployment successful."
+info "Horizon Plymouth deployment successful."
 info "Please run your 140_mkinitcpio_generation.sh and 155_limine_setup.sh scripts to finalize."

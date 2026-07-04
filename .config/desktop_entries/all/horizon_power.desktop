@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=Application
+Name=Horizon Power
+GenericName=Power & Session Configurator
+Comment=Systemd Logind Power Management (Lid, Power Button, Idle)
+Exec=uwsm-app -- kitty --class horizon_power.sh -e /home/dusk/user_scripts/power/horizon_power.sh
+Terminal=false
+Categories=Settings;System;Utility;ConsoleOnly;
+Keywords=horizon;power;logind;systemd;suspend;hibernate;lid;config;tui;
+Icon=system-shutdown
+StartupNotify=true
+StartupWMClass=horizon_power_tui

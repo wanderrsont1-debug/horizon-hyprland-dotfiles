@@ -131,7 +131,7 @@ UI_PID_FILE="$SESSION_DIR/ui.pid"
 # --- DEBUG ---
 # Debug log stays under ~/.config (survives reboot) so it's available after a run.
 DEBUG="${AISEARCH_DEBUG:-0}"
-DEBUG_DIR="$HOME/.config/dusky/settings/rofi_ai_search"
+DEBUG_DIR="$HOME/.config/horizon/settings/rofi_ai_search"
 mkdir -p "$DEBUG_DIR"
 DEBUG_LOG="$DEBUG_DIR/debug.log"
 dbg() { [[ "$DEBUG" == "1" ]] && printf '[%s] %s\n' "$(date +%H:%M:%S)" "$*" >> "$DEBUG_LOG"; return 0; }

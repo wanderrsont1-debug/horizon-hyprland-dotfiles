@@ -53,7 +53,7 @@ hl.bind(
 
 hl.bind(
     "XF86Launch3",
-    hl.dsp.exec_cmd(terminal .. " --class asusctl.sh -e sudo " .. dusky_scripts .. "asus/asusctl.sh"),
+    hl.dsp.exec_cmd(terminal .. " --class asusctl.sh -e sudo " .. horizon_scripts .. "asus/asusctl.sh"),
     { description = "ASUS Control", locked = true }
 )
 EOF

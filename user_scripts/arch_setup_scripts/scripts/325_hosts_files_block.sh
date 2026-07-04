@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Blocks websites in the host file
 # -----------------------------------------------------------------------------
-# Engine: Dusky TUI v3.9.5 (Strict Port)
+# Engine: Horizon TUI v3.9.5 (Strict Port)
 # Target: Arch Linux / Hyprland / UWSM / Wayland
 # Purpose: High-performance /etc/hosts manager for deep work focus.
 # -----------------------------------------------------------------------------
@@ -16,7 +16,7 @@ shopt -s extglob
 declare -r HOSTS_FILE="/etc/hosts"
 declare -r BACKUP_FILE="/etc/hosts.backup.focusforge"
 declare -r REDIRECT_IP="0.0.0.0"
-declare -r APP_TITLE="Dusky Site Blocker"
+declare -r APP_TITLE="Horizon Site Blocker"
 declare -r APP_VERSION="v2.3.5 (Stable)"
 
 # Dimensions & Layout
@@ -57,7 +57,7 @@ declare -r IMPORT_BUTTON_LABEL="[⬇] Import Host File"
 declare -r CLEAR_BUTTON_LABEL="[X] Clear All Blocks"
 
 # =============================================================================
-# ▼ CORE ENGINE (Dusky v3.9.5) ▼
+# ▼ CORE ENGINE (Horizon v3.9.5) ▼
 # =============================================================================
 
 # --- Pre-computed Constants ---

@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # ==============================================================================
-# Dusky Power Management Orchestrator (Elite Edition)
+# Horizon Power Management Orchestrator (Elite Edition)
 # A monolithic, intelligent power state manager for Arch/Hyprland ecosystems.
 # Optimized for zero-fork I/O, strict UWSM session isolation, Async DDC/CI,
 # highly resilient process termination, and 100% modular configuration.
@@ -15,8 +15,8 @@ if ((BASH_VERSINFO[0] < 5)); then
 fi
 
 # --- CONSTANTS & PATHS ---
-readonly STATE_DIR="${HOME}/.config/dusky/settings/power_saver"
-readonly GUI_STATE_FILE="${HOME}/.config/dusky/settings/power_saver_state"
+readonly STATE_DIR="${HOME}/.config/horizon/settings/power_saver"
+readonly GUI_STATE_FILE="${HOME}/.config/horizon/settings/power_saver_state"
 
 # Hardware Limits
 readonly BRIGHTNESS_PS_LEVEL="1%"
@@ -34,12 +34,12 @@ readonly WP_AUDIO_SINK="@DEFAULT_AUDIO_SINK@"
 readonly -a TARGET_PROCESSES=("btop" "nvtop" "hyprsunset" "awww-daemon" "waybar" "blueman-manager")
 
 # Target scripts (Safely matched via args parsing to prevent killing text editors)
-readonly -a TARGET_SCRIPTS=("dusky_main.py" "dusky_stt_main.py") 
+readonly -a TARGET_SCRIPTS=("horizon_main.py" "horizon_stt_main.py") 
 
 readonly -a TARGET_SYSTEM_SERVICES=("firewalld" "vsftpd" "waydroid-container" "logrotate.timer" "sshd" "ufw")
 
 # Note: 'hypridle' explicitly removed to preserve Wayland DPMS idle power-saving management.
-readonly -a TARGET_USER_SERVICES=("battery_notify" "update_checker.timer" "osd_lock" "blueman-applet" "gvfs-daemon" "gvfs-metadata" "network_meter" "dusky_quickpanal" "dusky")
+readonly -a TARGET_USER_SERVICES=("battery_notify" "update_checker.timer" "osd_lock" "blueman-applet" "gvfs-daemon" "gvfs-metadata" "network_meter" "horizon_quickpanal" "horizon")
 
 # ==============================================================================
 #  USER CONFIGURATION AREA — Custom Workflows
@@ -115,7 +115,7 @@ ensure_root() {
 
 # --- UTILITY: CUSTOM COMMAND EXECUTION ---
 # Safely executes arbitrary string commands from the user arrays.
-# Borrows logic from Dusky Fleet Patcher for high resilience.
+# Borrows logic from Horizon Fleet Patcher for high resilience.
 execute_custom_commands() {
     local -n cmd_array=$1
     if ((${#cmd_array[@]} == 0)); then return 0; fi
@@ -234,7 +234,7 @@ set_hardware_profiles() {
             "${HOME}/user_scripts/battery/tlp/tlp_mode_toggle.sh" power-saver || true
         elif has_cmd tlp; then
             sudo tlp bat || true
-            printf "power-saver" > "${HOME}/.config/dusky/settings/tlp_state"
+            printf "power-saver" > "${HOME}/.config/horizon/settings/tlp_state"
         fi
 
         # 3. APPLY ASUSCTL
@@ -336,7 +336,7 @@ set_hardware_profiles() {
             fi
         elif has_cmd tlp; then
             sudo tlp ac || true
-            printf "performance" > "${HOME}/.config/dusky/settings/tlp_state"
+            printf "performance" > "${HOME}/.config/horizon/settings/tlp_state"
         fi
 
         # SYNCHRONIZATION BARRIER:
@@ -631,8 +631,8 @@ manage_animations() {
             if [[ ! -f "${STATE_DIR}/visuals.state" ]]; then
                 local current_visuals="False"
                 # Check the exact file where the toggle script saves its state
-                if [[ -f "${HOME}/.config/dusky/settings/opacity_blur" ]]; then
-                    current_visuals=$(<"${HOME}/.config/dusky/settings/opacity_blur")
+                if [[ -f "${HOME}/.config/horizon/settings/opacity_blur" ]]; then
+                    current_visuals=$(<"${HOME}/.config/horizon/settings/opacity_blur")
                 fi
                 save_state "visuals" "$current_visuals"
             fi

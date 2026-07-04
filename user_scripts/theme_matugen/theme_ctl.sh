@@ -9,8 +9,8 @@
 # Ecosystem:   Arch Linux / Hyprland / UWSM / Wayland
 #
 # Architecture:
-#   1. INTERNAL STATE: ~/.config/dusky/settings/dusky_theme/state.conf
-#   2. PUBLIC STATE:   ~/.config/dusky/settings/dusky_theme/state (true/false)
+#   1. INTERNAL STATE: ~/.config/horizon/settings/horizon_theme/state.conf
+#   2. PUBLIC STATE:   ~/.config/horizon/settings/horizon_theme/state (true/false)
 #   3. LOCKING:        Single global flock across all mutating operations via run_locked
 #   4. DIRECTORY OPS:  Swaps stored folders into wallpaper_root/active_theme
 #
@@ -33,7 +33,7 @@ fi
 set -euo pipefail
 
 # --- CONFIGURATION ---
-readonly STATE_DIR="${HOME}/.config/dusky/settings/dusky_theme"
+readonly STATE_DIR="${HOME}/.config/horizon/settings/horizon_theme"
 readonly STATE_FILE="${STATE_DIR}/state.conf"
 readonly PUBLIC_STATE_FILE="${STATE_DIR}/state"
 readonly TRACK_LIGHT="${STATE_DIR}/light_wal"
@@ -408,7 +408,7 @@ write_state() {
             fi
         done < "$STATE_FILE" > "$_TEMP_FILE"
     else
-        printf '# Dusky Theme State File\n' > "$_TEMP_FILE"
+        printf '# Horizon Theme State File\n' > "$_TEMP_FILE"
     fi
 
     # Append any totally new/missing keys according to our STRICT canonical order

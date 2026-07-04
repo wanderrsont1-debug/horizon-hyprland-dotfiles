@@ -150,8 +150,8 @@ The `ANSWER_FONT` defaults to `JetBrainsMono Nerd Font` — install
   `$XDG_RUNTIME_DIR/rofi_ai_search`, so it auto-clears on reboot and never hits
   disk. Falls back to `/tmp` if `$XDG_RUNTIME_DIR` is unset.
 - **Debug:** run `AISEARCH_DEBUG=1 rofi_ai_search` to log the full pipeline to
-  `~/.config/dusky/settings/rofi_ai_search/debug.log` (`tail -f` it). The
-  `dusky/` path is config-specific; harmless on other setups (auto-created).
+  `~/.config/horizon/settings/rofi_ai_search/debug.log` (`tail -f` it). The
+  `horizon/` path is config-specific; harmless on other setups (auto-created).
 
 ---
 

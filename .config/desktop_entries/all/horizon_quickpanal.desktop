@@ -1,0 +1,13 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Horizon Quick Panal
+GenericName=System Controls
+Comment=Adjust Various Settings
+Exec=uwsm-app -- /home/dusk/user_scripts/horizon_system/quickpanal/horizon_quickpanal.py
+Terminal=false
+Categories=Audio;HardwareSettings;Settings;Utility;
+Keywords=horizon;quickpanal;sliders;brightness;nightlight;hyprsunset;display;volume;sound;audio;control;
+Icon=preferences-system
+StartupNotify=true
+StartupWMClass=org.horizon.quickpanal

@@ -10,7 +10,7 @@ set -euo pipefail
 # --- 2. Configuration ---
 readonly DEFAULT_MODEL_CONFIG="qwen3.5:0.8b"
 readonly OLLAMA_URL="http://localhost:11434"
-readonly CONFIG_DIR="${HOME}/.config/ollama_dusky/ollama-terminal-chat"
+readonly CONFIG_DIR="${HOME}/.config/ollama_horizon/ollama-terminal-chat"
 readonly STATE_FILE="${CONFIG_DIR}/last_model"
 readonly MAX_CLIPBOARD_LEN=4000
 

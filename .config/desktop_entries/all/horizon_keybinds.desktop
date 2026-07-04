@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Application
+Name=Horizon Keybind Manager
+GenericName=Keybind Editor
+Comment=Advanced TUI for managing Horizon keybinds with conflict resolution
+Exec=uwsm-app -- kitty --hold --class horizon_keybinds.sh -e /home/dusk/user_scripts/hypr/input/horizon_keybinds.py
+Icon=preferences-desktop-keyboard
+Terminal=false
+Categories=System;Settings;Utility;
+Keywords=horizon;keybinds;hyprland;config;tui;bind;shortcut;
+StartupNotify=true

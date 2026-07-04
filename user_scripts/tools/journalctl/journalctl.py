@@ -13,11 +13,11 @@ import tempfile
 
 def get_state_file():
     """Manages the lifecycle of the shared state file across FZF execution boundaries."""
-    sf = os.environ.get("DUSKY_JOURNAL_STATE")
+    sf = os.environ.get("HORIZON_JOURNAL_STATE")
     if not sf:
-        fd, sf = tempfile.mkstemp(prefix="dusky_", suffix=".json")
+        fd, sf = tempfile.mkstemp(prefix="horizon_", suffix=".json")
         os.close(fd)
-        os.environ["DUSKY_JOURNAL_STATE"] = sf
+        os.environ["HORIZON_JOURNAL_STATE"] = sf
         reset_state()
     return sf
 
@@ -51,7 +51,7 @@ def reset_state():
 # --- Theme & Configuration Loading ---
 
 def load_theme():
-    """Loads the dusky_tui.json theme, merging with defaults if fields are missing."""
+    """Loads the horizon_tui.json theme, merging with defaults if fields are missing."""
     theme = {
         "bg": "#151218",
         "fg": "#e7e0e8",
@@ -61,7 +61,7 @@ def load_theme():
         "success": "#f2b7c1",
         "muted": "#4a454e"
     }
-    theme_path = os.path.expanduser("~/.config/matugen/generated/dusky_tui.json")
+    theme_path = os.path.expanduser("~/.config/matugen/generated/horizon_tui.json")
     if os.path.exists(theme_path):
         try:
             with open(theme_path, 'r') as f:
@@ -518,7 +518,7 @@ def run_log_viewer():
     fzf_cmd += ['--preview', f"{exe} {script} preview {{2}}"]
     fzf_cmd += ['--preview-window', 'right,48%,border-left,wrap']
     
-    fzf_cmd += ['--border', 'rounded', '--border-label', ' 󰆑 Dusky Journal ']
+    fzf_cmd += ['--border', 'rounded', '--border-label', ' 󰆑 Horizon Journal ']
     fzf_cmd += ['--preview-label', ' Details ']
     fzf_cmd += ['--header', header_text]
     fzf_cmd += ['--footer', f' Cmd: {cmd_str}']
@@ -567,7 +567,7 @@ def main_menu():
             "8. 󰋊 Disk Usage & Maintenance",
             "9. 󰅙 Quit"
         ]
-        choice = fzf_prompt(options, " :: Main Menu ❯ ", " 󰆑 Dusky Navigator ")
+        choice = fzf_prompt(options, " :: Main Menu ❯ ", " 󰆑 Horizon Navigator ")
         
         if not choice or "Quit" in choice:
             break

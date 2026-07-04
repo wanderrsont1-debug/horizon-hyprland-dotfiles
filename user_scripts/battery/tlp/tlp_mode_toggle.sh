@@ -12,7 +12,7 @@ if (( BASH_VERSINFO[0] < 5 || (BASH_VERSINFO[0] == 5 && BASH_VERSINFO[1] < 1) ))
 fi
 
 # -- Configuration --
-readonly STATE_FILE="$HOME/.config/dusky/settings/tlp_state"
+readonly STATE_FILE="$HOME/.config/horizon/settings/tlp_state"
 readonly STATE_DIR="${STATE_FILE%/*}"
 readonly LOCK_FILE="${XDG_RUNTIME_DIR:-/tmp}/tlp_toggle.lock"
 readonly -a PROFILES=('power-saver' 'balanced' 'performance')
@@ -88,7 +88,7 @@ send_notification() {
         local pretty="${LABEL[$profile]:-$profile}"
         local font_icon="${ICON_NERDFONT[$profile]:-}"
         notify-send \
-            --app-name="dusky-tlp" \
+            --app-name="horizon-tlp" \
             --urgency="low" \
             --hint=string:x-canonical-private-synchronous:power-profile \
             "TLP ${pretty}" \

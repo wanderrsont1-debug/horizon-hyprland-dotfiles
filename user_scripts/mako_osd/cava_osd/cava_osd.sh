@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 # ==============================================================================
-# DUSKY CAVA - MAKO OSD VISUALIZER
+# HORIZON CAVA - MAKO OSD VISUALIZER
 # ==============================================================================
 
 set -euo pipefail
 
-readonly APP_NAME="dusky-cava"
+readonly APP_NAME="horizon-cava"
 readonly LOCK_FILE="/tmp/${APP_NAME}.lock"
 readonly PID_FILE="/tmp/${APP_NAME}.pid"
 readonly CAVA_CONF="/tmp/${APP_NAME}_cava.conf"
@@ -15,7 +15,7 @@ LOCK_HELD=false
 
 notify_user() {
     if command -v notify-send >/dev/null 2>&1; then
-        notify-send -u low -t 2000 --app-name="dusky-cava-alert" "Dusky Cava" "$1" || true
+        notify-send -u low -t 2000 --app-name="horizon-cava-alert" "Horizon Cava" "$1" || true
     fi
 }
 
@@ -83,7 +83,7 @@ import asyncio
 import sys
 
 CHARS = [" ", "▂", "▃", "▄", "▅", "▆", "▇", "█"]
-APP_NAME = "dusky-cava"
+APP_NAME = "horizon-cava"
 SYNC_ID = f"{APP_NAME}-sync"
 
 async def main():

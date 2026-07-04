@@ -20,7 +20,7 @@ readonly XDG_DATA_HOME="${XDG_DATA_HOME:-$HOME/.local/share}"
 readonly XDG_CACHE_HOME="${XDG_CACHE_HOME:-$HOME/.cache}"
 
 # --- User State File (Configurable Settings) ---
-readonly USER_STATE_FILE="${HOME}/.config/dusky/settings/clipboard_state"
+readonly USER_STATE_FILE="${HOME}/.config/horizon/settings/clipboard_state"
 
 if [[ ! -f "$USER_STATE_FILE" ]]; then
     mkdir -p -m 700 -- "${USER_STATE_FILE%/*}" 2>/dev/null || :
@@ -48,8 +48,8 @@ if [[ -r "$USER_STATE_FILE" ]]; then
 fi
 
 # --- Persistence Integration ---
-readonly STATE_FILE="${HOME}/.config/dusky/settings/clipboard_persistance"
-readonly DB_ENV_FILE="${HOME}/.config/dusky/settings/cliphist_db_env"
+readonly STATE_FILE="${HOME}/.config/horizon/settings/clipboard_persistance"
+readonly DB_ENV_FILE="${HOME}/.config/horizon/settings/cliphist_db_env"
 if [[ -f "$DB_ENV_FILE" ]]; then
     # We allow sourcing this specifically because it's managed entirely by your static toggler
     source "$DB_ENV_FILE"

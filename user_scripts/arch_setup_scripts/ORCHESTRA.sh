@@ -26,7 +26,7 @@ SCRIPT_SEARCH_DIRS=(
     "${HOME}/user_scripts/firefox/theme_matugen"
     "${HOME}/user_scripts/firefox"
     "${HOME}/user_scripts/nvim"
-    "${HOME}/user_scripts/mako_osd/dusky_keys"
+    "${HOME}/user_scripts/mako_osd/horizon_keys"
     # "${HOME}/my_other_scripts"
     # "/opt/shared_team_scripts"
 )
@@ -38,7 +38,7 @@ SCRIPT_SEARCH_DIRS=(
 # search directories.
 # Format: ["script_name.sh"]="path/relative/to/home/script_name.sh"
 declare -A SCRIPT_CONFLICT_RESOLUTIONS=(
-    # ["update_checker.sh"]="user_scripts/update_dusky/update_checker.sh"
+    # ["update_checker.sh"]="user_scripts/update_horizon/update_checker.sh"
 )
 
 # Delay (in seconds) after each successful script. Set to 0 to disable.
@@ -91,7 +91,7 @@ INSTALL_SEQUENCE=(
     "U | 137_snapper_isolation_subvolume.sh --auto"
     "U | 140_fc_cache_fv.sh"
 
-    "U | dusky_matugen_config_tui.sh --smart"
+    "U | horizon_matugen_config_tui.sh --smart"
 
     "U | 145_matugen_directories.py"
 #    "U | 150_wallpapers_download.sh"
@@ -120,7 +120,7 @@ INSTALL_SEQUENCE=(
     "U | 235_file_manager_switch.sh --nautilus"
     "U | 236_browser_switcher.sh --firefox"
 
-#    "U | dusky_firefox_tui.sh --sync --all"
+#    "U | horizon_firefox_tui.sh --sync --all"
 
     "U | 237_text_editer_switcher.sh --mousepad"
     "U | 238_terminal_switcher.sh --ghostty"
@@ -145,7 +145,7 @@ INSTALL_SEQUENCE=(
 #    "S | 335_preload_config.sh"
     "S | 350_dns_systemd_resolve.sh"
 #    "U | 355_hyprexpo_plugin.sh"
-#    "U | 356_dusky_plugin_manager.sh"
+#    "U | 356_horizon_plugin_manager.sh"
     "U | 360_obsidian_pensive_vault_configure.sh"
     "U | 365_cache_purge.sh"
     "S | 370_arch_install_scripts_cleanup.sh --auto"
@@ -166,7 +166,7 @@ INSTALL_SEQUENCE=(
     "U | 434_wayclick_soundpacks_download.sh --auto"
     "U | 435_key_sound_wayclick_setup.sh --setup"
 
-    "U | dusky_keys.sh --setup"
+    "U | horizon_keys.sh --setup"
 
     "U | 440_config_bat_notify.sh --default"
     "U | 455_hyprctl_reload.sh"
@@ -175,13 +175,13 @@ INSTALL_SEQUENCE=(
 #    "U | 470_vesktop_matugen.sh --auto"
     "S | 473_add_user_to_group.sh --auto"
     "U | 475_reverting_sleep_timeout.sh"
-    "U | 480_dusky_commands.sh"
+    "U | 480_horizon_commands.sh"
     "S | 485_sudoers_nopassword.sh"
 
 # ------ CUSTOM PATH SCRIPTS -------
 
     "U | wallpaper_selector.py --build-cache"
-#    "U | dusky_neovim_manager.sh"
+#    "U | horizon_neovim_manager.sh"
 )
 
 # ==============================================================================

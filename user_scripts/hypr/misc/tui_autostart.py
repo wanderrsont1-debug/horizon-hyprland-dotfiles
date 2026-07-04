@@ -13,7 +13,7 @@ APP_TITLE = "Autostart & Services"
 # 2. UI & ENVIRONMENT BEHAVIOR
 # =============================================================================
 DEFAULT_MODE = "auto"
-THEME_FILE = "~/.config/matugen/generated/dusky_tui.json"
+THEME_FILE = "~/.config/matugen/generated/horizon_tui.json"
 ENABLE_USER_PRESETS = True
 USER_PRESETS_TAB = "Profiles"
 
@@ -46,28 +46,28 @@ SCHEMA = {
     ],
 
     # -------------------------------------------------------------------------
-    # TAB 1: Utility Actions (Dusky Dashboards & Autostart Triggers)
+    # TAB 1: Utility Actions (Horizon Dashboards & Autostart Triggers)
     # -------------------------------------------------------------------------
     1: [
-        # --- HYBRID FOLDER: Dusky Glance Dashboards ---
+        # --- HYBRID FOLDER: Horizon Glance Dashboards ---
         ConfigItem(
-            label="Dusky Glance Dashboards",
-            key="menu_dusky_glance",
+            label="Horizon Glance Dashboards",
+            key="menu_horizon_glance",
             scope="DEFAULT",
             type_="menu",
             default=None,
             is_parent=True,
             expanded=False,
             group="Monitors",
-            extended_help="**Dusky Glance Modules**\n\nLaunch various system monitoring overlays directly via Rofi. These commands provide quick, floating overviews of your system's real-time metrics."
+            extended_help="**Horizon Glance Modules**\n\nLaunch various system monitoring overlays directly via Rofi. These commands provide quick, floating overviews of your system's real-time metrics."
         ),
         ConfigItem(
             label="Glance: CPU Usage",
             key="action_glance_cpu",
             scope="DEFAULT",
             type_="action",
-            default="~/user_scripts/rofi/dusky_glance.sh --cpu",
-            parent_ref="menu_dusky_glance",
+            default="~/user_scripts/rofi/horizon_glance.sh --cpu",
+            parent_ref="menu_horizon_glance",
             group="Monitors",
             extended_help="**CPU Glance**\n\nExecutes the Rofi overlay to display current CPU utilization and core statistics."
         ),
@@ -76,8 +76,8 @@ SCHEMA = {
             key="action_glance_ram",
             scope="DEFAULT",
             type_="action",
-            default="~/user_scripts/rofi/dusky_glance.sh --ram",
-            parent_ref="menu_dusky_glance",
+            default="~/user_scripts/rofi/horizon_glance.sh --ram",
+            parent_ref="menu_horizon_glance",
             group="Monitors",
             extended_help="**RAM Glance**\n\nExecutes the Rofi overlay to display current Memory usage, caching, and swap allocation."
         ),
@@ -86,8 +86,8 @@ SCHEMA = {
             key="action_glance_temp",
             scope="DEFAULT",
             type_="action",
-            default="~/user_scripts/rofi/dusky_glance.sh --temp",
-            parent_ref="menu_dusky_glance",
+            default="~/user_scripts/rofi/horizon_glance.sh --temp",
+            parent_ref="menu_horizon_glance",
             group="Monitors",
             extended_help="**Temperature Glance**\n\nExecutes the Rofi overlay to display thermal metrics for your CPU and GPU."
         ),
@@ -96,8 +96,8 @@ SCHEMA = {
             key="action_glance_battery",
             scope="DEFAULT",
             type_="action",
-            default="~/user_scripts/rofi/dusky_glance.sh --battery",
-            parent_ref="menu_dusky_glance",
+            default="~/user_scripts/rofi/horizon_glance.sh --battery",
+            parent_ref="menu_horizon_glance",
             group="Monitors",
             extended_help="**Battery Glance**\n\nExecutes the Rofi overlay to display the charging state, overall health, and exact capacity of the internal battery."
         ),
@@ -106,8 +106,8 @@ SCHEMA = {
             key="action_glance_network",
             scope="DEFAULT",
             type_="action",
-            default="~/user_scripts/rofi/dusky_glance.sh --network",
-            parent_ref="menu_dusky_glance",
+            default="~/user_scripts/rofi/horizon_glance.sh --network",
+            parent_ref="menu_horizon_glance",
             group="Monitors",
             extended_help="**Network Glance**\n\nExecutes the Rofi overlay to display active network connections, local IP addresses, and bandwidth data."
         ),
@@ -116,8 +116,8 @@ SCHEMA = {
             key="action_glance_uptime",
             scope="DEFAULT",
             type_="action",
-            default="~/user_scripts/rofi/dusky_glance.sh --uptime",
-            parent_ref="menu_dusky_glance",
+            default="~/user_scripts/rofi/horizon_glance.sh --uptime",
+            parent_ref="menu_horizon_glance",
             group="Monitors",
             extended_help="**Uptime Glance**\n\nExecutes the Rofi overlay to display how long the operating system has been running since the last boot."
         ),
@@ -126,8 +126,8 @@ SCHEMA = {
             key="action_glance_workspace",
             scope="DEFAULT",
             type_="action",
-            default="~/user_scripts/rofi/dusky_glance.sh --workspace",
-            parent_ref="menu_dusky_glance",
+            default="~/user_scripts/rofi/horizon_glance.sh --workspace",
+            parent_ref="menu_horizon_glance",
             group="Monitors",
             extended_help="**Workspace Glance**\n\nExecutes the Rofi overlay to display the current active workspace overview."
         ),
@@ -136,8 +136,8 @@ SCHEMA = {
             key="action_glance_clock",
             scope="DEFAULT",
             type_="action",
-            default="~/user_scripts/rofi/dusky_glance.sh --clock",
-            parent_ref="menu_dusky_glance",
+            default="~/user_scripts/rofi/horizon_glance.sh --clock",
+            parent_ref="menu_horizon_glance",
             group="Monitors",
             extended_help="**Clock Glance**\n\nExecutes the Rofi overlay to display the current time, date, and calendar."
         ),
@@ -255,7 +255,7 @@ SCHEMA = {
             key="action_cliphist_db_text",
             scope="DEFAULT",
             type_="action",
-            default="uwsm-app -- sh -c '. $HOME/.config/dusky/settings/cliphist_db_env && exec wl-paste --type text --watch cliphist store'",
+            default="uwsm-app -- sh -c '. $HOME/.config/horizon/settings/cliphist_db_env && exec wl-paste --type text --watch cliphist store'",
             parent_ref="menu_clipboard",
             group="Clipboard",
             extended_help="**Cliphist Custom DB (Text)**\n\nStarts listening for text with a custom database environment."
@@ -265,7 +265,7 @@ SCHEMA = {
             key="action_cliphist_db_image",
             scope="DEFAULT",
             type_="action",
-            default="uwsm-app -- sh -c '. $HOME/.config/dusky/settings/cliphist_db_env && exec wl-paste --type image --watch cliphist store'",
+            default="uwsm-app -- sh -c '. $HOME/.config/horizon/settings/cliphist_db_env && exec wl-paste --type image --watch cliphist store'",
             parent_ref="menu_clipboard",
             group="Clipboard",
             extended_help="**Cliphist Custom DB (Image)**\n\nStarts listening for images with a custom database environment."

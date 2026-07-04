@@ -309,7 +309,7 @@ uncomment_matugen_template() {
         local tmp_conf
         tmp_conf=$(mktemp)
         
-        # 1:1 Robust AWK engine ported from Dusky TUI
+        # 1:1 Robust AWK engine ported from Horizon TUI
         TARGET_KEY="spicetify" NEW_VALUE="true" \
         LC_ALL=C awk '
         function is_blank(line) {

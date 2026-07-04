@@ -11,8 +11,8 @@ readonly CONFIG_DIR="${XDG_CONFIG_HOME:-$HOME/.config}"
 readonly ANIM_DIR="$CONFIG_DIR/hypr/source/animations"
 readonly LINK_DIR="$ANIM_DIR/active"
 readonly DEST_FILE="$LINK_DIR/active.lua"
-readonly STATE_FILE="$CONFIG_DIR/dusky/settings/dusky_animiation" 
-readonly FALLBACK_ANIM="dusky.lua"
+readonly STATE_FILE="$CONFIG_DIR/horizon/settings/horizon_animiation" 
+readonly FALLBACK_ANIM="horizon.lua"
 
 # Visual Assets
 readonly ICON_ACTIVE=""   

@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Helper script for Waybar to launch user-selected default applications dynamically
-# based on active choices from Dusky TUI Switchers.
+# based on active choices from Horizon TUI Switchers.
 
 set -euo pipefail
 
@@ -9,7 +9,7 @@ set -euo pipefail
 get_setting() {
     local setting_name="$1"
     local fallback_val="$2"
-    local smart_file="$HOME/.config/dusky/settings/${setting_name}_switch.smart"
+    local smart_file="$HOME/.config/horizon/settings/${setting_name}_switch.smart"
     
     if [[ -f "$smart_file" ]]; then
         cat "$smart_file" | tr -d '\r\n[:space:]'
@@ -31,7 +31,7 @@ get_setting() {
 get_is_terminal() {
     local setting_name="$1"
     local fallback_val="$2"
-    local legacy_file="$HOME/.config/dusky/settings/${setting_name}_switch"
+    local legacy_file="$HOME/.config/horizon/settings/${setting_name}_switch"
     
     if [[ -f "$legacy_file" ]]; then
         cat "$legacy_file" | tr -d '\r\n[:space:]'

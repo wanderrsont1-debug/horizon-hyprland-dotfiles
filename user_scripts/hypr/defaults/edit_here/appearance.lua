@@ -3,7 +3,7 @@
 -- ==============================================================================
 -- Add your custom appearance settings here.
 -- These will override or add to the defaults found in ~/.config/hypr/source/
--- This file can also be managed with dusky appearance from the rofi menu or
+-- This file can also be managed with horizon appearance from the rofi menu or
 -- from horizon control center.
 -- -------------------------------------------------------------------------------------------------
 -- APPEARANCE, DECORATION & RENDERING

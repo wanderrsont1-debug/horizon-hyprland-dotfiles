@@ -434,7 +434,7 @@ try:
     url = f'{base_url}?arg[]={pkg_name}'
     
     # Arch AUR rate-limits generic curl/python User-Agents; a custom UA ensures stability
-    req = urllib.request.Request(url, headers={'User-Agent': 'DuskyISO-Builder/3.0'})
+    req = urllib.request.Request(url, headers={'User-Agent': 'HorizonISO-Builder/3.0'})
     
     for attempt in range(4):
         try:

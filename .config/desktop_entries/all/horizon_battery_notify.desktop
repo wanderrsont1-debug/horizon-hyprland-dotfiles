@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Application
+Name=Horizon Battery
+GenericName=Battery Notify Configuration
+Comment=Configure Battery Timeout Settings
+Exec=uwsm-app -- kitty --class horizon_battery_notify.sh -e /home/dusk/user_scripts/battery/notify/horizon_battery_notify.sh
+Terminal=false
+Categories=Settings;System;
+Keywords=horizon;notification;battery;timeout;
+Icon=preferences-system-power
+StartupNotify=true

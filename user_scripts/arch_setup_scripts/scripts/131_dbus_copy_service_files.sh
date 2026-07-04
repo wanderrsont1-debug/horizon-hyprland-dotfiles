@@ -29,8 +29,8 @@ fi
 
 readonly SYMLINK_MAP=(
     # [DBus] Horizon Control Center Activation
-    "$HOME/user_scripts/dusky_system/control_center/service/com.github.dusky.controlcenter.service | $HOME/.local/share/dbus-1/services/com.github.dusky.controlcenter.service"
-    "$HOME/user_scripts/dusky_system/quickpanal/service/org.dusky.quickpanal.service | $HOME/.local/share/dbus-1/services/org.dusky.quickpanal.service"
+    "$HOME/user_scripts/horizon_system/control_center/service/com.github.horizon.controlcenter.service | $HOME/.local/share/dbus-1/services/com.github.horizon.controlcenter.service"
+    "$HOME/user_scripts/horizon_system/quickpanal/service/org.horizon.quickpanal.service | $HOME/.local/share/dbus-1/services/org.horizon.quickpanal.service"
 )
 
 # ==============================================================================

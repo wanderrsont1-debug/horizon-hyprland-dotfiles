@@ -4,7 +4,7 @@
 # FOR Horizontal WAYBARS
 
 # "custom/updates": {
-#     "exec": "tail -F ~/.config/dusky/settings/waybar_update_counter_h 2>/dev/null",
+#     "exec": "tail -F ~/.config/horizon/settings/waybar_update_counter_h 2>/dev/null",
 #     "return-type": "json",
 #     "format": "{}",
 #     "tooltip": true
@@ -13,7 +13,7 @@
 # FOR Vertical WAYBARS
 
 # "custom/updates": {
-#     "exec": "tail -F ~/.config/dusky/settings/waybar_update_counter_v 2>/dev/null",
+#     "exec": "tail -F ~/.config/horizon/settings/waybar_update_counter_v 2>/dev/null",
 #     "return-type": "json",
 #     "format": "{}",
 #     "tooltip": true
@@ -26,10 +26,10 @@ set -euo pipefail
 # ---------------------------------------------------------
 SHOW_PACMAN=0
 SHOW_AUR=0
-SHOW_DUSKY=0
+SHOW_HORIZON=0
 MODULE_ORDER=() 
 TIMEOUT_SEC=15
-STATE_DIR="$HOME/.config/dusky/settings"
+STATE_DIR="$HOME/.config/horizon/settings"
 
 # Parse Arguments
 for arg in "$@"; do
@@ -42,12 +42,12 @@ for arg in "$@"; do
             [[ $SHOW_AUR -eq 0 ]] && MODULE_ORDER+=("aur")
             SHOW_AUR=1 
             ;;
-        --dusky) 
-            [[ $SHOW_DUSKY -eq 0 ]] && MODULE_ORDER+=("dusky")
-            SHOW_DUSKY=1 
+        --horizon) 
+            [[ $SHOW_HORIZON -eq 0 ]] && MODULE_ORDER+=("horizon")
+            SHOW_HORIZON=1 
             ;;
         -h|--help)
-            printf "Usage: %s [--pacman] [--aur] [--dusky]\n" "${0##*/}"
+            printf "Usage: %s [--pacman] [--aur] [--horizon]\n" "${0##*/}"
             exit 0
             ;;
     esac
@@ -76,7 +76,7 @@ fi
 # ---------------------------------------------------------
 # Secure Ephemeral Storage & Bulletproof Trap Handling
 # ---------------------------------------------------------
-TMP_DIR=$(mktemp -d "${XDG_RUNTIME_DIR:-/tmp}/dusky_updates.XXXXXX")
+TMP_DIR=$(mktemp -d "${XDG_RUNTIME_DIR:-/tmp}/horizon_updates.XXXXXX")
 
 trap 'set +e; pids=$(jobs -p); [[ -n "$pids" ]] && kill $pids 2>/dev/null; wait 2>/dev/null; [[ -n "${TMP_DIR:-}" ]] && rm -rf "$TMP_DIR"; rm -f "$STATE_DIR"/waybar_update_counter_*.tmp 2>/dev/null' EXIT
 trap 'exit 129' HUP
@@ -110,9 +110,9 @@ if (( SHOW_AUR )); then
     ) &
 fi
 
-if (( SHOW_DUSKY )); then
+if (( SHOW_HORIZON )); then
     (
-        DSK_FILE="$STATE_DIR/dusky_update_behind_commit"
+        DSK_FILE="$STATE_DIR/horizon_update_behind_commit"
         if [[ -r "$DSK_FILE" && -f "$DSK_FILE" && ! -p "$DSK_FILE" ]]; then
             val=""
             # Execute read and ignore EOF errors to safely handle files missing a trailing newline
@@ -193,8 +193,8 @@ render_axis() {
                     { c: ($pac_c | clamp), i: $pac_icon, name: "Pacman", desc: "Official Arch Linux Packages" } 
                 elif . == "aur" and $aur_c > 0 then 
                     { c: ($aur_c | clamp), i: $aur_icon, name: "AUR", desc: "Arch User Repository Packages" }
-                elif . == "dusky" and $dsk_c > 0 then 
-                    { c: ($dsk_c | clamp), i: $dsk_icon, name: "Dusky", desc: "Dusky Github Commits" }
+                elif . == "horizon" and $dsk_c > 0 then 
+                    { c: ($dsk_c | clamp), i: $dsk_icon, name: "Horizon", desc: "Horizon Github Commits" }
                 else empty end
             )) as $items |
 

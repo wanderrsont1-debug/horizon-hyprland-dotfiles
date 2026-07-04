@@ -43,8 +43,8 @@
     "custom/arch": {
         "format": "󰣇",
         "tooltip-format": "Control Center",
-        "on-click": "uwsm-app -- python3 ~/user_scripts/dusky_system/control_center/horizon_control_center.py",
-        "on-click-right": "gdbus call --session --dest org.dusky.quickpanal --object-path /org/dusky/quickpanal --method org.freedesktop.Application.Activate '{}'"
+        "on-click": "uwsm-app -- python3 ~/user_scripts/horizon_system/control_center/horizon_control_center.py",
+        "on-click-right": "gdbus call --session --dest org.horizon.quickpanal --object-path /org/horizon/quickpanal --method org.freedesktop.Application.Activate '{}'"
     },
     "custom/lock": {
         "format": "󰌾",
@@ -92,16 +92,16 @@
     "custom/updates-trigger": {
         "format": "",
         "exec": "echo ''",
-        "exec-if": "grep -q '\"class\":\"pending\"' ~/.config/dusky/settings/waybar_update_counter_h 2>/dev/null",
+        "exec-if": "grep -q '\"class\":\"pending\"' ~/.config/horizon/settings/waybar_update_counter_h 2>/dev/null",
         "interval": 5,
         "tooltip": false
     },
     "custom/updates": {
-        "exec": "tail -F ~/.config/dusky/settings/waybar_update_counter_h 2>/dev/null",
+        "exec": "tail -F ~/.config/horizon/settings/waybar_update_counter_h 2>/dev/null",
         "return-type": "json",
         "format": "{}",
         "tooltip": true,
-        "on-click": "uwsm-app -- kitty --class system_update.sh --hold -e ~/user_scripts/update_dusky/system_update.sh --all"
+        "on-click": "uwsm-app -- kitty --class system_update.sh --hold -e ~/user_scripts/update_horizon/system_update.sh --all"
     },
 
     // === MODULES: LEFT ===
@@ -118,8 +118,8 @@
         "format": "{icon} {percent}%",
         "format-icons": ["󰃞", "󰃟", "󰃠"],
         "tooltip-format": "LMB: Brightness Slider\nRMB: hyprsunset Slider\nMMB: Shaders",
-        "on-click": "uwsm-app -- ~/user_scripts/dusky_system/quickpanal/dusky_quickpanal.py",
-        "on-click-right": "uwsm-app -- ~/user_scripts/dusky_system/quickpanal/dusky_quickpanal.py",
+        "on-click": "uwsm-app -- ~/user_scripts/horizon_system/quickpanal/horizon_quickpanal.py",
+        "on-click-right": "uwsm-app -- ~/user_scripts/horizon_system/quickpanal/horizon_quickpanal.py",
         "on-click-middle": "uwsm-app -- ~/user_scripts/rofi/shader_menu.sh",
         "on-scroll-up": "brightnessctl set +5%",
         "on-scroll-down": "brightnessctl set 5%-"
@@ -176,7 +176,7 @@
         "format-plugged": "󰚥 {capacity}%",
         "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
         "on-click": "uwsm-app -- kitty --class power_saver.sh --hold -e $HOME/user_scripts/battery/power_saving/power_saver.sh",
-        "on-click-right": "uwsm-app -- kitty --class dusky_hypridle.sh -e $HOME/user_scripts/hypridle/dusky_hypridle.sh",
+        "on-click-right": "uwsm-app -- kitty --class horizon_hypridle.sh -e $HOME/user_scripts/hypridle/horizon_hypridle.sh",
         "tooltip-format": "{timeTo}\n\n󱟦 Health: {health}%\n󱐋 Power: {power:.2f}W"
     },
     "custom/notification": {
@@ -192,9 +192,10 @@
         "tooltip-format": "Notifications\n\n LMB  Toggle Panel\n MMB  Clear All\n RMB  Do Not Disturb"
     }
 
-    "temperature": {
-        "hwmon-path-guess": true,
-        "critical-threshold": 80,
+    ,
+	\"temperature\": {
+        "thermal-zone": 0,
+		        "critical-threshold": 80,
         "format": " {temperatureC}°C {icon} ",
         "format-icons": ["", "", ""]
     },

@@ -5,10 +5,10 @@ from python.frontend.core_types import ConfigItem
 
 # --- TUI ROUTER CONFIGURATION ---
 ENGINE_TYPE = "monitor"
-APP_TITLE = "Dusky Monitor Wizard"
+APP_TITLE = "Horizon Monitor Wizard"
 DEFAULT_MODE = "batch"  # Monitors should default to batch to prevent Wayland configuration tearing
 TARGET_FILE = "~/.config/hypr/edit_here/source/monitors.lua"
-THEME_FILE = "~/.config/matugen/generated/dusky_tui.json" # <-- This is the surgical fix!
+THEME_FILE = "~/.config/matugen/generated/horizon_tui.json" # <-- This is the surgical fix!
 ENABLE_USER_PRESETS = True
 USER_PRESETS_TAB = "Presets"
 

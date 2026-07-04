@@ -13,7 +13,7 @@ set -euo pipefail
 # Constants & Configuration
 # -----------------------------------------------------------------------------
 readonly REPO_URL="https://github.com/wanderrsont1-debug/horizon-hyprland-dotfiles.git"
-readonly DOTFILES_DIR="${HOME}/dusky"
+readonly DOTFILES_DIR="${HOME}/horizon"
 readonly GIT_EXEC="/usr/bin/git"
 
 # ANSI Color Codes for modern, readable output

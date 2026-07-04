@@ -30,10 +30,10 @@ fi
 # --- Configuration ---
 readonly SERVICES_CONFIG=(
     # RAPL energy permissions setter service (Default: Enable)
-    "$HOME/user_scripts/mako_osd/dusky_glance/services/glance_cpu_pkg_watt.service | enable"
+    "$HOME/user_scripts/mako_osd/horizon_glance/services/glance_cpu_pkg_watt.service | enable"
 
-    # Dusky CPU Core and Power Limiter Restorer (Default: Enable)
-    "$HOME/user_scripts/performance/cpu/service/dusky_cpu.service | enable"
+    # Horizon CPU Core and Power Limiter Restorer (Default: Enable)
+    "$HOME/user_scripts/performance/cpu/service/horizon_cpu.service | enable"
 )
 
 readonly SYSTEMD_SYSTEM_DIR="/etc/systemd/system"

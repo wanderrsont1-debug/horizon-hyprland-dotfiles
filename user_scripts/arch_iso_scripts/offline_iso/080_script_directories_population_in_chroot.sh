@@ -30,7 +30,7 @@
 #   scripts available once you cross the chroot boundary.
 #
 # * TASK 2: Propagates the Bare Git Repository
-#   Copies the 'dusky' bare git repository (the backbone of your dotfiles) 
+#   Copies the 'horizon' bare git repository (the backbone of your dotfiles) 
 #   into the physical hard drive so the final system has access to it.
 #
 # * TASK 3: Merges the /etc/skel Payload (The Most Critical Step)
@@ -54,7 +54,7 @@ readonly MNT_POINT="/mnt"
 readonly PAYLOAD_BASE="/etc/skel"
 
 # Source Directories inside the Live ISO
-readonly SRC_DIR="${PAYLOAD_BASE}/dusky"
+readonly SRC_DIR="${PAYLOAD_BASE}/horizon"
 # Update this path to wherever your post-chroot scripts actually live!
 readonly POST_CHROOT_SRC="${PAYLOAD_BASE}/user_scripts/arch_iso_scripts/001_post_chroot"
 
@@ -92,7 +92,7 @@ else
     _warn "Skipping Task 1 and continuing execution."
 fi
 
-# TASK 2: Copy the 'dusky' Bare Environment
+# TASK 2: Copy the 'horizon' Bare Environment
 _log "Task 2: Copying bare repository to ${MNT_POINT}..."
 if [[ -d "${SRC_DIR}" ]]; then
     cp -Rfp -- "${SRC_DIR}" "${MNT_POINT}/" || _warn "Minor issues encountered during copy, continuing."

@@ -111,8 +111,8 @@
         "backlight": {
             "format": "{icon} {percent}",
             "tooltip-format": "Brightness: {percent}%\n\n LMB  Brightness\n RMB  Night Light\n MMB  Shaders",
-            "on-click": "uwsm-app -- ~/user_scripts/dusky_system/quickpanal/dusky_quickpanal.py",
-            "on-click-right": "uwsm-app -- ~/user_scripts/dusky_system/quickpanal/dusky_quickpanal.py",
+            "on-click": "uwsm-app -- ~/user_scripts/horizon_system/quickpanal/horizon_quickpanal.py",
+            "on-click-right": "uwsm-app -- ~/user_scripts/horizon_system/quickpanal/horizon_quickpanal.py",
             "on-click-middle": "uwsm-app -- ~/user_scripts/rofi/shader_menu.sh",
             "on-scroll-up": "brightnessctl set +5%",
             "on-scroll-down": "brightnessctl set 5%-",
@@ -215,22 +215,22 @@
         "custom/updates-trigger": {
             "format": "",
             "exec": "echo ''",
-            "exec-if": "grep -q '\"class\":\"pending\"' ~/.config/dusky/settings/waybar_update_counter_h 2>/dev/null",
+            "exec-if": "grep -q '\"class\":\"pending\"' ~/.config/horizon/settings/waybar_update_counter_h 2>/dev/null",
             "interval": 18000,
             "tooltip": false
         },
 
         "custom/updates": {
-            "exec": "tail -F ~/.config/dusky/settings/waybar_update_counter_h 2>/dev/null",
+            "exec": "tail -F ~/.config/horizon/settings/waybar_update_counter_h 2>/dev/null",
             "return-type": "json",
             "format": "{}",
             "tooltip": true,
-            "on-click": "uwsm-app -- kitty --class system_update.sh --hold -e ~/user_scripts/update_dusky/system_update.sh --all"
+            "on-click": "uwsm-app -- kitty --class system_update.sh --hold -e ~/user_scripts/update_horizon/system_update.sh --all"
         },
 
         "custom/arch": {
             "format": "",
-            "on-click": "gdbus call --session --dest com.github.dusky.controlcenter --object-path /com/github/dusky/controlcenter --method org.freedesktop.Application.Activate '{}'",
+            "on-click": "gdbus call --session --dest com.github.horizon.controlcenter --object-path /com/github/horizon/controlcenter --method org.freedesktop.Application.Activate '{}'",
             "tooltip": false
         },
 

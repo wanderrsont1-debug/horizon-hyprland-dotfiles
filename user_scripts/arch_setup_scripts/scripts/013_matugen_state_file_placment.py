@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """
-Initializes or overwrites the 'state.conf' user configuration for Dusky Theme.
+Initializes or overwrites the 'state.conf' user configuration for Horizon Theme.
 Designed for Arch Linux environments using Python 3.
 
-Usage: python 006_dusky_state_setup.py
+Usage: python 006_horizon_state_setup.py
 """
 
 import sys
@@ -46,12 +46,12 @@ def main() -> None:
     # 1. Paths & Content Definition
     # ------------------------------------------------------------------------------
     # Expand the tilde (~) to the user's actual home directory
-    target_path = Path("~/.config/dusky/settings/dusky_theme/state.conf").expanduser()
+    target_path = Path("~/.config/horizon/settings/horizon_theme/state.conf").expanduser()
     target_dir = target_path.parent
 
     # The exact configuration text requested (formatted explicitly to prevent indentation errors)
     state_content = (
-        "# Dusky Theme State File\n"
+        "# Horizon Theme State File\n"
         "THEME_MODE=\"dark\"\n"
         "MATUGEN_TYPE=\"scheme-vibrant\"\n"
         "MATUGEN_CONTRAST=\"0\"\n"
@@ -68,7 +68,7 @@ def main() -> None:
     # ------------------------------------------------------------------------------
     # 2. Main Logic: Create Directory & Overwrite File
     # ------------------------------------------------------------------------------
-    log_info("Initializing Dusky Theme state configuration...")
+    log_info("Initializing Horizon Theme state configuration...")
 
     # Ensure base directory structure exists FIRST
     if not target_dir.exists():

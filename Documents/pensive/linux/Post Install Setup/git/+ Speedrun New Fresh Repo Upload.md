@@ -16,20 +16,20 @@ git config --global init.defaultBranch main
 ```
 - [ ] 4
 ```bash
-git init --bare $HOME/dusky
+git init --bare $HOME/horizon
 ```
 - [ ] 5
 ```bash
-git_dusky config --local status.showUntrackedFiles no
+git_horizon config --local status.showUntrackedFiles no
 ```
 - [ ] 6
 ```bash
-git_dusky_add_list
+git_horizon_add_list
 ```
 - [ ] 7
 ```bash
-git_dusky status
-git_dusky commit -m "Initial Commit: Fresh Dotfiles Backup"
+git_horizon status
+git_horizon commit -m "Initial Commit: Fresh Dotfiles Backup"
 ```
 - [ ] 8
 #### Create an Empty Remote Repository
@@ -65,11 +65,11 @@ cat ~/.ssh/id_ed25519.pub
 - [ ] 14
 for the next command, you Might get an error saying `error: remote origin already exists.` and that's okay. continue on with the rest. 
 ```bash
-git_dusky remote add origin git@github.com:dusklinux/dusky.git
+git_horizon remote add origin git@github.com:dusklinux/horizon.git
 ```
 - [ ] 15
 ```bash
-git_dusky remote set-url origin git@github.com:dusklinux/dusky.git
+git_horizon remote set-url origin git@github.com:dusklinux/horizon.git
 ```
 - [ ] 16
 ```bash
@@ -79,8 +79,8 @@ ssh -T git@github.com
 You may see a one-time warning about the host's authenticity; type `yes` and press Enter. A success message will include your GitHub username. The message "GitHub does not provide shell access" is normal and expected.
 - [ ] 17
 ```bash
-git_dusky branch -m main
-git_dusky push -u origin main
+git_horizon branch -m main
+git_horizon push -u origin main
 ```
 
 ---

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 ===============================================================================
-DUSKY TUI: MASTER CONFIGURATION SCHEMA
+HORIZON TUI: MASTER CONFIGURATION SCHEMA
 ===============================================================================
 Target: ~/.config/hypr/edit_here/source/appearance.lua
 Engine: lua
@@ -20,7 +20,7 @@ APP_TITLE = "Appearance Settings"
 # 2. UI & ENVIRONMENT BEHAVIOR
 # =============================================================================
 DEFAULT_MODE = "auto"
-THEME_FILE = "~/.config/matugen/generated/dusky_tui.json"
+THEME_FILE = "~/.config/matugen/generated/horizon_tui.json"
 
 # =============================================================================
 # 3. TABS DEFINITION
@@ -72,14 +72,14 @@ SCHEMA = {
     # -------------------------------------------------------------------------
     0: [
         ConfigItem(
-            label="Reset Dusky Defaults",
+            label="Reset Horizon Defaults",
             key="preset_factory_reset",
             scope="DEFAULT",
             type_="preset",
             default=None,
             group="Reset",
             preset_payload={"__ALL_DEFAULTS__": True},
-            extended_help="**Reset Dusky Defaults**\n\nReverts every single configuration item across all tabs back to its programmed default state."
+            extended_help="**Reset Horizon Defaults**\n\nReverts every single configuration item across all tabs back to its programmed default state."
         ),
         ConfigItem(
             label="Paper Texture",

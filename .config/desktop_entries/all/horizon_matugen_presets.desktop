@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=Horizon Matugen Presets
+Comment=Vibrant Material Design Theme Switcher
+Exec=uwsm-app -- kitty --class horizon_matugen_presets.sh -e /home/dusk/user_scripts/theme_matugen/horizon_matugen_presets.sh
+Icon=preferences-desktop-theme
+Terminal=false
+Categories=Settings;Utility;System;
+Keywords=horizon;presets;theme;color;matugen;material;horizon;
+StartupNotify=false

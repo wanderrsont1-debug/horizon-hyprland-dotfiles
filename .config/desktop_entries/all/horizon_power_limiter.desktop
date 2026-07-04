@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=Application
+Name=Horizon Power Limiter
+GenericName=CPU Power Limit Configurator
+Comment=Configure CPU RAPL PL1/PL2 power limits and time windows
+Exec=uwsm-app -- foot --app-id=horizon_tui python /home/dusk/user_scripts/horizon_tui/python/main/main.py /home/dusk/user_scripts/performance/cpu/tui_horizon_power_throttle.py
+Terminal=false
+Categories=Settings;System;Utility;
+Keywords=horizon;power;rapl;throttle;limit;cpu;tui;
+Icon=cpu
+StartupNotify=true
+StartupWMClass=horizon_tui

@@ -1,7 +1,7 @@
 
 HOME = os.getenv("HOME")
 
-dusky_scripts = HOME .. "/user_scripts/"
+horizon_scripts = HOME .. "/user_scripts/"
 
 
 
@@ -147,8 +147,8 @@ hl.bind(
 hl.on("hyprland.start", function()
 
 
-    hl.exec_cmd("uwsm-app -- sh -c '. $HOME/.config/dusky/settings/cliphist_db_env && exec wl-paste --type text --watch cliphist store'")
-    hl.exec_cmd("uwsm-app -- sh -c '. $HOME/.config/dusky/settings/cliphist_db_env && exec wl-paste --type image --watch cliphist store'")
+    hl.exec_cmd("uwsm-app -- sh -c '. $HOME/.config/horizon/settings/cliphist_db_env && exec wl-paste --type text --watch cliphist store'")
+    hl.exec_cmd("uwsm-app -- sh -c '. $HOME/.config/horizon/settings/cliphist_db_env && exec wl-paste --type image --watch cliphist store'")
 
     hl.exec_cmd("uwsm-app -- wl-clip-persist --clipboard regular")
 
@@ -156,17 +156,17 @@ hl.on("hyprland.start", function()
     hl.exec_cmd("systemctl --user import-environment $(env | cut -d'=' -f 1)")
     hl.exec_cmd("dbus-update-activation-environment --systemd --all")
 
-    -- --- dusky glance ---
-    -- EG: dusky glance (uncomment only one at a time)
-    hl.exec_cmd("~/user_scripts/rofi/dusky_glance.sh --cpu")
-    -- hl.exec_cmd("~/user_scripts/rofi/dusky_glance.sh --ram")
-    -- hl.exec_cmd("~/user_scripts/rofi/dusky_glance.sh --temp")
-    -- hl.exec_cmd("~/user_scripts/rofi/dusky_glance.sh --battery")
-    -- hl.exec_cmd("~/user_scripts/rofi/dusky_glance.sh --network")
-    -- hl.exec_cmd("~/user_scripts/rofi/dusky_glance.sh --uptime")
-    -- hl.exec_cmd("~/user_scripts/rofi/dusky_glance.sh --workspace")
-    -- hl.exec_cmd("~/user_scripts/rofi/dusky_glance.sh --clock")
-    hl.exec_cmd('foot --hold --title "Dusky Orchestra" bash -c "~/user_scripts/arch_setup_scripts/ORCHESTRA_iso.sh"')
+    -- --- horizon glance ---
+    -- EG: horizon glance (uncomment only one at a time)
+    hl.exec_cmd("~/user_scripts/rofi/horizon_glance.sh --cpu")
+    -- hl.exec_cmd("~/user_scripts/rofi/horizon_glance.sh --ram")
+    -- hl.exec_cmd("~/user_scripts/rofi/horizon_glance.sh --temp")
+    -- hl.exec_cmd("~/user_scripts/rofi/horizon_glance.sh --battery")
+    -- hl.exec_cmd("~/user_scripts/rofi/horizon_glance.sh --network")
+    -- hl.exec_cmd("~/user_scripts/rofi/horizon_glance.sh --uptime")
+    -- hl.exec_cmd("~/user_scripts/rofi/horizon_glance.sh --workspace")
+    -- hl.exec_cmd("~/user_scripts/rofi/horizon_glance.sh --clock")
+    hl.exec_cmd('foot --hold --title "Horizon Orchestra" bash -c "~/user_scripts/arch_setup_scripts/ORCHESTRA_iso.sh"')
 
 end)
 
@@ -212,7 +212,7 @@ hl.gesture({
     fingers   = 3,
     direction = "down",
     action    = function()
-        hl.exec_cmd(dusky_scripts .. "mako_osd/osd_router/osd_router.sh --play-pause")
+        hl.exec_cmd(horizon_scripts .. "mako_osd/osd_router/osd_router.sh --play-pause")
     end,
 })
 
@@ -223,7 +223,7 @@ hl.gesture({
     fingers   = 4,
     direction = "left",
     action    = function()
-        hl.exec_cmd(dusky_scripts .. "mako_osd/osd_router/osd_router.sh --vol-down 10")
+        hl.exec_cmd(horizon_scripts .. "mako_osd/osd_router/osd_router.sh --vol-down 10")
     end,
 })
 
@@ -231,7 +231,7 @@ hl.gesture({
     fingers   = 4,
     direction = "right",
     action    = function()
-        hl.exec_cmd(dusky_scripts .. "mako_osd/osd_router/osd_router.sh --vol-up 10")
+        hl.exec_cmd(horizon_scripts .. "mako_osd/osd_router/osd_router.sh --vol-up 10")
     end,
 })
 
@@ -239,7 +239,7 @@ hl.gesture({
     fingers   = 4,
     direction = "up",
     action    = function()
-        hl.exec_cmd(dusky_scripts .. "mako_osd/osd_router/osd_router.sh --bright-up 10")
+        hl.exec_cmd(horizon_scripts .. "mako_osd/osd_router/osd_router.sh --bright-up 10")
     end,
 })
 
@@ -247,7 +247,7 @@ hl.gesture({
     fingers   = 4,
     direction = "down",
     action    = function()
-        hl.exec_cmd(dusky_scripts .. "mako_osd/osd_router/osd_router.sh --bright-down 10")
+        hl.exec_cmd(horizon_scripts .. "mako_osd/osd_router/osd_router.sh --bright-down 10")
     end,
 })
 

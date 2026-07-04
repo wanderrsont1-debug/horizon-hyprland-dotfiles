@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 ==============================================================================
- DUSKY DESKTOP ENTRY SYNCHRONIZER (Enterprise Atomic Edition)
+ HORIZON DESKTOP ENTRY SYNCHRONIZER (Enterprise Atomic Edition)
  Description: Idempotent, zero-trust, hash-based synchronizer.
               Features true atomic writes, strict XDG compliance, surrogate 
               escaping, C-optimized file digests, and power-loss safety mechanisms.
@@ -44,7 +44,7 @@ XDG_STATE_HOME  = get_xdg_dir('XDG_STATE_HOME', HOME / '.local' / 'state')
 
 SRC_DIR    = XDG_CONFIG_HOME / 'desktop_entries' / 'all'
 DEST_DIR   = XDG_DATA_HOME / 'applications'
-STATE_DIR  = XDG_STATE_HOME / 'dusky'
+STATE_DIR  = XDG_STATE_HOME / 'horizon'
 STATE_FILE = STATE_DIR / 'desktop_sync_state.json'
 
 # Pre-compile regex engines for maximum execution speed

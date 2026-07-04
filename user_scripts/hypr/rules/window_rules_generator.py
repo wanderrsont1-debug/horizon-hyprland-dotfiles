@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # ==============================================================================
 # Purpose: Interactive TUI to generate, copy, and append Hyprland window rules.
-#          * Engine: Dusky TUI Engine v5.2.0 (Math-Perfected Lua Edition)
+#          * Engine: Horizon TUI Engine v5.2.0 (Math-Perfected Lua Edition)
 #          * Core: Window Scanning & Lua Rule Generation Logic (Hyprland 0.55+)
 # ==============================================================================
 
@@ -16,7 +16,7 @@ from typing import List, Dict, Optional, Any
 
 # --- Configuration ---
 TARGET_FILE = os.path.expanduser("~/.config/hypr/edit_here/source/window_rules.lua")
-APP_TITLE = "Dusky Window Rule Generator"
+APP_TITLE = "Horizon Window Rule Generator"
 APP_VERSION = "v5.3.0"
 
 @dataclass
@@ -286,7 +286,7 @@ def scan_windows() -> List[GeneratedRule]:
     return generated_rules
 
 
-class DuskyTUI:
+class HorizonTUI:
     def __init__(self, stdscr: curses.window, rules: List[GeneratedRule]):
         self.stdscr = stdscr
         self.rules = rules
@@ -575,7 +575,7 @@ def main(stdscr: curses.window) -> None:
         print("No mapped, visible windows found on active monitors.")
         return
 
-    tui = DuskyTUI(stdscr, rules)
+    tui = HorizonTUI(stdscr, rules)
     tui.run()
 
 if __name__ == "__main__":

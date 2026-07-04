@@ -15,7 +15,7 @@ shopt -s globstar nullglob
 
 # --- Configuration ---
 readonly CONFIG_FILE="${HOME}/.config/hypr/edit_here/source/appearance.lua"
-readonly STATE_FILE="${HOME}/.config/dusky/settings/opacity_blur"
+readonly STATE_FILE="${HOME}/.config/horizon/settings/opacity_blur"
 
 # Mako Targets
 readonly MAKO_TEMPLATE="${HOME}/.config/matugen/templates/mako.ini"

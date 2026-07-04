@@ -3,9 +3,9 @@
 # ==========================================
 
 # 1. State Configuration (UNIFIED DIRECTORY)
-typeset -g DUSKY_DIFF_DIR="$HOME/.config/dusky/settings/neodiff"
-typeset -g DUSKY_DIFF_HISTORY="$DUSKY_DIFF_DIR/history"
-typeset -g DUSKY_DIFF_ENGINE="$HOME/user_scripts/tools/delta/neo_delta_zsh_engine.py"
+typeset -g HORIZON_DIFF_DIR="$HOME/.config/horizon/settings/neodiff"
+typeset -g HORIZON_DIFF_HISTORY="$HORIZON_DIFF_DIR/history"
+typeset -g HORIZON_DIFF_ENGINE="$HOME/user_scripts/tools/delta/neo_delta_zsh_engine.py"
 
 # Helper Function: Guarantees clean terminal execution and state restoration
 _d_execute() {
@@ -13,7 +13,7 @@ _d_execute() {
     local -a run_args=("$@")
     
     # Engine is now 100% autonomous. Direct execution.
-    "$DUSKY_DIFF_ENGINE" "${run_args[@]}"
+    "$HORIZON_DIFF_ENGINE" "${run_args[@]}"
     
     # Force reset terminal color, restore cursor visibility, and clear dirty states
     print -n '\e[?25h\e[0m'
@@ -25,16 +25,16 @@ _d_execute() {
 d() {
     emulate -L zsh
     
-    command mkdir -p -- "$DUSKY_DIFF_DIR"
+    command mkdir -p -- "$HORIZON_DIFF_DIR"
 
     # Re-run the absolute last diff.
     if [[ $# -eq 0 ]]; then
-        if [[ ! -s "$DUSKY_DIFF_HISTORY" ]]; then
+        if [[ ! -s "$HORIZON_DIFF_HISTORY" ]]; then
             print -u2 -P "%F{red}󰑤 No previous diff history found. Try 'd <file>' first.%f"
             return 1
         fi
         
-        local last_cmd=$(command tail -n 1 -- "$DUSKY_DIFF_HISTORY")
+        local last_cmd=$(command tail -n 1 -- "$HORIZON_DIFF_HISTORY")
         local -a run_args=("${(@Q)${(@z)last_cmd}}")
         
         print -u2 -P "%F{blue}󰑤 Rerunning: d ${run_args[*]}%f"
@@ -72,15 +72,15 @@ d() {
 
     local args_quoted="${(j: :)${(q)new_args[@]}}"
     
-    if [[ -f "$DUSKY_DIFF_HISTORY" ]]; then
-        command grep -v -F -x -- "$args_quoted" "$DUSKY_DIFF_HISTORY" > "${DUSKY_DIFF_HISTORY}.tmp"
-        command mv -f -- "${DUSKY_DIFF_HISTORY}.tmp" "$DUSKY_DIFF_HISTORY"
+    if [[ -f "$HORIZON_DIFF_HISTORY" ]]; then
+        command grep -v -F -x -- "$args_quoted" "$HORIZON_DIFF_HISTORY" > "${HORIZON_DIFF_HISTORY}.tmp"
+        command mv -f -- "${HORIZON_DIFF_HISTORY}.tmp" "$HORIZON_DIFF_HISTORY"
     fi
     
-    print -r -- "$args_quoted" >> "$DUSKY_DIFF_HISTORY"
+    print -r -- "$args_quoted" >> "$HORIZON_DIFF_HISTORY"
     
-    command tail -n 100 -- "$DUSKY_DIFF_HISTORY" > "${DUSKY_DIFF_HISTORY}.tmp"
-    command mv -f -- "${DUSKY_DIFF_HISTORY}.tmp" "$DUSKY_DIFF_HISTORY"
+    command tail -n 100 -- "$HORIZON_DIFF_HISTORY" > "${HORIZON_DIFF_HISTORY}.tmp"
+    command mv -f -- "${HORIZON_DIFF_HISTORY}.tmp" "$HORIZON_DIFF_HISTORY"
 
     _d_execute "${new_args[@]}"
 }
@@ -89,7 +89,7 @@ d() {
 di() {
     emulate -L zsh
     
-    if [[ ! -s "$DUSKY_DIFF_HISTORY" ]]; then
+    if [[ ! -s "$HORIZON_DIFF_HISTORY" ]]; then
         print -u2 -P "%F{red}󰑤 No previous diff history found. Run 'd <target>' to populate your history.%f"
         return 1
     fi
@@ -119,14 +119,14 @@ di() {
         --wrap \
         --tac \
         --color="bg:-1,bg+:#1e1e2e,spinner:#f5e0dc,fg:#cdd6f4,fg+:#cdd6f4,header:#89b4fa,info:#cba6f7,pointer:#a6e3a1,marker:#f5e0dc,prompt:#cba6f7,hl:#f38ba8,hl+:#f38ba8,border:#585b70,label:#a6e3a1,list-border:#585b70,input-border:#585b70,list-label:#a6e3a1,input-label:#a6e3a1" \
-        < "$DUSKY_DIFF_HISTORY"
+        < "$HORIZON_DIFF_HISTORY"
     )
 
     if [[ -n "$selected" ]]; then
-        command grep -v -F -x -- "$selected" "$DUSKY_DIFF_HISTORY" > "${DUSKY_DIFF_HISTORY}.tmp"
-        print -r -- "$selected" >> "${DUSKY_DIFF_HISTORY}.tmp"
-        command tail -n 100 -- "${DUSKY_DIFF_HISTORY}.tmp" > "$DUSKY_DIFF_HISTORY"
-        command rm -f -- "${DUSKY_DIFF_HISTORY}.tmp"
+        command grep -v -F -x -- "$selected" "$HORIZON_DIFF_HISTORY" > "${HORIZON_DIFF_HISTORY}.tmp"
+        print -r -- "$selected" >> "${HORIZON_DIFF_HISTORY}.tmp"
+        command tail -n 100 -- "${HORIZON_DIFF_HISTORY}.tmp" > "$HORIZON_DIFF_HISTORY"
+        command rm -f -- "${HORIZON_DIFF_HISTORY}.tmp"
 
         local -a run_args=("${(@Q)${(@z)selected}}")
         print -u2 -P "%F{blue}󰑤 Running: d ${run_args[*]}%f"

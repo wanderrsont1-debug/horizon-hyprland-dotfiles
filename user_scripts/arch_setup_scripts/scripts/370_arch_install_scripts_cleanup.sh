@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Removes installation scripts (*.sh) and the git repository from root (/) after using dusky arch iso installation method
+# Removes installation scripts (*.sh) and the git repository from root (/) after using horizon arch iso installation method
 # ==============================================================================
 #  ARCH LINUX POST-INSTALL CLEANUP (ROOT ARTIFACTS)
 # ==============================================================================
@@ -15,7 +15,7 @@
 
 # --- CONFIGURATION ---
 # Change this variable if your git repo name changes in the future
-readonly TARGET_REPO_NAME="dusky"
+readonly TARGET_REPO_NAME="horizon"
 readonly ROOT_PATH="/"
 
 # 1. Safety & Environment

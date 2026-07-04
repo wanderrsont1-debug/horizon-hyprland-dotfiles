@@ -117,7 +117,7 @@ BOOKMARKS: list[Bookmark] = [
     Bookmark(path="~/Downloads", name="Downloads", icon="folder-downloads"),
     Bookmark(path="~/Pictures", name="Pictures", icon="folder-pictures"),
     Bookmark(path="/mnt/zram1", name="ZRAM Disk", icon="drive-harddisk"),
-    Bookmark(path="~/user_scripts", name="Dusky Scripts", icon="text-x-script"),
+    Bookmark(path="~/user_scripts", name="Horizon Scripts", icon="text-x-script"),
     Bookmark(path="/mnt", name="Mounts", icon="drive-harddisk"),
     Bookmark(path="~/.config", name="Config", icon="folder-system"),
 ]

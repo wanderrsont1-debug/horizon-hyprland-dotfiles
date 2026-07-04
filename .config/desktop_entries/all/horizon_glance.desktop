@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Application
+Name=Horizon Glance
+GenericName=System Monitor & Timer
+Comment=Rofi frontend for timers, pomodoro, and system stats
+Exec=/home/dusk/user_scripts/rofi/horizon_glance.sh
+Terminal=false
+Categories=Utility;System;Settings;
+Keywords=rofi;monitor;timer;pomodoro;clock;system;cpu;ram;
+Icon=utilities-system-monitor
+StartupNotify=true

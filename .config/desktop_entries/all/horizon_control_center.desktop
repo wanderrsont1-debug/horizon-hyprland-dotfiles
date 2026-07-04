@@ -2,11 +2,11 @@
 Type=Application
 Name=Horizon Control Center
 GenericName=System Settings
-Comment=Centralized configuration for Dusky OS
-Exec=/usr/bin/env python3 /home/dusk/user_scripts/dusky_system/control_center/horizon_control_center.py
+Comment=Centralized configuration for Horizon OS
+Exec=/usr/bin/env python3 /home/dusk/user_scripts/horizon_system/control_center/horizon_control_center.py
 Icon=preferences-system
 Terminal=false
 Categories=System;Settings;GTK;
-Keywords=dusky;settings;control;panel;sound;audio;network;wifi;bluetooth;display;monitor;theme;appearance;update;power;dotfiles;
-StartupWMClass=com.github.dusky.controlcenter
+Keywords=horizon;settings;control;panel;sound;audio;network;wifi;bluetooth;display;monitor;theme;appearance;update;power;dotfiles;
+StartupWMClass=com.github.horizon.controlcenter
 StartupNotify=true

@@ -21,7 +21,7 @@ readonly RESET=$'\033[0m'
 readonly HYPR_DIR="${HOME}/.config/hypr"
 readonly EDIT_DIR="${HYPR_DIR}/edit_here"
 readonly SOURCE_DIR="${EDIT_DIR}/source"
-readonly BACKUP_DIR="${HOME}/Documents/dusky_backups/hyprland_conf"
+readonly BACKUP_DIR="${HOME}/Documents/horizon_backups/hyprland_conf"
 
 # --- Helper Functions ---
 log_info()    { printf '%s[INFO]%s %s\n'    "${BLUE}"   "${RESET}" "${1:-}"; }

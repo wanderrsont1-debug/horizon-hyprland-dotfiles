@@ -3,7 +3,7 @@
 # ELITE HYPRLAND FILE MANAGER SWITCHER - PLATINUM EDITION (v6.8)
 # =============================================================================
 #
-# BASED ON: Dusky TUI Engine v5.9 (Fully Armored)
+# BASED ON: Horizon TUI Engine v5.9 (Fully Armored)
 # TARGET:   Arch Linux / Hyprland / UWSM / Wayland
 
 set -Eeuo pipefail
@@ -28,11 +28,11 @@ declare -ra FM_CATALOG=(
 # Paths
 declare -r CONF_VARS="${HOME}/.config/hypr/edit_here/source/default_apps.lua"
 declare -r CONF_BINDS="${HOME}/.config/hypr/edit_here/source/keybinds.lua"
-declare -r STATE_FILE="${HOME}/.config/dusky/settings/filemanager_switch"
-declare -r LOCK_FILE="${XDG_RUNTIME_DIR:-/tmp}/dusky_fm_switch.lock"
+declare -r STATE_FILE="${HOME}/.config/horizon/settings/filemanager_switch"
+declare -r LOCK_FILE="${XDG_RUNTIME_DIR:-/tmp}/horizon_fm_switch.lock"
 
 # UI Configuration
-declare -r APP_TITLE="Dusky File Manager"
+declare -r APP_TITLE="Horizon File Manager"
 declare -r APP_VERSION="v6.8 (Armored TUI Engine)"
 declare -ri BOX_INNER_WIDTH=60
 declare -ri MAX_DISPLAY_ROWS=10

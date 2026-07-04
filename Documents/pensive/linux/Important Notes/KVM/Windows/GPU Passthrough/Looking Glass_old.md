@@ -67,14 +67,14 @@ Now we must tell the Virtual Machine to map the shared memory file we just prepa
 
 ### 1. Edit the VM Configuration
 
-Open your VM configuration file in the terminal. Replace `win_10_dusky` with your VM name if different.
+Open your VM configuration file in the terminal. Replace `win_10_horizon` with your VM name if different.
 
 ```bash
 # Check your VM name
 sudo virsh list --all
 
 # Edit the XML using Neovim (or your default editor)
-sudo EDITOR=nvim virsh edit win_10_dusky
+sudo EDITOR=nvim virsh edit win_10_horizon
 ```
 
 ### 2. Add the Shared Memory Device and XML Optimizations
@@ -108,14 +108,14 @@ XML changes regarding memory are not applied on a simple reboot. You must perfor
 
 ```bash
 # 1. Kill the VM
-sudo virsh destroy win_10_dusky
+sudo virsh destroy win_10_horizon
 
 # 2. Delete the old 0-byte/bad file.
 # If we don't do this, QEMU might fail to resize it or inherit bad permissions.
 sudo rm -f /dev/shm/looking-glass
 
 # 3. Start the VM
-sudo virsh start win_10_dusky
+sudo virsh start win_10_horizon
 ```
 
 ### 4. Verify the Hardware Link

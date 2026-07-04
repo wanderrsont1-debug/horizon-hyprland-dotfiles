@@ -3,7 +3,7 @@
 # ELITE HYPRLAND TERMINAL SWITCHER - PLATINUM EDITION (v6.7.1)
 # =============================================================================
 #
-# BASED ON: Dusky TUI Engine v5.9 (Template Aligned)
+# BASED ON: Horizon TUI Engine v5.9 (Template Aligned)
 # TARGET:   Arch Linux / Hyprland / UWSM / Wayland
 #
 # =============================================================================
@@ -28,10 +28,10 @@ declare -ra TERM_CATALOG=(
 # Paths
 declare -r CONF_VARS="${HOME}/.config/hypr/edit_here/source/default_apps.lua"
 declare -r CONF_BINDS="${HOME}/.config/hypr/edit_here/source/keybinds.lua"
-declare -r STATE_FILE="${HOME}/.config/dusky/settings/terminal_switch"
+declare -r STATE_FILE="${HOME}/.config/horizon/settings/terminal_switch"
 
 # UI Configuration (Template Aligned)
-declare -r APP_TITLE="Dusky Terminal Manager"
+declare -r APP_TITLE="Horizon Terminal Manager"
 declare -r APP_VERSION="v6.7.1 (Omni-Environment)"
 declare -ri BOX_INNER_WIDTH=60
 declare -ri MAX_DISPLAY_ROWS=10

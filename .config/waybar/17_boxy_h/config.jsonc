@@ -131,7 +131,7 @@
     "tooltip-format-disconnected": "Disconnected",
     "interval": 3,
     "spacing": 1,
-    "on-click": "foot --app-id=dusky_tui python $HOME/user_scripts/dusky_tui/python/main/main.py $HOME/user_scripts/network_manager/tui_dusky_network.py"
+    "on-click": "foot --app-id=horizon_tui python $HOME/user_scripts/horizon_tui/python/main/main.py $HOME/user_scripts/network_manager/tui_horizon_network.py"
   },
   "battery": {
     "format": "{icon} {capacity}%",
@@ -197,9 +197,10 @@
     }
   }
 
-    "temperature": {
-        "hwmon-path-guess": true,
-        "critical-threshold": 80,
+    ,
+	\"temperature\": {
+        "thermal-zone": 0,
+		        "critical-threshold": 80,
         "format": " {temperatureC}°C {icon} ",
         "format-icons": ["", "", ""]
     },

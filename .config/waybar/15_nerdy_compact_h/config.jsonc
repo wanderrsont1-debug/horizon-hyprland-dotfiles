@@ -67,8 +67,8 @@
         "format": "󰣇",
         "tooltip-format": "App Launcher\n\nLMB: Control Center\nMMB: Quick Panel\nRMB: Application Launcher",
         "on-click-right": "uwsm-app -- rofi -show drun",
-        "on-click-middle": "gdbus call --session --dest org.dusky.quickpanal --object-path /org/dusky/quickpanal --method org.freedesktop.Application.Activate '{}'",
-        "on-click": "python3 ~/user_scripts/dusky_system/control_center/horizon_control_center.py"
+        "on-click-middle": "gdbus call --session --dest org.horizon.quickpanal --object-path /org/horizon/quickpanal --method org.freedesktop.Application.Activate '{}'",
+        "on-click": "python3 ~/user_scripts/horizon_system/control_center/horizon_control_center.py"
     },
 
     "hyprland/workspaces": {
@@ -184,17 +184,17 @@
     "custom/updates-trigger": {
         "format": "",
         "exec": "echo ''",
-        "exec-if": "grep -q '\"class\":\"pending\"' ~/.config/dusky/settings/waybar_update_counter_h 2>/dev/null",
+        "exec-if": "grep -q '\"class\":\"pending\"' ~/.config/horizon/settings/waybar_update_counter_h 2>/dev/null",
         "interval": 5,
         "tooltip": false
     },
 
     "custom/updates": {
-        "exec": "tail -F ~/.config/dusky/settings/waybar_update_counter_h 2>/dev/null",
+        "exec": "tail -F ~/.config/horizon/settings/waybar_update_counter_h 2>/dev/null",
         "return-type": "json",
         "format": "{}",
         "tooltip": true,
-        "on-click": "uwsm-app -- kitty --class system_update.sh --hold -e ~/user_scripts/update_dusky/system_update.sh --all"
+        "on-click": "uwsm-app -- kitty --class system_update.sh --hold -e ~/user_scripts/update_horizon/system_update.sh --all"
     },
 
     "privacy": {
@@ -267,8 +267,8 @@
         "format": "{icon} {percent}%",
         "format-icons": ["󰃞", "󰃟", "󰃠"],
         "tooltip-format": "Brightness: {percent}%\n\nLMB: Brightness Slider\nRMB: Hyprsunset Slider\nMMB: Shader Menu\nScroll: Adjust",
-        "on-click": "uwsm-app -- ~/user_scripts/dusky_system/quickpanal/dusky_quickpanal.py",
-        "on-click-right": "uwsm-app -- ~/user_scripts/dusky_system/quickpanal/dusky_quickpanal.py",
+        "on-click": "uwsm-app -- ~/user_scripts/horizon_system/quickpanal/horizon_quickpanal.py",
+        "on-click-right": "uwsm-app -- ~/user_scripts/horizon_system/quickpanal/horizon_quickpanal.py",
         "on-click-middle": "uwsm-app -- ~/user_scripts/rofi/shader_menu.sh",
         "on-scroll-up": "brightnessctl set +5%",
         "on-scroll-down": "brightnessctl set 5%-",
@@ -283,11 +283,11 @@
         "format-disconnected": "󰤭",
         "format-disabled": "󰀝",
         "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
-        "tooltip-format-wifi": " {essid}\n\nSignal: {signalStrength}% ({signaldBm} dBm)\nFrequency: {frequency} MHz\nInterface: {ifname}\nIP: {ipaddr}/{cidr}\n\n󰕒 {bandwidthUpBytes}  󰇚 {bandwidthDownBytes}\n\nLMB: Dusky Network\nRMB: WiFi ON\nMMB: WiFi OFF",
+        "tooltip-format-wifi": " {essid}\n\nSignal: {signalStrength}% ({signaldBm} dBm)\nFrequency: {frequency} MHz\nInterface: {ifname}\nIP: {ipaddr}/{cidr}\n\n󰕒 {bandwidthUpBytes}  󰇚 {bandwidthDownBytes}\n\nLMB: Horizon Network\nRMB: WiFi ON\nMMB: WiFi OFF",
         "tooltip-format-ethernet": "󰈀 Wired Connected\n\nInterface: {ifname}\nIP: {ipaddr}/{cidr}\nGateway: {gwaddr}\n\n(Speed shown in center meter)",
         "tooltip-format-disconnected": "No connection\n\nRMB: Turn WiFi ON",
         "interval": 2,
-        "on-click": "foot --app-id=dusky_tui python $HOME/user_scripts/dusky_tui/python/main/main.py $HOME/user_scripts/network_manager/tui_dusky_network.py",
+        "on-click": "foot --app-id=horizon_tui python $HOME/user_scripts/horizon_tui/python/main/main.py $HOME/user_scripts/network_manager/tui_horizon_network.py",
         "on-click-right": "nmcli radio wifi on && notify-send 'WiFi' 'Turned ON'",
         "on-click-middle": "nmcli radio wifi off && notify-send 'WiFi' 'Turned OFF'"
     },
@@ -348,7 +348,7 @@
             "critical": 15
         },
         "tooltip-format": "{timeTo}\nHealth: {health}%\nPower Draw: {power:.2f} W\nCycles: {cycles}\n\nLMB: Toggle Format\nRMB: Timeout Settings",
-        "on-click-right": "uwsm-app -- kitty --class dusky_hypridle.sh -e $HOME/user_scripts/hypridle/dusky_hypridle.sh"
+        "on-click-right": "uwsm-app -- kitty --class horizon_hypridle.sh -e $HOME/user_scripts/hypridle/horizon_hypridle.sh"
     },
 
     // ===================================================================

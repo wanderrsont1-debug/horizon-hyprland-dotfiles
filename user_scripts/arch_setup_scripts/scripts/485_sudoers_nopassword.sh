@@ -20,7 +20,7 @@ declare -ar DEFAULT_BINARIES=(
     "/usr/bin/rfkill"
     "/usr/bin/smartctl"
     "/usr/bin/tlp"
-#    "~/user_scripts/btrfs_snapshots/cc/04_dusky_snapshot_manager.py"
+#    "~/user_scripts/btrfs_snapshots/cc/04_horizon_snapshot_manager.py"
 #    "~/user_scripts/btrfs_snapshots/cc/bash_wrapper_for_cc.sh"
 )
 

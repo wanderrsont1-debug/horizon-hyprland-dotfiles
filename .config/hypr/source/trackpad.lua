@@ -19,7 +19,7 @@ hl.gesture({
     fingers   = 3,
     direction = "up",
     action    = function()
-        hl.exec_cmd([[gdbus call --session --dest org.dusky.quickpanal --object-path /org/dusky/quickpanal --method org.freedesktop.Application.Activate "{}"]])
+        hl.exec_cmd([[gdbus call --session --dest org.horizon.quickpanal --object-path /org/horizon/quickpanal --method org.freedesktop.Application.Activate "{}"]])
     end,
 })
 
@@ -28,7 +28,7 @@ hl.gesture({
     fingers   = 3,
     direction = "down",
     action    = function()
-        hl.exec_cmd(dusky_scripts .. "mako_osd/osd_router/osd_router.sh --play-pause")
+        hl.exec_cmd(horizon_scripts .. "mako_osd/osd_router/osd_router.sh --play-pause")
     end,
 })
 
@@ -39,7 +39,7 @@ hl.gesture({
     fingers   = 4,
     direction = "left",
     action    = function()
-        hl.exec_cmd(dusky_scripts .. "mako_osd/osd_router/osd_router.sh --vol-down 10")
+        hl.exec_cmd(horizon_scripts .. "mako_osd/osd_router/osd_router.sh --vol-down 10")
     end,
 })
 
@@ -47,7 +47,7 @@ hl.gesture({
     fingers   = 4,
     direction = "right",
     action    = function()
-        hl.exec_cmd(dusky_scripts .. "mako_osd/osd_router/osd_router.sh --vol-up 10")
+        hl.exec_cmd(horizon_scripts .. "mako_osd/osd_router/osd_router.sh --vol-up 10")
     end,
 })
 
@@ -55,7 +55,7 @@ hl.gesture({
     fingers   = 4,
     direction = "up",
     action    = function()
-        hl.exec_cmd(dusky_scripts .. "mako_osd/osd_router/osd_router.sh --bright-up 10")
+        hl.exec_cmd(horizon_scripts .. "mako_osd/osd_router/osd_router.sh --bright-up 10")
     end,
 })
 
@@ -63,7 +63,7 @@ hl.gesture({
     fingers   = 4,
     direction = "down",
     action    = function()
-        hl.exec_cmd(dusky_scripts .. "mako_osd/osd_router/osd_router.sh --bright-down 10")
+        hl.exec_cmd(horizon_scripts .. "mako_osd/osd_router/osd_router.sh --bright-down 10")
     end,
 })
 

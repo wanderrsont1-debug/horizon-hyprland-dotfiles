@@ -165,11 +165,11 @@
     "custom/updates": {
         "justify": "center",
         "align": 0.5,
-        "exec": "tail -F ~/.config/dusky/settings/waybar_update_counter_v 2>/dev/null",
+        "exec": "tail -F ~/.config/horizon/settings/waybar_update_counter_v 2>/dev/null",
         "return-type": "json",
         "format": "{}",
         "tooltip": true,
-        "on-click": "uwsm-app -- kitty --class system_update.sh --hold -e ~/user_scripts/update_dusky/system_update.sh --all"
+        "on-click": "uwsm-app -- kitty --class system_update.sh --hold -e ~/user_scripts/update_horizon/system_update.sh --all"
     },
 
     "pulseaudio": {
@@ -177,7 +177,7 @@
         "format": "{icon}\n{volume}",
         "format-muted": "󰖁\nMute",
         "on-click": "uwsm-app -- pavucontrol",
-        "on-click-right": "uwsm-app -- \"$HOME/user_scripts/dusky_system/quickpanal/dusky_quickpanal.py\"",
+        "on-click-right": "uwsm-app -- \"$HOME/user_scripts/horizon_system/quickpanal/horizon_quickpanal.py\"",
         "format-icons": ["", "", ""],
         "tooltip-format": "Volume: {volume}%"
     },
@@ -189,7 +189,7 @@
         "format-icons": ["","","","","","","","","","","","","","",""],
         "tooltip": true,
         "tooltip-format": "Brightness: {percent}%",
-        "on-click": "uwsm-app -- \"$HOME/user_scripts/dusky_system/quickpanal/dusky_quickpanal.py\"",
+        "on-click": "uwsm-app -- \"$HOME/user_scripts/horizon_system/quickpanal/horizon_quickpanal.py\"",
         "on-scroll-up": "brightnessctl set +5%",
         "on-scroll-down": "brightnessctl set 5%-",
         "min-length": 4,
@@ -211,7 +211,7 @@
         "return-type": "json",
         "exec": "$HOME/user_scripts/waybar/network/network_meter_calling.sh vertical",
         "interval": 1, 
-        "on-click": "foot --app-id=dusky_tui python $HOME/user_scripts/dusky_tui/python/main/main.py $HOME/user_scripts/network_manager/tui_dusky_network.py",
+        "on-click": "foot --app-id=horizon_tui python $HOME/user_scripts/horizon_tui/python/main/main.py $HOME/user_scripts/network_manager/tui_horizon_network.py",
         "on-click-right": "nmcli radio wifi on",
         "on-click-middle": "nmcli radio wifi off"
     },
@@ -231,7 +231,7 @@
         "tooltip": true,
         "tooltip-format": "Power Menu\nRMB - Control Center",
         "on-click": "uwsm-app -- ~/user_scripts/wlogout/wlogout_scale.sh",
-        "on-click-right": "uwsm-app -- python3 ~/user_scripts/dusky_system/control_center/horizon_control_center.py"
+        "on-click-right": "uwsm-app -- python3 ~/user_scripts/horizon_system/control_center/horizon_control_center.py"
     },
 
     "custom/inhibit-suspend": {

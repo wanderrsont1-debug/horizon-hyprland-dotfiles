@@ -1,5 +1,5 @@
 [Unit]
-Description=Dusky Network Limiter Background Daemon
+Description=Horizon Network Limiter Background Daemon
 After=network-online.target
 Wants=network-online.target
 

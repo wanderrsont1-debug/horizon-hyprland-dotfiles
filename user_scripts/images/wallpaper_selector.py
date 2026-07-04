@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 # ==============================================================================
-# ARCH LINUX :: DUSKY THEME :: GTK3 WALLPAPER SELECTOR
+# ARCH LINUX :: HORIZON THEME :: GTK3 WALLPAPER SELECTOR
 # ==============================================================================
 # Description: Native, lightning-fast GTK3 replacement for the Rofi wallpaper
 #              selector. Features lazy-loading, instant grid mapping, smart
@@ -31,8 +31,8 @@ from gi.repository import Gtk, Gdk, GdkPixbuf, GLib, Gio, Pango
 # --- CONSTANTS & PATHS ---
 HOME = Path.home()
 WALLPAPER_DIR = HOME / "Pictures/wallpapers"
-SETTINGS_DIR = HOME / ".config/dusky/settings"
-THEME_DIR = SETTINGS_DIR / "dusky_theme"
+SETTINGS_DIR = HOME / ".config/horizon/settings"
+THEME_DIR = SETTINGS_DIR / "horizon_theme"
 FAVORITES_FILE = THEME_DIR / "wal_fav_list"
 STATE_FILE = THEME_DIR / "state.conf"
 FAV_STATE_FILE = THEME_DIR / "current_fav"
@@ -41,7 +41,7 @@ TRACK_DARK = THEME_DIR / "dark_wal"
 THEME_CTL = HOME / "user_scripts/theme_matugen/theme_ctl.sh"
 
 APP_SETTINGS_FILE = THEME_DIR / "gtk_wall_settings"
-CACHE_DIR = HOME / ".cache/dusky_images/wallpaper_selector/"
+CACHE_DIR = HOME / ".cache/horizon_images/wallpaper_selector/"
 THUMB_DIR = CACHE_DIR / "thumbs"
 
 THUMB_SIZE = 240
@@ -356,7 +356,7 @@ class WallpaperApp:
         self.Pango = Pango
 
         self.app = self.Gtk.Application(
-            application_id='com.dusky.wallpaperselector',
+            application_id='com.horizon.wallpaperselector',
             flags=Gio.ApplicationFlags.FLAGS_NONE
         )
         self.app.connect("activate", self.do_activate)
@@ -425,7 +425,7 @@ class WallpaperApp:
         self.show_only_favorites = self.app_settings.get("START_IN_FAVORITES", False)
 
     def _save_app_settings(self):
-        lines = ["# Dusky GTK Wallpaper Selector Configuration"]
+        lines = ["# Horizon GTK Wallpaper Selector Configuration"]
         for k, v in sorted(self.app_settings.items()):
             if isinstance(v, bool):
                 val = 'true' if v else 'false'
@@ -1518,7 +1518,7 @@ def apply_fav_wallpaper(rel_path: str):
             [str(THEME_CTL), "refresh"], check=True, capture_output=True, text=True
         )
         subprocess.run([
-            "notify-send", "-a", "dusky-fav-wal", 
+            "notify-send", "-a", "horizon-fav-wal", 
             "-h", "string:x-canonical-private-synchronous:fav-wal",
             "-i", "/usr/share/icons/Papirus/16x16/symbolic/emblems/emblem-favorite-symbolic.svg",
             "Favorite", basename,
@@ -1528,7 +1528,7 @@ def apply_fav_wallpaper(rel_path: str):
         err_msg = e.stderr.strip() if e.stderr else str(e)
         print(f"Backend execution failed: {err_msg}")
         subprocess.run([
-            "notify-send", "-a", "dusky-fav-wal", 
+            "notify-send", "-a", "horizon-fav-wal", 
             "-h", "string:x-canonical-private-synchronous:fav-wal",
             "-i", "/usr/share/icons/Papirus/16x16/symbolic/emblems/emblem-favorite-symbolic.svg",
             "Error", "Failed to apply wallpaper", 
@@ -1540,7 +1540,7 @@ def cycle_favorites(direction: str = "next"):
     favs = load_favorites_list()
     if not favs:
         subprocess.run([
-            "notify-send", "-a", "dusky-fav-wal", 
+            "notify-send", "-a", "horizon-fav-wal", 
             "-i", "/usr/share/icons/Papirus/16x16/symbolic/emblems/emblem-favorite-symbolic.svg",
             "No Favorites", "No liked wallpapers yet.", 
             "-u", "normal", "-t", "2500"
@@ -1574,7 +1574,7 @@ def cycle_favorites(direction: str = "next"):
 # ENTRY POINT & CLI PARSING
 # ==============================================================================
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="Dusky Theme GTK3 Wallpaper Selector")
+    parser = argparse.ArgumentParser(description="Horizon Theme GTK3 Wallpaper Selector")
     group = parser.add_mutually_exclusive_group()
     group.add_argument(
         '--build-cache', action='store_true',

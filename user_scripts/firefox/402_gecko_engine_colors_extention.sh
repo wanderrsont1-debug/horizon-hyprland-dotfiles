@@ -315,7 +315,7 @@ MANIFEST
                     app_id="${app_id%%/*}"
                     log_info "Applying Flatpak sandbox filesystem overrides for $app_id..."
                     # [UPDATED]: Added access to the new XDG config directory so atomic_write works through the sandbox
-                    flatpak override --user --filesystem="$HOST_DIR" --filesystem="$HOME/.config/matugen" --filesystem="$HOME/.config/dusky_sites" --filesystem="$CONFIG_DIR" "$app_id" || log_warn "Failed to apply Flatpak override."
+                    flatpak override --user --filesystem="$HOST_DIR" --filesystem="$HOME/.config/matugen" --filesystem="$HOME/.config/horizon_sites" --filesystem="$CONFIG_DIR" "$app_id" || log_warn "Failed to apply Flatpak override."
                 fi
 
                 break
@@ -495,7 +495,7 @@ init_config() {
   "nakedMode": false,
   "paletteShortcut": "ctrl+alt+c",
   "colorsPath": "~/.config/matugen/generated/firefox_websites.css",
-  "websitesDir": "~/.config/dusky_sites",
+  "websitesDir": "~/.config/horizon_sites",
   "presets": [],
   "blocklist": []
 }
@@ -702,7 +702,7 @@ perform_uninstall() {
                 app_id="${app_id%%/*}"
                 log_info "Reverting Flatpak filesystem overrides for $app_id..."
                 # [UPDATED]: Cleans up the new XDG config override path
-                flatpak override --user --nofilesystem="$HOST_DIR" --nofilesystem="$HOME/.config/matugen" --nofilesystem="$HOME/.config/dusky_sites" --nofilesystem="$CONFIG_DIR" "$app_id" || true
+                flatpak override --user --nofilesystem="$HOST_DIR" --nofilesystem="$HOME/.config/matugen" --nofilesystem="$HOME/.config/horizon_sites" --nofilesystem="$CONFIG_DIR" "$app_id" || true
             fi
         done
     done

@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # 1. Define the exact state file location safely
-STATE_FILE="$HOME/.config/dusky/settings/reboot_post_lua"
+STATE_FILE="$HOME/.config/horizon/settings/reboot_post_lua"
 
 # 2. State Check: Silent exit if already processed
 if [[ -f "$STATE_FILE" ]]; then
@@ -31,7 +31,7 @@ else
 fi
 
 # 4. Visual Notification: Force output directly to the terminal ($TERM_TARGET)
-# This completely bypasses the update_dusky.sh log piping so it appears instantly.
+# This completely bypasses the update_horizon.sh log piping so it appears instantly.
 {
     echo -e "\n\n"
     echo -e "\e[1;97;41m======================================================================\e[0m"

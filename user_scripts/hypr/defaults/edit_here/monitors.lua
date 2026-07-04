@@ -3,7 +3,7 @@
 -- ==============================================================================
 -- Add your monitor configuration here.
 -- These will override or add to the defaults found in ~/.config/hypr/source/
--- This file can also be managed with dusky monitor from the rofi menu or
+-- This file can also be managed with horizon monitor from the rofi menu or
 -- from horizon control center.
 -- HOW THIS FILE IS STRUCTURED
 -- ──────────────────────────────────────────────────────────────────────────

@@ -35,20 +35,20 @@ readonly SERVICES_CONFIG=(
     "$HOME/user_scripts/waybar/network/network_meter.service | enable"
 
     # Horizon Control Center Daemon (Default: Disable)
-    "$HOME/user_scripts/dusky_system/control_center/service/dusky.service | disable"
+    "$HOME/user_scripts/horizon_system/control_center/service/horizon.service | disable"
 
-    # dusky update checker
-    "$HOME/user_scripts/update_dusky/update_checker/service/update_checker.service | disable"
-    "$HOME/user_scripts/update_dusky/update_checker/service/update_checker.timer | disable"
+    # horizon update checker
+    "$HOME/user_scripts/update_horizon/update_checker/service/update_checker.service | disable"
+    "$HOME/user_scripts/update_horizon/update_checker/service/update_checker.timer | disable"
 
-    # dusky quickpanal
-    "$HOME/user_scripts/dusky_system/quickpanal/service/dusky_quickpanal.service | disable"
+    # horizon quickpanal
+    "$HOME/user_scripts/horizon_system/quickpanal/service/horizon_quickpanal.service | disable"
 
-    # dusky osd
+    # horizon osd
     "$HOME/user_scripts/mako_osd/osd_router/osd_lock.service | disable"
 
-    # dusky RAM monitor
-    "$HOME/user_scripts/performance/swap_and_ram_monitor_service/dusky_ram_monitor.service | enable"
+    # horizon RAM monitor
+    "$HOME/user_scripts/performance/swap_and_ram_monitor_service/horizon_ram_monitor.service | enable"
 )
 
 # XDG Standard: ~/.config/systemd/user

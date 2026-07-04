@@ -79,7 +79,7 @@ async function init() {
     
     // Paths default handling
     const defaultColors = '~/.config/matugen/generated/firefox_websites.css';
-    const defaultDirs = '~/.config/dusky_sites';
+    const defaultDirs = '~/.config/horizon_sites';
     document.getElementById('opt-colors-path').value = (config.colorsPath && config.colorsPath !== defaultColors) ? config.colorsPath : '';
     document.getElementById('opt-websites-dir').value = (config.websitesDir && config.websitesDir !== defaultDirs) ? config.websitesDir : '';
 
@@ -155,7 +155,7 @@ function updateOptionsVisuals() {
 document.getElementById('save-paths-btn').addEventListener('click', () => {
     const partialUpdate = {
         colorsPath: document.getElementById('opt-colors-path').value.trim() || '~/.config/matugen/generated/firefox_websites.css',
-        websitesDir: document.getElementById('opt-websites-dir').value.trim() || '~/.config/dusky_sites'
+        websitesDir: document.getElementById('opt-websites-dir').value.trim() || '~/.config/horizon_sites'
     };
     Object.assign(config, partialUpdate);
     browser.runtime.sendMessage({ type: "UPDATE_CONFIG", partialUpdate }).then(() => flashStatus('paths-status'));

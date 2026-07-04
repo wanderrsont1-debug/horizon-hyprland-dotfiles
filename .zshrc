@@ -123,16 +123,16 @@ alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
 
 # System & Development Scripts
-alias tui='python ~/user_scripts/dusky_tui/python/main/main.py'
+alias tui='python ~/user_scripts/horizon_tui/python/main/main.py'
 alias sendlogs='~/user_scripts/arch_setup_scripts/send_logs.sh --auto'
-alias update_dusky='~/user_scripts/update_dusky/update_dusky.sh'
-alias dusky_force_sync_github='~/user_scripts/update_dusky/dusky_force_sync_github.sh'
+alias update_horizon='~/user_scripts/update_horizon/update_horizon.sh'
+alias horizon_force_sync_github='~/user_scripts/update_horizon/horizon_force_sync_github.sh'
 alias darkmode='~/user_scripts/theme_matugen/matugen_config.sh --mode dark'
 alias lightmode='~/user_scripts/theme_matugen/matugen_config.sh --mode light'
 alias run_sysbench='~/user_scripts/performance/sysbench_benchmark.sh'
 
 # Memory Optimization
-alias mem_optimize='sudo systemctl start dusky_boot_mem_reclaim.service'
+alias mem_optimize='sudo systemctl start horizon_boot_mem_reclaim.service'
 
 # Networking
 alias iphone_vnc='~/user_scripts/networking/iphone_vnc.sh'

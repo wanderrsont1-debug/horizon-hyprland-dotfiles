@@ -6,7 +6,7 @@
 zmodload zsh/datetime || print -u2 "Error: Could not load zsh/datetime module."
 
 export SSHFILE_BASE_DIR="${SSHFILE_BASE_DIR:-/mnt/zram1/sshfile}"
-export SSHFILE_CONFIG_DIR="${XDG_CONFIG_HOME:-$HOME/.config}/dusky/settings/sshfiles"
+export SSHFILE_CONFIG_DIR="${XDG_CONFIG_HOME:-$HOME/.config}/horizon/settings/sshfiles"
 
 _sshfile_init_db() {
     mkdir -p "$SSHFILE_CONFIG_DIR"/{data,scripts}

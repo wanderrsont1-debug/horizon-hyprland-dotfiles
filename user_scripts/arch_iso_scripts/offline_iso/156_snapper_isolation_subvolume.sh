@@ -676,8 +676,8 @@ enable_snapper_timers() {
 
 deploy_custom_timer() {
     info "Deploying custom scheduled snapshot creation timer with gatekeeper..."
-    local service_file="/etc/systemd/system/dusky_snapshot.service"
-    local timer_file="/etc/systemd/system/dusky_snapshot.timer"
+    local service_file="/etc/systemd/system/horizon_snapshot.service"
+    local timer_file="/etc/systemd/system/horizon_snapshot.timer"
 
     local tmp_service tmp_timer
     tmp_service="$(mktemp)"
@@ -710,9 +710,9 @@ RestrictRealtime=true
 Nice=19
 IOSchedulingClass=idle
 CPUSchedulingPolicy=idle
-ExecCondition=/usr/bin/bash -c 'if [ -f /var/lib/dusky_snapshot_time ]; then elapsed=\$\$((\$\$(date +%%s) - \$\$(stat -c %%Y /var/lib/dusky_snapshot_time))); if [ \$\$elapsed -lt 72000 ]; then exit 1; fi; fi; exit 0'
+ExecCondition=/usr/bin/bash -c 'if [ -f /var/lib/horizon_snapshot_time ]; then elapsed=\$\$((\$\$(date +%%s) - \$\$(stat -c %%Y /var/lib/horizon_snapshot_time))); if [ \$\$elapsed -lt 72000 ]; then exit 1; fi; fi; exit 0'
 ExecStart=/usr/bin/bash -c 'for cfg in \$(/usr/bin/snapper --csvout --no-headers list-configs | /usr/bin/cut -d, -f1); do /usr/bin/snapper -c "\$cfg" create --description "auto 8pm" --cleanup-algorithm number; done'
-ExecStartPost=/usr/bin/touch /var/lib/dusky_snapshot_time
+ExecStartPost=/usr/bin/touch /var/lib/horizon_snapshot_time
 EOF
 
     cat << EOF > "$tmp_timer"
@@ -730,9 +730,9 @@ WantedBy=timers.target
 EOF
 
     # CHROOT FALLBACK: Manually wire the timer symlink if systemctl complains in the installation environment
-    if ! systemctl enable dusky_snapshot.timer 2>/dev/null; then
+    if ! systemctl enable horizon_snapshot.timer 2>/dev/null; then
         mkdir -p /etc/systemd/system/timers.target.wants
-        ln -sf ../dusky_snapshot.timer /etc/systemd/system/timers.target.wants/dusky_snapshot.timer
+        ln -sf ../horizon_snapshot.timer /etc/systemd/system/timers.target.wants/horizon_snapshot.timer
     fi
     info "Custom scheduled snapshot timer deployed for ${SNAPSHOT_TIME}."
 }

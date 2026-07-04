@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Horizon Network
+Comment=Arch Linux / Hyprland WiFi Manager (TUI)
+Exec=uwsm-app -- foot --app-id=horizon_tui python /home/dusk/user_scripts/horizon_tui/python/main/main.py /home/dusk/user_scripts/network_manager/tui_horizon_network.py
+Icon=network-wireless
+Terminal=false
+Categories=Network;Settings;
+Keywords=horizon;wifi;network;nmcli;manager;hotspot;
+StartupWMClass=horizon-network

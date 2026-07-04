@@ -3,7 +3,7 @@
 -- ==============================================================================
 -- Add your custom keybinds here.
 -- These will override or add to the defaults found in ~/.config/hypr/source/
--- This file can also be managed with dusky keybinds manager from the rofi
+-- This file can also be managed with horizon keybinds manager from the rofi
 -- menu or from horizon control center.
 --
 -- Syntax:

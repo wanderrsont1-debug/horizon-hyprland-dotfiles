@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=Horizon Snapshot
+GenericName=BTRFS Snapshots
+Comment=Advanced Btrfs/Snapper Flat Layout Manager
+Exec=kitty --class horizon_snapshot_manager.py /home/dusk/user_scripts/btrfs_snapshots/cc/horizon_snapshot_manager.py
+Terminal=false
+Categories=horizon;btrfs;backup;restore;System;Utility;
+Icon=drive-harddisk

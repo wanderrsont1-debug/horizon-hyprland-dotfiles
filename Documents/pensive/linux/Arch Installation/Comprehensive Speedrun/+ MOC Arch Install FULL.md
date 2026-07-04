@@ -759,7 +759,7 @@ echo "LANG=en_US.UTF-8" > /etc/locale.conf
 **(replace with your desired hostname)**
 
 ```bash
-echo "dusky" > /etc/hostname
+echo "horizon" > /etc/hostname
 ```
 
 - [ ] Status

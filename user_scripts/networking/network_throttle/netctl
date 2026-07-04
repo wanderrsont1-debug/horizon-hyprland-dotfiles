@@ -7,7 +7,7 @@ project_root = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, project_root)
 
 # Redirect bytecode cache to ~/.cache to avoid cluttering the project directory
-sys.pycache_prefix = os.path.expanduser("~/.cache/dusky_network_limiter/pycache")
+sys.pycache_prefix = os.path.expanduser("~/.cache/horizon_network_limiter/pycache")
 
 def main():
     if len(sys.argv) > 1 and sys.argv[1] == "tui":

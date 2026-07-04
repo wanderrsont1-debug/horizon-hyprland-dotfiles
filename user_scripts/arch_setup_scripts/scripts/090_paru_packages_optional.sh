@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Dusky Optional Package Installer
+# Horizon Optional Package Installer
 
 set -euo pipefail
 shopt -s extglob
@@ -8,7 +8,7 @@ shopt -s extglob
 # ▼ USER CONFIGURATION (EDIT THIS SECTION) ▼
 # =============================================================================
 
-declare -r APP_TITLE="Dusky Optional Packages"
+declare -r APP_TITLE="Horizon Optional Packages"
 declare -r APP_VERSION="v3.0 (Template Engine)"
 
 # Format: Category | Package Name | Description

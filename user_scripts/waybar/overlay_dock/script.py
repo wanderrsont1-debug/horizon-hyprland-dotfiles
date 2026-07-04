@@ -351,12 +351,12 @@ class Updates(Gtk.Label):
     """
     Passive label showing pending update count.
 
-    Reads ~/.config/dusky/settings/waybar_update_counter_h once at startup,
+    Reads ~/.config/horizon/settings/waybar_update_counter_h once at startup,
     then tails it in a single persistent thread for live updates.
     No periodic polling — the file is the source of truth.
     """
     _WAYBAR_PATH = os.path.expanduser(
-        '~/.config/dusky/settings/waybar_update_counter_h'
+        '~/.config/horizon/settings/waybar_update_counter_h'
     )
 
     def __init__(self):

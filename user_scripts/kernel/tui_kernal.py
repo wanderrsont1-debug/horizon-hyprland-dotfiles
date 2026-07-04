@@ -13,7 +13,7 @@ REQUIRE_ROOT = True
 # 2. UI & ENVIRONMENT BEHAVIOR
 # =============================================================================
 DEFAULT_MODE = "batch"                        
-THEME_FILE = "~/.config/matugen/generated/dusky_tui.json"
+THEME_FILE = "~/.config/matugen/generated/horizon_tui.json"
 
 ENABLE_USER_PRESETS = True                   
 USER_PRESETS_TAB = "Presets"

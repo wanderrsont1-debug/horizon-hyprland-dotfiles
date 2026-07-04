@@ -74,7 +74,7 @@ resolve_user_context() {
     user_home=$(getent passwd "${TARGET_USER}" | cut -d: -f6 || true)
     user_home=${user_home:-/root}
 
-    STATE_DIR="${user_home}/.config/dusky/settings"
+    STATE_DIR="${user_home}/.config/horizon/settings"
     STATE_FILE="${STATE_DIR}/battery_limiter"
 }
 
@@ -144,7 +144,7 @@ update_user_state() {
     local snippet="mkdir -p '${STATE_DIR}' && echo '${limit}%' > '${STATE_FILE}' && chmod 644 '${STATE_FILE}'"
     
     if runuser -u "${TARGET_USER}" -- /bin/bash -c "${snippet}"; then
-        success "Dusky state updated: ${STATE_FILE} -> ${limit}%"
+        success "Horizon state updated: ${STATE_FILE} -> ${limit}%"
         return 0
     else
         error "Failed to write Waybar state to ${STATE_FILE}"

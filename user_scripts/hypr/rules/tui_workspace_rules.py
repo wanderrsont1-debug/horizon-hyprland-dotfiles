@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 ===============================================================================
-DUSKY TUI: MASTER CONFIGURATION SCHEMA (WORKSPACE RULES)
+HORIZON TUI: MASTER CONFIGURATION SCHEMA (WORKSPACE RULES)
 ===============================================================================
 """
 
@@ -18,7 +18,7 @@ APP_TITLE = "Hyprland Workspace Rules"
 # 2. UI & ENVIRONMENT BEHAVIOR
 # =============================================================================
 DEFAULT_MODE = "auto"
-THEME_FILE = "~/.config/matugen/generated/dusky_tui.json"
+THEME_FILE = "~/.config/matugen/generated/horizon_tui.json"
 
 # =============================================================================
 # 3. TABS DEFINITION

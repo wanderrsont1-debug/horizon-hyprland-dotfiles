@@ -481,10 +481,10 @@ hl.window_rule({
     center = true
 })
 
---- 356_dusky_plugin_manager.sh ---
+--- 356_horizon_plugin_manager.sh ---
 hl.window_rule({
-    name = "356_dusky_plugin_manager.sh",
-    match = { class = "^(356_dusky_plugin_manager.sh)$" },
+    name = "356_horizon_plugin_manager.sh",
+    match = { class = "^(356_horizon_plugin_manager.sh)$" },
     float = true,
     size = {772, 554},
     center = true
@@ -519,7 +519,7 @@ hl.window_rule({
     center = true
 })
 
---- Dusky system locale ---
+--- Horizon system locale ---
 hl.window_rule({
     name = "locale_tui.sh",
     match = { class = "^(locale_tui.sh)$" },
@@ -529,16 +529,16 @@ hl.window_rule({
 })
 
 
---- Dusky Main TUI App ---
+--- Horizon Main TUI App ---
 hl.window_rule({
-  name = "dusky_tui",
-  match = { class = "^(dusky_tui)$" },
+  name = "horizon_tui",
+  match = { class = "^(horizon_tui)$" },
   float = true,
   size = {815,539},
   center = true
 })
 
---- Dusky glance_mako_tui.sh ---
+--- Horizon glance_mako_tui.sh ---
 hl.window_rule({
     name = "glance_mako_tui.sh",
     match = { class = "^(glance_mako_tui.sh)$" },
@@ -630,20 +630,20 @@ hl.window_rule({
 })
 
 
---- dusky_snapshot_manager.py ---
+--- horizon_snapshot_manager.py ---
 hl.window_rule({
-    name = "dusky_snapshot_manager.py",
-    match = { class = "^(dusky_snapshot_manager.py)$" },
+    name = "horizon_snapshot_manager.py",
+    match = { class = "^(horizon_snapshot_manager.py)$" },
     float = true,
     size = {"(monitor_w*0.95)", "(monitor_h*0.9)"},
     move = {"(monitor_w*0.05)", "(monitor_h*0.05)"},
     center = true
 })
 
---- dusky_disk_monitor_io.py ---
+--- horizon_disk_monitor_io.py ---
 hl.window_rule({
-    name = "dusky_disk_monitor_io.py",
-    match = { class = "^(dusky_disk_monitor_io.py)$" },
+    name = "horizon_disk_monitor_io.py",
+    match = { class = "^(horizon_disk_monitor_io.py)$" },
     float = true,
     size = {871, 607},
     center = true
@@ -686,16 +686,16 @@ hl.window_rule({
     center = true
 })
 
---- neovim manager for dusky ---
+--- neovim manager for horizon ---
 hl.window_rule({
-    name = "dusky_neovim_manager.sh",
-    match = { class = "^(dusky_neovim_manager.sh)$" },
+    name = "horizon_neovim_manager.sh",
+    match = { class = "^(horizon_neovim_manager.sh)$" },
     float = true,
     size = {532, 475},
     center = true
 })
 
---- Dusky optional pacakges ---
+--- Horizon optional pacakges ---
 hl.window_rule({
     name = "090_paru_packages_optional.sh",
     match = { class = "^(090_paru_packages_optional\\.sh)$" },
@@ -703,7 +703,7 @@ hl.window_rule({
     size = {831, 572}
 })
 
---- dusky zram configurator ---
+--- horizon zram configurator ---
 hl.window_rule({
     name = "205_zram_configuration.sh",
     match = { class = "^(205_zram_configuration.sh)$" },
@@ -739,7 +739,7 @@ hl.window_rule({
     center = true
 })
 
---- dusky swapiness ---
+--- horizon swapiness ---
 hl.window_rule({
     name = "210_zram_optimize_swappiness.sh",
     match = { class = "^(210_zram_optimize_swappiness\\.sh)$" },
@@ -748,7 +748,7 @@ hl.window_rule({
     center = true
 })
 
---- dusky gpu env setter ---
+--- horizon gpu env setter ---
 hl.window_rule({
     name = "000_configure_uwsm_gpu.sh",
     match = {
@@ -760,18 +760,18 @@ hl.window_rule({
     center = true
 })
 
---- Dusky Wayclick ---
+--- Horizon Wayclick ---
 hl.window_rule({
-    name = "dusky_wayclick.sh",
-    match = { class = "^(dusky_wayclick.sh)$" },
+    name = "horizon_wayclick.sh",
+    match = { class = "^(horizon_wayclick.sh)$" },
     float = true,
     size = {831, 572}
 })
 
---- Dusky Wayclick TUI ---
+--- Horizon Wayclick TUI ---
 hl.window_rule({
-    name = "dusky_tui_wayclick.sh",
-    match = { class = "^(dusky_tui_wayclick.sh)$" },
+    name = "horizon_tui_wayclick.sh",
+    match = { class = "^(horizon_tui_wayclick.sh)$" },
     float = true,
     size = {780, 510}
 })
@@ -802,10 +802,10 @@ hl.window_rule({
     center = true
 })
 
---- dusky_keybinds.sh script ---
+--- horizon_keybinds.sh script ---
 hl.window_rule({
-    name = "dusky_keybinds.sh",
-    match = { class = "^(dusky_keybinds.sh)$" },
+    name = "horizon_keybinds.sh",
+    match = { class = "^(horizon_keybinds.sh)$" },
     float = true,
     size = {"(monitor_w*0.9)", "(monitor_h*0.9)"},
     move = {"(monitor_w*0.05)", "(monitor_h*0.05)"}
@@ -813,46 +813,46 @@ hl.window_rule({
 
 
 
---- dusky_packages.sh script ---
+--- horizon_packages.sh script ---
 hl.window_rule({
-    name = "dusky_packages.sh",
-    match = { class = "^(dusky_packages.sh)$" },
+    name = "horizon_packages.sh",
+    match = { class = "^(horizon_packages.sh)$" },
     float = true,
     size = {"(monitor_w*0.9)", "(monitor_h*0.9)"},
     move = {"(monitor_w*0.05)", "(monitor_h*0.05)"}
 })
 
---- dusky_appearances.sh script ---
+--- horizon_appearances.sh script ---
 hl.window_rule({
-    name = "dusky_appearances.sh",
-    match = { class = "^(dusky_appearances.sh)$" },
+    name = "horizon_appearances.sh",
+    match = { class = "^(horizon_appearances.sh)$" },
     float = true,
     size = {781, 507},
     center = true
 })
 
---- dusky_workspace_manager.sh script ---
+--- horizon_workspace_manager.sh script ---
 hl.window_rule({
-    name = "dusky_workspace_manager.sh",
-    match = { class = "^(dusky_workspace_manager.sh)$" },
+    name = "horizon_workspace_manager.sh",
+    match = { class = "^(horizon_workspace_manager.sh)$" },
     float = true,
     size = {781, 507},
     center = true
 })
 
---- dusky_matugen_presets.sh script ---
+--- horizon_matugen_presets.sh script ---
 hl.window_rule({
-    name = "dusky_matugen_presets.sh",
-    match = { class = "^(dusky_matugen_presets.sh)$" },
+    name = "horizon_matugen_presets.sh",
+    match = { class = "^(horizon_matugen_presets.sh)$" },
     float = true,
     size = {820, 620},
     center = true
 })
 
---- dusky_input.sh script ---
+--- horizon_input.sh script ---
 hl.window_rule({
-    name = "dusky_input.sh",
-    match = { class = "^(dusky_input.sh)$" },
+    name = "horizon_input.sh",
+    match = { class = "^(horizon_input.sh)$" },
     float = true,
     size = {781, 507},
     center = true
@@ -867,10 +867,10 @@ hl.window_rule({
     center = true
 })
 
---- dusky_gsettings.sh script ---
+--- horizon_gsettings.sh script ---
 hl.window_rule({
-    name = "dusky_gsettings.sh",
-    match = { class = "^(dusky_gsettings.sh)$" },
+    name = "horizon_gsettings.sh",
+    match = { class = "^(horizon_gsettings.sh)$" },
     float = true,
     size = {781, 507},
     center = true
@@ -884,19 +884,19 @@ hl.window_rule({
     size = {979, 642}
 })
 
---- dusky_power.sh script ---
+--- horizon_power.sh script ---
 hl.window_rule({
-    name = "dusky_power.sh",
-    match = { class = "^(dusky_power.sh)$" },
+    name = "horizon_power.sh",
+    match = { class = "^(horizon_power.sh)$" },
     float = true,
     size = {790, 530},
     center = true
 })
 
---- dusky_battery_tui.sh ---
+--- horizon_battery_tui.sh ---
 hl.window_rule({
-    name = "dusky_battery_notify.sh",
-    match = { class = "^(dusky_battery_notify.sh)$" },
+    name = "horizon_battery_notify.sh",
+    match = { class = "^(horizon_battery_notify.sh)$" },
     float = true,
     size = {790, 530},
     center = true
@@ -911,10 +911,10 @@ hl.window_rule({
     center = true
 })
 
---- dusky_hypridle.sh script ---
+--- horizon_hypridle.sh script ---
 hl.window_rule({
-    name = "dusky_hypridle.sh",
-    match = { class = "^(dusky_hypridle.sh)$" },
+    name = "horizon_hypridle.sh",
+    match = { class = "^(horizon_hypridle.sh)$" },
     float = true,
     size = {784, 529},
     center = true
@@ -929,10 +929,10 @@ hl.window_rule({
     center = true
 })
 
--- dusky_window_rules.sh
+-- horizon_window_rules.sh
 hl.window_rule({
     name = "kitty",
-    match = { class = "^(dusky_window_rules.sh)$" },
+    match = { class = "^(horizon_window_rules.sh)$" },
     float = true,
     size = {1000, 750},
     center = true
@@ -1025,8 +1025,8 @@ hl.window_rule({
 
 --- nmcli script ---
 hl.window_rule({
-    name = "tui_dusky_network.py",
-    match = { class = "^(tui_dusky_network.py)$" },
+    name = "tui_horizon_network.py",
+    match = { class = "^(tui_horizon_network.py)$" },
     float = true,
     size = {780,530},
     center = true
@@ -1086,7 +1086,7 @@ hl.window_rule({
     center = true
 })
 
---- dusky CC hypr config text editor ---
+--- horizon CC hypr config text editor ---
 hl.window_rule({
     name = "org.gnome.TextEditor",
     match = { class = "^(org.gnome.TextEditor)$" },
@@ -1118,10 +1118,10 @@ hl.window_rule({
 
 --- backup dir open from cc ---
 hl.window_rule({
-    name = "backups_dusky",
+    name = "backups_horizon",
     match = {
         class = "^(thunar)$",
-        title = "^(dusky_backups - Thunar)$"
+        title = "^(horizon_backups - Thunar)$"
     },
     float = true,
     size = {"(monitor_w*0.5612)", "(monitor_h*0.8)"},
@@ -1160,19 +1160,19 @@ hl.window_rule({
 hl.window_rule({
     name = "controlcenter",
     match = {
-        class = "^(com\\.github\\.dusky\\.controlcenter)$",
+        class = "^(com\\.github\\.horizon\\.controlcenter)$",
     },
     float = true,
     size = {"monitor_w * 0.3958", "monitor_h * 0.9093"},
     animation = "slide up"
 })
 
---- Dusky_QuickPanal Script ---
+--- Horizon_QuickPanal Script ---
 hl.window_rule({
-    name = "dusky_quickpanalpy",
+    name = "horizon_quickpanalpy",
     match = {
-        class = "^(dusky_quickpanal\\.py)$",
-        -- title = "^(dusky_quickpanal\\.py)$",
+        class = "^(horizon_quickpanal\\.py)$",
+        -- title = "^(horizon_quickpanal\\.py)$",
     },
     float = true,
     animation = "slide right",
@@ -1331,10 +1331,10 @@ hl.window_rule({
     center = true
 })
 
---- update_dusky.sh script ---
+--- update_horizon.sh script ---
 hl.window_rule({
-    name = "update_dusky.sh",
-    match = { class = "^(update_dusky.sh)$" },
+    name = "update_horizon.sh",
+    match = { class = "^(update_horizon.sh)$" },
     float = true,
     size = {1192, 710},
     center = true
@@ -1386,10 +1386,10 @@ hl.window_rule({
     center = true
 })
 
---- about_dusky.sh script ---
+--- about_horizon.sh script ---
 hl.window_rule({
-    name = "about_dusky.sh",
-    match = { class = "^(about_dusky.sh)$" },
+    name = "about_horizon.sh",
+    match = { class = "^(about_horizon.sh)$" },
     float = true,
     size = {503, 264},
     center = true
@@ -1408,10 +1408,10 @@ hl.window_rule({
     move = {"(monitor_w*0.038)", "(monitor_h*0.5 - window_h*0.5)"}
 })
 
---- dusky_service_toggle.sh script ---
+--- horizon_service_toggle.sh script ---
 hl.window_rule({
-    name = "dusky_service_toggle.sh",
-    match = { class = "^(dusky_service_toggle.sh)$" },
+    name = "horizon_service_toggle.sh",
+    match = { class = "^(horizon_service_toggle.sh)$" },
     float = true,
     size = {840, 598},
     center = true
@@ -1426,10 +1426,10 @@ hl.window_rule({
     center = true
 })
 
---- dusky_hyprlock_switcher.sh script ---
+--- horizon_hyprlock_switcher.sh script ---
 hl.window_rule({
-    name = "dusky_hyprlock_switcher.sh",
-    match = { class = "^(dusky_hyprlock_switcher.sh)$" },
+    name = "horizon_hyprlock_switcher.sh",
+    match = { class = "^(horizon_hyprlock_switcher.sh)$" },
     float = true,
     size = {821, 508},
     center = true
@@ -1465,7 +1465,7 @@ hl.window_rule({
 })
 
 
---- Dusky Wallpaper Selector---
+--- Horizon Wallpaper Selector---
 hl.window_rule({
     name = "wallpaper_selectorpy",
     match = {

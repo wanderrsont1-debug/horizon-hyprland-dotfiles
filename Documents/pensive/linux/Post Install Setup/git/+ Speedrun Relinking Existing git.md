@@ -1,5 +1,5 @@
 ```bash
-rm -rf $HOME/dusky
+rm -rf $HOME/horizon
 ```
 
 ```bash
@@ -21,37 +21,37 @@ cat ~/.ssh/id_ed25519.pub
 save to pgp key on github
 
 ```bash
-git clone --bare git@github.com:dusklinux/dusky.git $HOME/dusky
+git clone --bare git@github.com:dusklinux/horizon.git $HOME/horizon
 ```
 
 type yes
 
 ```bash
-git_dusky config --local status.showUntrackedFiles no
+git_horizon config --local status.showUntrackedFiles no
 ```
 
 ```bash
-git_dusky status
+git_horizon status
 ```
 
 ```bash
-git_dusky reset
+git_horizon reset
 ```
 
 ```bash
-git_dusky status
+git_horizon status
 ```
 
 ```bash
-git_dusky_add_list && git_dusky commit -m "fresh install first commit to the same old git repo"
+git_horizon_add_list && git_horizon commit -m "fresh install first commit to the same old git repo"
 ```
 
 ```bash
-git_dusky remote add origin git@github.com:dusklinux/dusky.git
+git_horizon remote add origin git@github.com:dusklinux/horizon.git
 ```
 
 ```bash
-git_dusky remote set-url origin git@github.com:dusklinux/dusky.git
+git_horizon remote set-url origin git@github.com:dusklinux/horizon.git
 ```
 
 ```bash
@@ -59,5 +59,5 @@ ssh -T git@github.com
 ```
 
 ```bash
-git_dusky push -u origin main
+git_horizon push -u origin main
 ```

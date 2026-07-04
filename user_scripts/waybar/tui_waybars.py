@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 """
 ===============================================================================
-DUSKY TUI: WAYBAR CONFIGURATION SCHEMA & SCRIPTING CLI
+HORIZON TUI: WAYBAR CONFIGURATION SCHEMA & SCRIPTING CLI
 ===============================================================================
 This file serves a dual purpose:
-1. It is the visual layout schema consumed by the Dusky TUI (`main.py waybar_schema`).
-2. It is a standalone executable scripting tool duplicating `dusky_waybars.sh`.
+1. It is the visual layout schema consumed by the Horizon TUI (`main.py waybar_schema`).
+2. It is a standalone executable scripting tool duplicating `horizon_waybars.sh`.
 ===============================================================================
 """
 import sys
@@ -18,7 +18,7 @@ _cwd = Path.cwd()
 if (_cwd / "python" / "frontend").exists() and str(_cwd) not in sys.path:
     sys.path.insert(0, str(_cwd))
 else:
-    _fallback = Path("~/user_scripts/dusky_tui").expanduser().resolve()
+    _fallback = Path("~/user_scripts/horizon_tui").expanduser().resolve()
     if str(_fallback) not in sys.path:
         sys.path.insert(0, str(_fallback))
 
@@ -29,9 +29,9 @@ from python.frontend.core_types import ConfigItem
 # =============================================================================
 ENGINE_TYPE = "waybar"                     
 TARGET_FILE = "~/.config/waybar" 
-APP_TITLE = "Dusky Waybars"               
+APP_TITLE = "Horizon Waybars"               
 DEFAULT_MODE = "auto"                      
-THEME_FILE = "~/.config/matugen/generated/dusky_tui.json"
+THEME_FILE = "~/.config/matugen/generated/horizon_tui.json"
 
 ENABLE_USER_PRESETS = False
 USER_PRESETS_TAB = None
@@ -127,13 +127,13 @@ SCHEMA[0].extend([
 ])
 
 # =============================================================================
-# 3. STANDALONE CLI MODE (Replaces dusky_waybars.sh)
+# 3. STANDALONE CLI MODE (Replaces horizon_waybars.sh)
 # =============================================================================
 if __name__ == "__main__":
     import argparse
     
     parser = argparse.ArgumentParser(
-        description="Dusky Waybar Manager - Scripting CLI Tool",
+        description="Horizon Waybar Manager - Scripting CLI Tool",
         formatter_class=argparse.RawTextHelpFormatter,
         add_help=False
     )
@@ -150,18 +150,18 @@ if __name__ == "__main__":
     
     # Behavior 1: If executed with no arguments, act like the bash script and launch the TUI
     if not any(vars(args).values()):
-        main_script = Path("~/user_scripts/dusky_tui/main/main.py").expanduser().resolve()
+        main_script = Path("~/user_scripts/horizon_tui/main/main.py").expanduser().resolve()
         if main_script.exists():
             os.execvp(sys.executable, [sys.executable, str(main_script), __file__])
         else:
-            print("[-] Error: Could not locate dusky_tui main.py to launch TUI.")
+            print("[-] Error: Could not locate horizon_tui main.py to launch TUI.")
             sys.exit(1)
             
     # Behavior 2: If executed with flags, act as a headless mutator script
     try:
         from python.engines.waybar_engine import WaybarEngine
     except ImportError:
-        print("[-] Error: Could not import WaybarEngine. Ensure dusky_tui is installed correctly.")
+        print("[-] Error: Could not import WaybarEngine. Ensure horizon_tui is installed correctly.")
         sys.exit(1)
         
     engine = WaybarEngine(TARGET_FILE)

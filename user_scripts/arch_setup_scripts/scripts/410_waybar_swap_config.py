@@ -8,11 +8,11 @@ import sys
 from pathlib import Path
 
 # --- Prevent Local __pycache__ Generation ---
-# Route all compiled .pyc files to ~/.cache/dusky_tui to keep source folders perfectly clean.
+# Route all compiled .pyc files to ~/.cache/horizon_tui to keep source folders perfectly clean.
 # Setting this in the environment guarantees the underlying tui_waybars.py script inherits it.
 _cache_home = Path(os.environ.get("XDG_CACHE_HOME", "~/.cache")).expanduser().resolve()
-os.environ["PYTHONPYCACHEPREFIX"] = str(_cache_home / "dusky_tui")
-sys.pycache_prefix = str(_cache_home / "dusky_tui")
+os.environ["PYTHONPYCACHEPREFIX"] = str(_cache_home / "horizon_tui")
+sys.pycache_prefix = str(_cache_home / "horizon_tui")
 
 # We only need the target script. tui_waybars.py acts as its own 
 # standalone CLI router when arguments are passed to it.
@@ -56,7 +56,7 @@ def build_command(target_script: Path, ns: argparse.Namespace, passthrough: list
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(
         prog="waybar_swap_config",
-        description="Smart wrapper around the Dusky Waybar configuration ecosystem.",
+        description="Smart wrapper around the Horizon Waybar configuration ecosystem.",
         allow_abbrev=False,
     )
 

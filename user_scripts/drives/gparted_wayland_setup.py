@@ -8,7 +8,7 @@
 
               The desktop entry is NOT placed in ~/.config/desktop_entries/all/
               because that directory is reserved for static, git-tracked entries
-              managed by the Dusky Desktop Entry Synchronizer. This script's
+              managed by the Horizon Desktop Entry Synchronizer. This script's
               output is dynamically generated and deployed directly to its
               final XDG destination.
 

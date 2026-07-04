@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 ===============================================================================
-DUSKY TUI: TRACKPAD GESTURES CONFIGURATION SCHEMA
+HORIZON TUI: TRACKPAD GESTURES CONFIGURATION SCHEMA
 ===============================================================================
 """
 
@@ -18,7 +18,7 @@ APP_TITLE = "Trackpad Gestures"
 # 2. UI & ENVIRONMENT BEHAVIOR
 # =============================================================================
 DEFAULT_MODE = "auto"
-THEME_FILE = "~/.config/matugen/generated/dusky_tui.json"
+THEME_FILE = "~/.config/matugen/generated/horizon_tui.json"
 
 # =============================================================================
 # 3. TABS DEFINITION
@@ -37,7 +37,7 @@ TABS = [
 # =============================================================================
 GESTURE_OPTIONS = [
     "Native Workspace Swipe",
-    "Toggle Dusky QuickPanel",
+    "Toggle Horizon QuickPanel",
     "Toggle Waybar",
     "Toggle Blur & Opacity",
     "Media: Play / Pause",
@@ -246,7 +246,7 @@ SCHEMA = {
             key="action",
             scope="gesture/3/up",
             type_="picker",
-            default="Toggle Dusky QuickPanel",
+            default="Toggle Horizon QuickPanel",
             options=GESTURE_OPTIONS,
             hints=GESTURE_HINTS,
             group="Trio",

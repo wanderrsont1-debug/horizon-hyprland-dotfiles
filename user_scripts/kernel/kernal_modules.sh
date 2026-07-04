@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 # =============================================================================
-# Dusky Module Atlas (Platinum Edition - Revision 2 - Centered Apex)
+# Horizon Module Atlas (Platinum Edition - Revision 2 - Centered Apex)
 # Architecture: Kernel 7.0+ Module Management TUI via FZF 0.73.1
-#               Mirrors dusky_packages.sh with 1:1 interaction paradigms.
+#               Mirrors horizon_packages.sh with 1:1 interaction paradigms.
 #               Fully supports Wayland wl-copy and --desktop flags.
 # =============================================================================
 
@@ -21,14 +21,14 @@ _mod_interactive() {
     export LC_ALL=C
 
     # Track State Across Subshells
-    export DUSKY_MOD_STATE_FILE="/tmp/dusky_mod_${$}_state"
-    echo "CURRENT_SORT=\"$init_mode\"; CURRENT_FILTER=\"$init_target\"" > "$DUSKY_MOD_STATE_FILE"
+    export HORIZON_MOD_STATE_FILE="/tmp/horizon_mod_${$}_state"
+    echo "CURRENT_SORT=\"$init_mode\"; CURRENT_FILTER=\"$init_target\"" > "$HORIZON_MOD_STATE_FILE"
 
     # F1 Help Menu Payload (Contains input flush loop to prevent \eOP escape sequence bleed)
-    export DUSKY_MOD_HELP='clear; printf "\n\n  \033[1;38;5;81m󰘚 Dusky Module Atlas - Keyboard Shortcuts\033[0m\n  \033[38;5;238m──────────────────────────────────────────────\033[0m\n  \033[1;37mSort & View Controls\033[0m\n  \033[1;33m[CTRL-S]\033[0m  Sort by Size descending (Hogs)\n  \033[1;33m[ALT-S]\033[0m   Sort by Size ascending (Tiny)\n  \033[1;33m[CTRL-D]\033[0m  Sort by Refcount descending (Most Used)\n  \033[1;33m[CTRL-R]\033[0m  Reset to Alpha + clear filter\n  \033[1;33m[CTRL-A]\033[0m  View: All Available Modules (Disk Scan)\n\n  \033[1;37mFilter Controls\033[0m\n  \033[1;33m[CTRL-U]\033[0m  Filter: Unused only (refcount=0)\n  \033[1;33m[CTRL-E]\033[0m  Filter: Active only (refcount>0)\n  \033[1;33m[CTRL-G]\033[0m  GPU      \033[1;33m[CTRL-N]\033[0m  Network  \033[1;33m[CTRL-O]\033[0m  Audio\n  \033[1;33m[CTRL-I]\033[0m  Input    \033[1;33m[CTRL-B]\033[0m  Storage  \033[1;33m[ALT-P]\033[0m   USB\n  \033[1;33m[ALT-F]\033[0m   FS       \033[1;33m[ALT-V]\033[0m   Virtual  \033[1;33m[ALT-X]\033[0m   DKMS/Ext\n\n  \033[1;37mModule Actions\033[0m\n  \033[1;33m[ALT-L]\033[0m   Load Module (sudo modprobe)\n  \033[1;33m[ALT-U]\033[0m   Unload Module (sudo modprobe -r)\n  \033[1;33m[ALT-B]\033[0m   Blacklist + Unload\n  \033[1;33m[ALT-K]\033[0m   Copy blacklist command to clipboard\n  \033[1;33m[ALT-R]\033[0m   Copy rmmod command to clipboard\n  \033[1;33m[ALT-C]\033[0m   Copy preview panel to clipboard\n  \033[1;33m[ENTER]\033[0m   Copy module name to clipboard & Exit\n  \033[1;33m[F1]\033[0m      Show this Help Menu\n\n  \033[38;5;242mPress any key to return...\033[0m"; read -rsn1; while read -rsn1 -t 0.01; do :; done'
+    export HORIZON_MOD_HELP='clear; printf "\n\n  \033[1;38;5;81m󰘚 Horizon Module Atlas - Keyboard Shortcuts\033[0m\n  \033[38;5;238m──────────────────────────────────────────────\033[0m\n  \033[1;37mSort & View Controls\033[0m\n  \033[1;33m[CTRL-S]\033[0m  Sort by Size descending (Hogs)\n  \033[1;33m[ALT-S]\033[0m   Sort by Size ascending (Tiny)\n  \033[1;33m[CTRL-D]\033[0m  Sort by Refcount descending (Most Used)\n  \033[1;33m[CTRL-R]\033[0m  Reset to Alpha + clear filter\n  \033[1;33m[CTRL-A]\033[0m  View: All Available Modules (Disk Scan)\n\n  \033[1;37mFilter Controls\033[0m\n  \033[1;33m[CTRL-U]\033[0m  Filter: Unused only (refcount=0)\n  \033[1;33m[CTRL-E]\033[0m  Filter: Active only (refcount>0)\n  \033[1;33m[CTRL-G]\033[0m  GPU      \033[1;33m[CTRL-N]\033[0m  Network  \033[1;33m[CTRL-O]\033[0m  Audio\n  \033[1;33m[CTRL-I]\033[0m  Input    \033[1;33m[CTRL-B]\033[0m  Storage  \033[1;33m[ALT-P]\033[0m   USB\n  \033[1;33m[ALT-F]\033[0m   FS       \033[1;33m[ALT-V]\033[0m   Virtual  \033[1;33m[ALT-X]\033[0m   DKMS/Ext\n\n  \033[1;37mModule Actions\033[0m\n  \033[1;33m[ALT-L]\033[0m   Load Module (sudo modprobe)\n  \033[1;33m[ALT-U]\033[0m   Unload Module (sudo modprobe -r)\n  \033[1;33m[ALT-B]\033[0m   Blacklist + Unload\n  \033[1;33m[ALT-K]\033[0m   Copy blacklist command to clipboard\n  \033[1;33m[ALT-R]\033[0m   Copy rmmod command to clipboard\n  \033[1;33m[ALT-C]\033[0m   Copy preview panel to clipboard\n  \033[1;33m[ENTER]\033[0m   Copy module name to clipboard & Exit\n  \033[1;33m[F1]\033[0m      Show this Help Menu\n\n  \033[38;5;242mPress any key to return...\033[0m"; read -rsn1; while read -rsn1 -t 0.01; do :; done'
 
     # Compile Live List Generator
-    export DUSKY_MOD_LIST='
+    export HORIZON_MOD_LIST='
 export LC_ALL=C
 mode="$1"
 target="$2"
@@ -145,7 +145,7 @@ fetch_data | sort "${sort_args[@]}" | awk -F"|" -v target="$target" '\''
 '
 
     # Compile Preview Script
-    export DUSKY_MOD_PREVIEW='
+    export HORIZON_MOD_PREVIEW='
 export LC_ALL=C
 pkg="$1"
 
@@ -259,7 +259,7 @@ printf "\033[1;38;5;39m%-18s\033[0m: \033[38;5;253m%s\033[0m\n" "Holders" "$hold
 printf "\n\033[1;38;5;81m:: \033[1;37mHardware Devices\033[0m\n\033[38;5;238m%s\033[0m\n" "$hr"
 dev_found=0
 # PCI Lookup
-pci_matches=$(echo "$DUSKY_MOD_PCI_MAP" | grep "^$pkg=" | cut -d= -f2-)
+pci_matches=$(echo "$HORIZON_MOD_PCI_MAP" | grep "^$pkg=" | cut -d= -f2-)
 if [[ -n "$pci_matches" ]]; then
     while read -r dev; do
         printf "  \033[1;32m●\033[0m [\033[38;5;207mPCI\033[0m]  \033[38;5;253m%s\033[0m\n" "$dev"
@@ -338,14 +338,14 @@ printf "  \033[1;33m[ENTER]\033[0m  Copy module name to clipboard\n"
 '
 
     # Wayland Clipboard Payload
-    export DUSKY_MOD_COPY='
+    export HORIZON_MOD_COPY='
 export LC_ALL=C
 pkg="$1"
-bash -c "$DUSKY_MOD_PREVIEW" _ "$pkg" | sed -r "s/\x1B\[([0-9]{1,3}(;[0-9]{1,2})?)?[mGK]//g" | wl-copy
+bash -c "$HORIZON_MOD_PREVIEW" _ "$pkg" | sed -r "s/\x1B\[([0-9]{1,3}(;[0-9]{1,2})?)?[mGK]//g" | wl-copy
 '
 
     # Calculate Footer Analytics
-    export DUSKY_MOD_SUMMARY=$(
+    export HORIZON_MOD_SUMMARY=$(
         awk '
             {
                 tm++
@@ -370,7 +370,7 @@ bash -c "$DUSKY_MOD_PREVIEW" _ "$pkg" | sed -r "s/\x1B\[([0-9]{1,3}(;[0-9]{1,2})
     local visual_header=$(printf " \033[38;5;242mST\033[0m  \033[38;5;242mCAT\033[0m  \033[1;37m         MODULE            \033[0m \033[38;5;238m│\033[0m \033[38;5;242m   SIZE   \033[0m \033[38;5;238m│\033[0m \033[38;5;242mREFCT\033[0m")
 
     local fzf_choice
-    fzf_choice=$(bash -c "$DUSKY_MOD_LIST" _ "$init_mode" "$init_target" | fzf --ansi \
+    fzf_choice=$(bash -c "$HORIZON_MOD_LIST" _ "$init_mode" "$init_target" | fzf --ansi \
         --delimiter='\|' \
         --with-nth=2 \
         --accept-nth=1 \
@@ -383,31 +383,31 @@ bash -c "$DUSKY_MOD_PREVIEW" _ "$pkg" | sed -r "s/\x1B\[([0-9]{1,3}(;[0-9]{1,2})
         --marker="✓" \
         --layout=reverse \
         --border=rounded \
-        --border-label=" 󰘚 Dusky Module Atlas [F1: Help] " \
+        --border-label=" 󰘚 Horizon Module Atlas [F1: Help] " \
         --border-label-pos=3 \
         --info=hidden \
         --header="$visual_header" \
         --header-first \
-        --footer=" $DUSKY_MOD_SUMMARY " \
+        --footer=" $HORIZON_MOD_SUMMARY " \
         --footer-border=line \
-        --bind="ctrl-s:execute-silent(sed -i 's/CURRENT_SORT=.*/CURRENT_SORT=\"size_desc\"/' \"$DUSKY_MOD_STATE_FILE\")+reload-sync(. \"$DUSKY_MOD_STATE_FILE\"; bash -c \"\$DUSKY_MOD_LIST\" _ \"\$CURRENT_SORT\" \"\$CURRENT_FILTER\")+change-prompt( 󰘚  Hogs (Largest) ❯ )" \
-        --bind="alt-s:execute-silent(sed -i 's/CURRENT_SORT=.*/CURRENT_SORT=\"size_asc\"/' \"$DUSKY_MOD_STATE_FILE\")+reload-sync(. \"$DUSKY_MOD_STATE_FILE\"; bash -c \"\$DUSKY_MOD_LIST\" _ \"\$CURRENT_SORT\" \"\$CURRENT_FILTER\")+change-prompt( 󰘚  Tiny (Smallest) ❯ )" \
-        --bind="ctrl-d:execute-silent(sed -i 's/CURRENT_SORT=.*/CURRENT_SORT=\"refcount_desc\"/' \"$DUSKY_MOD_STATE_FILE\")+reload-sync(. \"$DUSKY_MOD_STATE_FILE\"; bash -c \"\$DUSKY_MOD_LIST\" _ \"\$CURRENT_SORT\" \"\$CURRENT_FILTER\")+change-prompt( 󰘚  Most Used ❯ )" \
-        --bind="ctrl-r:execute-silent(sed -i -e 's/CURRENT_SORT=.*/CURRENT_SORT=\"alpha\"/' -e 's/CURRENT_FILTER=.*/CURRENT_FILTER=\"all\"/' \"$DUSKY_MOD_STATE_FILE\")+reload-sync(. \"$DUSKY_MOD_STATE_FILE\"; bash -c \"\$DUSKY_MOD_LIST\" _ \"\$CURRENT_SORT\" \"\$CURRENT_FILTER\")+change-prompt( 󰘚  Search Modules ❯ )" \
-        --bind="ctrl-a:execute-silent(sed -i 's/CURRENT_FILTER=.*/CURRENT_FILTER=\"available\"/' \"$DUSKY_MOD_STATE_FILE\")+reload-sync(. \"$DUSKY_MOD_STATE_FILE\"; bash -c \"\$DUSKY_MOD_LIST\" _ \"\$CURRENT_SORT\" \"\$CURRENT_FILTER\")+change-prompt( 󰘚  All Available ❯ )" \
-        --bind="ctrl-u:execute-silent(sed -i 's/CURRENT_FILTER=.*/CURRENT_FILTER=\"unused\"/' \"$DUSKY_MOD_STATE_FILE\")+reload-sync(. \"$DUSKY_MOD_STATE_FILE\"; bash -c \"\$DUSKY_MOD_LIST\" _ \"\$CURRENT_SORT\" \"\$CURRENT_FILTER\")+change-prompt( 󰘚  Unused (Wasted) ❯ )" \
-        --bind="ctrl-e:execute-silent(sed -i 's/CURRENT_FILTER=.*/CURRENT_FILTER=\"active\"/' \"$DUSKY_MOD_STATE_FILE\")+reload-sync(. \"$DUSKY_MOD_STATE_FILE\"; bash -c \"\$DUSKY_MOD_LIST\" _ \"\$CURRENT_SORT\" \"\$CURRENT_FILTER\")+change-prompt( 󰘚  Active Only ❯ )" \
-        --bind="ctrl-g:execute-silent(sed -i 's/CURRENT_FILTER=.*/CURRENT_FILTER=\"gpu\"/' \"$DUSKY_MOD_STATE_FILE\")+reload-sync(. \"$DUSKY_MOD_STATE_FILE\"; bash -c \"\$DUSKY_MOD_LIST\" _ \"\$CURRENT_SORT\" \"\$CURRENT_FILTER\")+change-prompt( 󰘚  GPU ❯ )" \
-        --bind="ctrl-n:execute-silent(sed -i 's/CURRENT_FILTER=.*/CURRENT_FILTER=\"net\"/' \"$DUSKY_MOD_STATE_FILE\")+reload-sync(. \"$DUSKY_MOD_STATE_FILE\"; bash -c \"\$DUSKY_MOD_LIST\" _ \"\$CURRENT_SORT\" \"\$CURRENT_FILTER\")+change-prompt( 󰘚  Network ❯ )" \
-        --bind="ctrl-o:execute-silent(sed -i 's/CURRENT_FILTER=.*/CURRENT_FILTER=\"audio\"/' \"$DUSKY_MOD_STATE_FILE\")+reload-sync(. \"$DUSKY_MOD_STATE_FILE\"; bash -c \"\$DUSKY_MOD_LIST\" _ \"\$CURRENT_SORT\" \"\$CURRENT_FILTER\")+change-prompt( 󰘚  Audio ❯ )" \
-        --bind="ctrl-i:execute-silent(sed -i 's/CURRENT_FILTER=.*/CURRENT_FILTER=\"input\"/' \"$DUSKY_MOD_STATE_FILE\")+reload-sync(. \"$DUSKY_MOD_STATE_FILE\"; bash -c \"\$DUSKY_MOD_LIST\" _ \"\$CURRENT_SORT\" \"\$CURRENT_FILTER\")+change-prompt( 󰘚  Input/HID ❯ )" \
-        --bind="ctrl-b:execute-silent(sed -i 's/CURRENT_FILTER=.*/CURRENT_FILTER=\"storage\"/' \"$DUSKY_MOD_STATE_FILE\")+reload-sync(. \"$DUSKY_MOD_STATE_FILE\"; bash -c \"\$DUSKY_MOD_LIST\" _ \"\$CURRENT_SORT\" \"\$CURRENT_FILTER\")+change-prompt( 󰘚  Storage ❯ )" \
-        --bind="alt-p:execute-silent(sed -i 's/CURRENT_FILTER=.*/CURRENT_FILTER=\"usb\"/' \"$DUSKY_MOD_STATE_FILE\")+reload-sync(. \"$DUSKY_MOD_STATE_FILE\"; bash -c \"\$DUSKY_MOD_LIST\" _ \"\$CURRENT_SORT\" \"\$CURRENT_FILTER\")+change-prompt( 󰘚  USB ❯ )" \
-        --bind="alt-f:execute-silent(sed -i 's/CURRENT_FILTER=.*/CURRENT_FILTER=\"fs\"/' \"$DUSKY_MOD_STATE_FILE\")+reload-sync(. \"$DUSKY_MOD_STATE_FILE\"; bash -c \"\$DUSKY_MOD_LIST\" _ \"\$CURRENT_SORT\" \"\$CURRENT_FILTER\")+change-prompt( 󰘚  Filesystems ❯ )" \
-        --bind="alt-v:execute-silent(sed -i 's/CURRENT_FILTER=.*/CURRENT_FILTER=\"virt\"/' \"$DUSKY_MOD_STATE_FILE\")+reload-sync(. \"$DUSKY_MOD_STATE_FILE\"; bash -c \"\$DUSKY_MOD_LIST\" _ \"\$CURRENT_SORT\" \"\$CURRENT_FILTER\")+change-prompt( 󰘚  Virtualization ❯ )" \
-        --bind="alt-x:execute-silent(sed -i 's/CURRENT_FILTER=.*/CURRENT_FILTER=\"dkms\"/' \"$DUSKY_MOD_STATE_FILE\")+reload-sync(. \"$DUSKY_MOD_STATE_FILE\"; bash -c \"\$DUSKY_MOD_LIST\" _ \"\$CURRENT_SORT\" \"\$CURRENT_FILTER\")+change-prompt( 󰘚  DKMS/External ❯ )" \
-        --bind="f1:execute(bash -c \"\$DUSKY_MOD_HELP\")" \
-        --bind="alt-c:execute-silent(bash -c \"\$DUSKY_MOD_COPY\" _ {1})+change-prompt( 󰘚  Copied Panel! ❯ )" \
+        --bind="ctrl-s:execute-silent(sed -i 's/CURRENT_SORT=.*/CURRENT_SORT=\"size_desc\"/' \"$HORIZON_MOD_STATE_FILE\")+reload-sync(. \"$HORIZON_MOD_STATE_FILE\"; bash -c \"\$HORIZON_MOD_LIST\" _ \"\$CURRENT_SORT\" \"\$CURRENT_FILTER\")+change-prompt( 󰘚  Hogs (Largest) ❯ )" \
+        --bind="alt-s:execute-silent(sed -i 's/CURRENT_SORT=.*/CURRENT_SORT=\"size_asc\"/' \"$HORIZON_MOD_STATE_FILE\")+reload-sync(. \"$HORIZON_MOD_STATE_FILE\"; bash -c \"\$HORIZON_MOD_LIST\" _ \"\$CURRENT_SORT\" \"\$CURRENT_FILTER\")+change-prompt( 󰘚  Tiny (Smallest) ❯ )" \
+        --bind="ctrl-d:execute-silent(sed -i 's/CURRENT_SORT=.*/CURRENT_SORT=\"refcount_desc\"/' \"$HORIZON_MOD_STATE_FILE\")+reload-sync(. \"$HORIZON_MOD_STATE_FILE\"; bash -c \"\$HORIZON_MOD_LIST\" _ \"\$CURRENT_SORT\" \"\$CURRENT_FILTER\")+change-prompt( 󰘚  Most Used ❯ )" \
+        --bind="ctrl-r:execute-silent(sed -i -e 's/CURRENT_SORT=.*/CURRENT_SORT=\"alpha\"/' -e 's/CURRENT_FILTER=.*/CURRENT_FILTER=\"all\"/' \"$HORIZON_MOD_STATE_FILE\")+reload-sync(. \"$HORIZON_MOD_STATE_FILE\"; bash -c \"\$HORIZON_MOD_LIST\" _ \"\$CURRENT_SORT\" \"\$CURRENT_FILTER\")+change-prompt( 󰘚  Search Modules ❯ )" \
+        --bind="ctrl-a:execute-silent(sed -i 's/CURRENT_FILTER=.*/CURRENT_FILTER=\"available\"/' \"$HORIZON_MOD_STATE_FILE\")+reload-sync(. \"$HORIZON_MOD_STATE_FILE\"; bash -c \"\$HORIZON_MOD_LIST\" _ \"\$CURRENT_SORT\" \"\$CURRENT_FILTER\")+change-prompt( 󰘚  All Available ❯ )" \
+        --bind="ctrl-u:execute-silent(sed -i 's/CURRENT_FILTER=.*/CURRENT_FILTER=\"unused\"/' \"$HORIZON_MOD_STATE_FILE\")+reload-sync(. \"$HORIZON_MOD_STATE_FILE\"; bash -c \"\$HORIZON_MOD_LIST\" _ \"\$CURRENT_SORT\" \"\$CURRENT_FILTER\")+change-prompt( 󰘚  Unused (Wasted) ❯ )" \
+        --bind="ctrl-e:execute-silent(sed -i 's/CURRENT_FILTER=.*/CURRENT_FILTER=\"active\"/' \"$HORIZON_MOD_STATE_FILE\")+reload-sync(. \"$HORIZON_MOD_STATE_FILE\"; bash -c \"\$HORIZON_MOD_LIST\" _ \"\$CURRENT_SORT\" \"\$CURRENT_FILTER\")+change-prompt( 󰘚  Active Only ❯ )" \
+        --bind="ctrl-g:execute-silent(sed -i 's/CURRENT_FILTER=.*/CURRENT_FILTER=\"gpu\"/' \"$HORIZON_MOD_STATE_FILE\")+reload-sync(. \"$HORIZON_MOD_STATE_FILE\"; bash -c \"\$HORIZON_MOD_LIST\" _ \"\$CURRENT_SORT\" \"\$CURRENT_FILTER\")+change-prompt( 󰘚  GPU ❯ )" \
+        --bind="ctrl-n:execute-silent(sed -i 's/CURRENT_FILTER=.*/CURRENT_FILTER=\"net\"/' \"$HORIZON_MOD_STATE_FILE\")+reload-sync(. \"$HORIZON_MOD_STATE_FILE\"; bash -c \"\$HORIZON_MOD_LIST\" _ \"\$CURRENT_SORT\" \"\$CURRENT_FILTER\")+change-prompt( 󰘚  Network ❯ )" \
+        --bind="ctrl-o:execute-silent(sed -i 's/CURRENT_FILTER=.*/CURRENT_FILTER=\"audio\"/' \"$HORIZON_MOD_STATE_FILE\")+reload-sync(. \"$HORIZON_MOD_STATE_FILE\"; bash -c \"\$HORIZON_MOD_LIST\" _ \"\$CURRENT_SORT\" \"\$CURRENT_FILTER\")+change-prompt( 󰘚  Audio ❯ )" \
+        --bind="ctrl-i:execute-silent(sed -i 's/CURRENT_FILTER=.*/CURRENT_FILTER=\"input\"/' \"$HORIZON_MOD_STATE_FILE\")+reload-sync(. \"$HORIZON_MOD_STATE_FILE\"; bash -c \"\$HORIZON_MOD_LIST\" _ \"\$CURRENT_SORT\" \"\$CURRENT_FILTER\")+change-prompt( 󰘚  Input/HID ❯ )" \
+        --bind="ctrl-b:execute-silent(sed -i 's/CURRENT_FILTER=.*/CURRENT_FILTER=\"storage\"/' \"$HORIZON_MOD_STATE_FILE\")+reload-sync(. \"$HORIZON_MOD_STATE_FILE\"; bash -c \"\$HORIZON_MOD_LIST\" _ \"\$CURRENT_SORT\" \"\$CURRENT_FILTER\")+change-prompt( 󰘚  Storage ❯ )" \
+        --bind="alt-p:execute-silent(sed -i 's/CURRENT_FILTER=.*/CURRENT_FILTER=\"usb\"/' \"$HORIZON_MOD_STATE_FILE\")+reload-sync(. \"$HORIZON_MOD_STATE_FILE\"; bash -c \"\$HORIZON_MOD_LIST\" _ \"\$CURRENT_SORT\" \"\$CURRENT_FILTER\")+change-prompt( 󰘚  USB ❯ )" \
+        --bind="alt-f:execute-silent(sed -i 's/CURRENT_FILTER=.*/CURRENT_FILTER=\"fs\"/' \"$HORIZON_MOD_STATE_FILE\")+reload-sync(. \"$HORIZON_MOD_STATE_FILE\"; bash -c \"\$HORIZON_MOD_LIST\" _ \"\$CURRENT_SORT\" \"\$CURRENT_FILTER\")+change-prompt( 󰘚  Filesystems ❯ )" \
+        --bind="alt-v:execute-silent(sed -i 's/CURRENT_FILTER=.*/CURRENT_FILTER=\"virt\"/' \"$HORIZON_MOD_STATE_FILE\")+reload-sync(. \"$HORIZON_MOD_STATE_FILE\"; bash -c \"\$HORIZON_MOD_LIST\" _ \"\$CURRENT_SORT\" \"\$CURRENT_FILTER\")+change-prompt( 󰘚  Virtualization ❯ )" \
+        --bind="alt-x:execute-silent(sed -i 's/CURRENT_FILTER=.*/CURRENT_FILTER=\"dkms\"/' \"$HORIZON_MOD_STATE_FILE\")+reload-sync(. \"$HORIZON_MOD_STATE_FILE\"; bash -c \"\$HORIZON_MOD_LIST\" _ \"\$CURRENT_SORT\" \"\$CURRENT_FILTER\")+change-prompt( 󰘚  DKMS/External ❯ )" \
+        --bind="f1:execute(bash -c \"\$HORIZON_MOD_HELP\")" \
+        --bind="alt-c:execute-silent(bash -c \"\$HORIZON_MOD_COPY\" _ {1})+change-prompt( 󰘚  Copied Panel! ❯ )" \
         --bind="alt-k:execute-silent(printf 'blacklist {1}' | wl-copy)+change-prompt( 󰘚  Copied Blacklist Cmd ❯ )" \
         --bind="alt-r:execute-silent(printf 'sudo modprobe -r {1}' | wl-copy)+change-prompt( 󰘚  Copied rmmod Cmd ❯ )" \
         --bind="alt-u:execute(
@@ -422,7 +422,7 @@ bash -c "$DUSKY_MOD_PREVIEW" _ "$pkg" | sed -r "s/\x1B\[([0-9]{1,3}(;[0-9]{1,2})
             echo \"\"
             echo -e \"\e[38;5;242mPress any key to continue...\e[0m\"
             read -rsn1; while read -rsn1 -t 0.01; do :; done
-        )+reload-sync(. \"$DUSKY_MOD_STATE_FILE\"; bash -c \"\$DUSKY_MOD_LIST\" _ \"\$CURRENT_SORT\" \"\$CURRENT_FILTER\")" \
+        )+reload-sync(. \"$HORIZON_MOD_STATE_FILE\"; bash -c \"\$HORIZON_MOD_LIST\" _ \"\$CURRENT_SORT\" \"\$CURRENT_FILTER\")" \
         --bind="alt-l:execute(
             clear
             echo -e \"\e[1;36m::\e[0m Loading: \e[1;39m{1}\e[0m\"
@@ -434,7 +434,7 @@ bash -c "$DUSKY_MOD_PREVIEW" _ "$pkg" | sed -r "s/\x1B\[([0-9]{1,3}(;[0-9]{1,2})
             echo \"\"
             echo -e \"\e[38;5;242mPress any key to continue...\e[0m\"
             read -rsn1; while read -rsn1 -t 0.01; do :; done
-        )+reload-sync(. \"$DUSKY_MOD_STATE_FILE\"; bash -c \"\$DUSKY_MOD_LIST\" _ \"\$CURRENT_SORT\" \"\$CURRENT_FILTER\")" \
+        )+reload-sync(. \"$HORIZON_MOD_STATE_FILE\"; bash -c \"\$HORIZON_MOD_LIST\" _ \"\$CURRENT_SORT\" \"\$CURRENT_FILTER\")" \
         --bind="alt-b:execute(
             clear
             echo -e \"\e[1;36m::\e[0m Blacklisting and unloading: \e[1;39m{1}\e[0m\"
@@ -451,26 +451,26 @@ bash -c "$DUSKY_MOD_PREVIEW" _ "$pkg" | sed -r "s/\x1B\[([0-9]{1,3}(;[0-9]{1,2})
             echo \"\"
             echo -e \"\e[38;5;242mPress any key to continue...\e[0m\"
             read -rsn1; while read -rsn1 -t 0.01; do :; done
-        )+reload-sync(. \"$DUSKY_MOD_STATE_FILE\"; bash -c \"\$DUSKY_MOD_LIST\" _ \"\$CURRENT_SORT\" \"\$CURRENT_FILTER\")" \
+        )+reload-sync(. \"$HORIZON_MOD_STATE_FILE\"; bash -c \"\$HORIZON_MOD_LIST\" _ \"\$CURRENT_SORT\" \"\$CURRENT_FILTER\")" \
         --color="bg+:#1e1e2e,bg:#11111b,spinner:#f5e0dc" \
         --color="fg:#cdd6f4,fg+:#cdd6f4,header:#89b4fa,info:#cba6f7" \
         --color="pointer:#a6e3a1,marker:#f5e0dc,prompt:#cba6f7" \
         --color="hl:#f38ba8,hl+:#f38ba8,border:#585b70,label:#a6e3a1" \
         --color="footer:#585b70,footer-border:#585b70" \
-        --preview='bash -c "$DUSKY_MOD_PREVIEW" _ {1}' \
+        --preview='bash -c "$HORIZON_MOD_PREVIEW" _ {1}' \
         --preview-window="right,50%,border-left,wrap" \
         --preview-label=" 󰋽 Module Info ")
 
     # Environment Cleanup
-    rm -f "$DUSKY_MOD_STATE_FILE"
-    unset DUSKY_MOD_LIST
-    unset DUSKY_MOD_PREVIEW
-    unset DUSKY_MOD_COPY
-    unset DUSKY_MOD_HELP
-    unset DUSKY_MOD_SUMMARY
-    unset DUSKY_MOD_PCI_MAP
-    unset DUSKY_MOD_USB_MAP
-    unset DUSKY_MOD_STATE_FILE
+    rm -f "$HORIZON_MOD_STATE_FILE"
+    unset HORIZON_MOD_LIST
+    unset HORIZON_MOD_PREVIEW
+    unset HORIZON_MOD_COPY
+    unset HORIZON_MOD_HELP
+    unset HORIZON_MOD_SUMMARY
+    unset HORIZON_MOD_PCI_MAP
+    unset HORIZON_MOD_USB_MAP
+    unset HORIZON_MOD_STATE_FILE
 
     # Action Router
     if [[ -n "$fzf_choice" ]]; then
@@ -577,7 +577,7 @@ main() {
     fi
 
     # Startup caching for Hardware Bindings
-    export DUSKY_MOD_PCI_MAP=$(lspci -vmm -k 2>/dev/null | awk '
+    export HORIZON_MOD_PCI_MAP=$(lspci -vmm -k 2>/dev/null | awk '
         /^Vendor:/ { v=substr($0,9) }
         /^Device:/ { d=substr($0,9) }
         /^Driver:/ { drv=substr($0,9); map[drv]=v " " d }

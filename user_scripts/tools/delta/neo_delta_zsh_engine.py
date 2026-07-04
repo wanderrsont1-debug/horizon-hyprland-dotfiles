@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 NeoDiff - Advanced Side-by-Side Diffing Engine with Frecency & FZF Tab-Completion.
-Optimized for the Dusky Ecosystem.
+Optimized for the Horizon Ecosystem.
 [HEADLESS MODE] Strictly relies on ZSH proxy for UI and routing.
 """
 
@@ -21,7 +21,7 @@ DELIM = '\x1f'
 if len(sys.argv) > 1 and sys.argv[1].startswith("--_fzf_"):
 
     def load_frecency_fast() -> dict[str, int]:
-        state_file = Path.home() / ".config" / "dusky" / "settings" / "neodiff" / "state.tsv"
+        state_file = Path.home() / ".config" / "horizon" / "settings" / "neodiff" / "state.tsv"
         weights = {}
         try:
             with open(state_file, 'r', encoding='utf-8') as f:
@@ -183,7 +183,7 @@ console = Console()
 # ==========================================
 # 2. Frecency & State Management
 # ==========================================
-STATE_DIR = Path.home() / ".config" / "dusky" / "settings" / "neodiff"
+STATE_DIR = Path.home() / ".config" / "horizon" / "settings" / "neodiff"
 STATE_FILE = STATE_DIR / "state.tsv"
 
 def load_frecency() -> dict[str, int]:

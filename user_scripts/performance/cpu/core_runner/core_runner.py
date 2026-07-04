@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Dusky Core Affinity Wrapper - Final Golden Release
+Horizon Core Affinity Wrapper - Final Golden Release
 Optimized exclusively for Python 3.14+ | Arch Linux Kernel 7.1.2+
 """
 
@@ -32,7 +32,7 @@ except ImportError:
 
 console = Console()
 CACHE_FILE = Path("/var/tmp/core_runner_topology.json")
-SETTINGS_FILE = Path(os.path.expanduser("~/.config/dusky/settings/core_runner"))
+SETTINGS_FILE = Path(os.path.expanduser("~/.config/horizon/settings/core_runner"))
 
 def load_settings() -> dict[str, list[int]]:
     if not SETTINGS_FILE.is_file():
@@ -337,7 +337,7 @@ def interactive_launcher_menu(topology: dict[int, dict[str, Any]]) -> None:
     
     selected_idx = interactive_menu_select(
         menu_options,
-        "Dusky Core Runner - Main Menu",
+        "Horizon Core Runner - Main Menu",
         "Up/Down: Navigate | Enter: Select | Esc/q: Exit"
     )
     
@@ -463,7 +463,7 @@ def interactive_launcher_menu(topology: dict[int, dict[str, Any]]) -> None:
     sys.exit(run_target_command(taskset_cmd, offline_targets))
 
 def print_beautiful_help() -> None:
-    console.print(Panel("[bold green]Dusky Core Affinity Wrapper[/bold green]", border_style="green", box=box.ROUNDED, expand=False))
+    console.print(Panel("[bold green]Horizon Core Affinity Wrapper[/bold green]", border_style="green", box=box.ROUNDED, expand=False))
     
     usage = Table(show_header=False, box=None, padding=(0, 4, 0, 0))
     usage.add_row("  [bold green]core[/bold green]", "[dim]Interactive Launcher Menu (Default)[/dim]")

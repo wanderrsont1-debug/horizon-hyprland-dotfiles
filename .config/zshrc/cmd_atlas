@@ -1,5 +1,5 @@
 # =============================================================================
-# Dusky Command Atlas v3.0 (Platinum Edition)
+# Horizon Command Atlas v3.0 (Platinum Edition)
 # Architecture: Zero-fork environment scanning, associative array metadata,
 #               hidden delimiter routing, and interactive Zsh buffer injection.
 # Dependencies: zsh 5.9+, fzf 0.72.0+
@@ -10,7 +10,7 @@
 # =============================================================================
 typeset -g -A ZSH_DOCS
 ZSH_DOCS=(
-    # --- DUSKY CUSTOM TOOLS ---
+    # --- HORIZON CUSTOM TOOLS ---
     "atlas"               "Interactive fuzzy-finder for environment functions and aliases."
     "batstat"             "Zero-fork battery monitor with live TUI."
     "mon_info"            "Mathematical aspect ratio and display info renderer."
@@ -22,12 +22,12 @@ ZSH_DOCS=(
     "nvidia_bind"         "Binds Nvidia GPU to the VFIO driver for VM passthrough."
     "nvidia_unbind"       "Unbinds Nvidia GPU from the VFIO driver to restore host access."
 
-    # --- DUSKY DOTFILES MANAGEMENT ---
-    "git_dusky"           "Core git wrapper locked to the bare repository."
-    "git_dusky_add_list"  "Stages specific tracked files from the .git_dusky_list payload."
-    "git_dusky_restore"   "Destructive hard reset to revert all local dotfile changes."
+    # --- HORIZON DOTFILES MANAGEMENT ---
+    "git_horizon"           "Core git wrapper locked to the bare repository."
+    "git_horizon_add_list"  "Stages specific tracked files from the .git_horizon_list payload."
+    "git_horizon_restore"   "Destructive hard reset to revert all local dotfile changes."
     "gitdelta"            "Stages list files and computes the repository diff against HEAD."
-    "lazygit_dusky"       "Launches Lazygit scoped to the Dusky bare repository."
+    "lazygit_horizon"       "Launches Lazygit scoped to the Horizon bare repository."
 
     # --- DEVELOPMENT & EXECUTION ---
     "logs_old"            "Advanced execution wrapper for robust script testing and tracing."
@@ -134,7 +134,7 @@ cmd_atlas() {
         --marker="✓" \
         --layout=reverse \
         --border=rounded \
-        --border-label=" 󰘳 Dusky Command Atlas " \
+        --border-label=" 󰘳 Horizon Command Atlas " \
         --border-label-pos=3 \
         --padding=1,2 \
         --margin=2%,5% \

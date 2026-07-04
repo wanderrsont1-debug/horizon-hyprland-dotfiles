@@ -85,7 +85,7 @@ The setup scripts are written to auto detect your hardware and set the appropria
 after installing arch, boot into the os and then run this in the terminal. 
 
 
-# Dusky ISO is now available!!, its an offline installer.
+# Horizon ISO is now available!!, its an offline installer.
 ```
 https://drive.google.com/drive/folders/1P368khN1p-IfzWoaDnPyQNEcpkKBsOte?usp=sharing
 ```
@@ -104,13 +104,13 @@ sudo pacman -Syu --needed git
 
 clone the repo
 ```
-git clone --bare --depth 1 https://github.com/dusklinux/dusky.git $HOME/dusky
+git clone --bare --depth 1 https://github.com/dusklinux/horizon.git $HOME/horizon
 ```
 
 deploy the files on your system.
 
 ```bash
-git --git-dir=$HOME/dusky/ --work-tree=$HOME checkout -f
+git --git-dir=$HOME/horizon/ --work-tree=$HOME checkout -f
 ```
 
 > Note:
@@ -223,7 +223,7 @@ Note : i've purposely decided to not use quickshell for anything in the interest
 - neovim configured, you could also use your own later on. or install lazyvim or any another neovim rice
 
 
-- github repo integration so you can easily create your own repo to backup all files, this uses bare repo so your specific existing files, listed in ~/.git_dusky_list will backup to github, you can add more files/remove existing ones from this text file.
+- github repo integration so you can easily create your own repo to backup all files, this uses bare repo so your specific existing files, listed in ~/.git_horizon_list will backup to github, you can add more files/remove existing ones from this text file.
 
 - btrfs system compression ratio - scans your os files to see how much space zstd compression is saving you. 
 

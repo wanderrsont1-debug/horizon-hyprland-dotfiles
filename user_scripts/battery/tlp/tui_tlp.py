@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 ===============================================================================
-DUSKY TUI: TLP POWER MANAGEMENT MASTER SCHEMA (VERSION 1.10)
+HORIZON TUI: TLP POWER MANAGEMENT MASTER SCHEMA (VERSION 1.10)
 ===============================================================================
 Target: ~/tlp.conf (Testing)
 Engine: ini
@@ -15,7 +15,7 @@ REQUIRE_ROOT = True
 
 APP_TITLE = "TLP Configurator"
 DEFAULT_MODE = "auto"
-THEME_FILE = "~/.config/matugen/generated/dusky_tui.json" 
+THEME_FILE = "~/.config/matugen/generated/horizon_tui.json" 
 
 ENABLE_USER_PRESETS = True
 USER_PRESETS_TAB = "Profiles"

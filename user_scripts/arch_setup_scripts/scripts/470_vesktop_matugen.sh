@@ -59,7 +59,7 @@ for _arg in "$@"; do
 done
 
 # 2. Define State File
-readonly STATE_FILE="$HOME/.config/dusky/settings/vesktop_matugen"
+readonly STATE_FILE="$HOME/.config/horizon/settings/vesktop_matugen"
 
 # 3. Logic Flow
 if [[ "$_auto_mode" == "false" ]]; then
@@ -156,7 +156,7 @@ elif grep -qE '^[[:space:]]*#.*\[templates\.vesktop\]' "$MATUGEN_CONFIG"; then
     
     _tmp=$(mktemp -p "${MATUGEN_CONFIG%/*}" .matugen.XXXXXXXXXX)
     
-    # 1:1 Robust AWK engine ported from Dusky TUI
+    # 1:1 Robust AWK engine ported from Horizon TUI
     TARGET_KEY="vesktop" NEW_VALUE="true" \
     LC_ALL=C awk '
     function is_blank(line) {

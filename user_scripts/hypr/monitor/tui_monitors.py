@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 ===============================================================================
-DUSKY TUI: MONITORS & RENDER CONFIGURATION SCHEMA
+HORIZON TUI: MONITORS & RENDER CONFIGURATION SCHEMA
 ===============================================================================
 """
 
@@ -18,7 +18,7 @@ APP_TITLE = "Monitors & Render Settings"
 # 2. UI & ENVIRONMENT BEHAVIOR
 # =============================================================================
 DEFAULT_MODE = "auto"
-THEME_FILE = "~/.config/matugen/generated/dusky_tui.json"
+THEME_FILE = "~/.config/matugen/generated/horizon_tui.json"
 
 # =============================================================================
 # 3. TABS DEFINITION

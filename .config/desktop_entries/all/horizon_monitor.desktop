@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=Horizon Monitor Wizard
+GenericName=Display Configuration
+Comment=Configure Hyprland monitors, resolution, and scaling
+Exec=uwsm-app -- foot --app-id=horizon_tui python /home/dusk/user_scripts/horizon_tui/python/main/main.py /home/dusk/user_scripts/hypr/monitor/monitor_wizard.py
+Icon=preferences-desktop-display
+Terminal=false
+Categories=Settings;Hardware;System;
+Keywords=horizon;display;screen;monitor;resolution;scale;

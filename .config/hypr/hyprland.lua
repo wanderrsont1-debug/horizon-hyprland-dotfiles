@@ -21,7 +21,7 @@ HOME = os.getenv("HOME")
 -- Path to scripts
 -- -----------------------------------------------------
 
-dusky_scripts = HOME .. "/user_scripts/"
+horizon_scripts = HOME .. "/user_scripts/"
 
 
 
@@ -33,7 +33,7 @@ dofile(HOME .. "/.config/matugen/generated/hyprland-colors.lua")
 
 -- =============================================================================
 -- HYPRLAND MAIN CONFIGURATION
--- User: [dusky]
+-- User: [horizon]
 -- System: UWSM Managed
 -- =============================================================================
 -- NOTE: All files are loaded with require() — NOT dofile().

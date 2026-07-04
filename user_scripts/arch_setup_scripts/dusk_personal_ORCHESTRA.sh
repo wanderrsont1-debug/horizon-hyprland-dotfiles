@@ -25,10 +25,10 @@ SCRIPT_SEARCH_DIRS=(
     "${HOME}/user_scripts/theme_matugen/config"
     "${HOME}/user_scripts/firefox/theme_matugen"
     "${HOME}/user_scripts/firefox"
-    "${HOME}/user_scripts/tts_stt/dusky_kokoro"
-    "${HOME}/user_scripts/tts_stt/dusky_parakeet"
+    "${HOME}/user_scripts/tts_stt/horizon_kokoro"
+    "${HOME}/user_scripts/tts_stt/horizon_parakeet"
     "${HOME}/user_scripts/nvim"
-    "${HOME}/user_scripts/mako_osd/dusky_keys"
+    "${HOME}/user_scripts/mako_osd/horizon_keys"
     # "${HOME}/my_other_scripts"
     # "/opt/shared_team_scripts"
 )
@@ -40,7 +40,7 @@ SCRIPT_SEARCH_DIRS=(
 # search directories.
 # Format: ["script_name.sh"]="path/relative/to/home/script_name.sh"
 declare -A SCRIPT_CONFLICT_RESOLUTIONS=(
-    # ["update_checker.sh"]="user_scripts/update_dusky/update_checker.sh"
+    # ["update_checker.sh"]="user_scripts/update_horizon/update_checker.sh"
 )
 
 # Delay (in seconds) after each successful script. Set to 0 to disable.
@@ -91,7 +91,7 @@ INSTALL_SEQUENCE=(
     "U | 135_battery_notify_service.sh"
     "U | 137_snapper_isolation_subvolume.sh --auto"
 
-    "U | dusky_matugen_config_tui.sh --smart"
+    "U | horizon_matugen_config_tui.sh --smart"
 
     "U | 140_fc_cache_fv.sh"
     "U | 145_matugen_directories.py"
@@ -162,7 +162,7 @@ INSTALL_SEQUENCE=(
     "U | 434_wayclick_soundpacks_download.sh --auto"
     "U | 435_key_sound_wayclick_setup.sh --setup"
 
-    "U | dusky_keys.sh --setup"
+    "U | horizon_keys.sh --setup"
 
     "U | 440_config_bat_notify.sh --default"
     "U | 455_hyprctl_reload.sh"
@@ -171,7 +171,7 @@ INSTALL_SEQUENCE=(
     "U | 470_vesktop_matugen.sh"
     "S | 473_add_user_to_group.sh"
     "U | 475_reverting_sleep_timeout.sh"
-    "U | 480_dusky_commands.sh"
+    "U | 480_horizon_commands.sh"
     "S | 485_sudoers_nopassword.sh"
 
 # ------ CUSTOM PATH SCRIPTS -------
@@ -179,7 +179,7 @@ INSTALL_SEQUENCE=(
     "U | wallpaper_selector.py --build-cache"
     "U | kokoro_installer.sh"
     "U | parakeet_installer.sh"
-    "U | dusky_neovim_manager.sh -a -t dusky"
+    "U | horizon_neovim_manager.sh -a -t horizon"
 
 )
 

@@ -174,7 +174,7 @@ replace the entire xml file with this.
 > [!TIP] Automated Pinning Configuration Script
 > You can automatically generate and apply these pinning settings for your specific host CPU topology (P-cores, E-cores, AMD SMT, etc.) by running:
 > ```bash
-> /home/new/user_scripts/dusky_vm/passthrough/35_cpu_pinning_generator.py
+> /home/new/user_scripts/horizon_vm/passthrough/35_cpu_pinning_generator.py
 > ```
 
 Otherwise, paste the following blocks below the `<vcpu>` tag manually:

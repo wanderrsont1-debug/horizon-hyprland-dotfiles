@@ -8,7 +8,7 @@ readonly ZIP_URL="https://github.com/dusklinux/wayclick_soundpacks/archive/refs/
 readonly TARGET_DIR="${HOME:?HOME not set}/.config/wayclick"
 readonly CACHE_DIR="${TARGET_DIR}/.dusk-soundpacks-cache"
 readonly CACHE_FILE="${CACHE_DIR}/dusk-soundpacks.zip"
-readonly SETTINGS_DIR="${HOME:?HOME not set}/.config/dusky/settings"
+readonly SETTINGS_DIR="${HOME:?HOME not set}/.config/horizon/settings"
 readonly STATE_FILE="${SETTINGS_DIR}/wayclick_soundpack_git"
 
 # --- Argument Parsing --------------------------------------------------------

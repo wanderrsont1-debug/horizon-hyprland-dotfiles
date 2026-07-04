@@ -49,16 +49,16 @@ declare -i DEPLOYED_COUNT=0
 
 declare -a COPY_TASKS=(
     # 0. User Scripts Directory (Directory contents)
-    # "dusky/user_scripts/ :: /etc/skel/Documents/user_scripts"
+    # "horizon/user_scripts/ :: /etc/skel/Documents/user_scripts"
 
     # 1. Deployment Script (Script -> Executable)
     "deploy_dotfiles.sh :: /etc/skel/deploy_dotfiles.sh"
 
     # 2. Zsh Config (Config -> Not Executable)
-    "dusky/.zshrc :: /etc/skel/.zshrc"
+    "horizon/.zshrc :: /etc/skel/.zshrc"
 
     # 3. Network Manager Script
-    "dusky/user_scripts/network_manager/tui_dusky_network.py :: /etc/skel/wifi_connect.sh"
+    "horizon/user_scripts/network_manager/tui_horizon_network.py :: /etc/skel/wifi_connect.sh"
 )
 
 # Files matching these patterns will be forced to be executable (755)

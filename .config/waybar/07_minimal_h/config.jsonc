@@ -150,11 +150,11 @@
     },
 
     "custom/updates": {
-        "exec": "tail -F ~/.config/dusky/settings/waybar_update_counter_h 2>/dev/null",
+        "exec": "tail -F ~/.config/horizon/settings/waybar_update_counter_h 2>/dev/null",
         "return-type": "json",
         "format": "{}",
         "tooltip": true,
-        "on-click": "uwsm-app -- kitty --class system_update.sh --hold -e ~/user_scripts/update_dusky/system_update.sh --all"
+        "on-click": "uwsm-app -- kitty --class system_update.sh --hold -e ~/user_scripts/update_horizon/system_update.sh --all"
     },
 
     "pulseaudio": {
@@ -186,7 +186,7 @@
         "tooltip-format-wifi": "󰤨 {essid}\n󱑽 {signalStrength}%\n󰩟 {ipaddr}",
         "tooltip-format-ethernet": "󰈀 Ethernet\n󰩟 {ipaddr}",
         "tooltip-format-disconnected": "󰤭 Disconnected",
-        "on-click": "foot --app-id=dusky_tui python $HOME/user_scripts/dusky_tui/python/main/main.py $HOME/user_scripts/network_manager/tui_dusky_network.py"
+        "on-click": "foot --app-id=horizon_tui python $HOME/user_scripts/horizon_tui/python/main/main.py $HOME/user_scripts/network_manager/tui_horizon_network.py"
     },
 
     "battery": {
@@ -221,7 +221,7 @@
         "format": "",
         "tooltip-format": "Power Menu\nRight-click: Control Center",
         "on-click": "uwsm-app -- ~/user_scripts/wlogout/wlogout_scale.sh",
-        "on-click-right": "uwsm-app -- python3 ~/user_scripts/dusky_system/control_center/horizon_control_center.py"
+        "on-click-right": "uwsm-app -- python3 ~/user_scripts/horizon_system/control_center/horizon_control_center.py"
     },
 
     "custom/inhibit-suspend": {
@@ -234,9 +234,10 @@
         "escape": true
     }
 
-    "temperature": {
-        "hwmon-path-guess": true,
-        "critical-threshold": 80,
+    ,
+	\"temperature\": {
+        "thermal-zone": 0,
+		        "critical-threshold": 80,
         "format": " {temperatureC}°C {icon} ",
         "format-icons": ["", "", ""]
     },

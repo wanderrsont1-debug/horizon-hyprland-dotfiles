@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Application
+Name=Horizon Toggle Service
+GenericName=User Services
+Comment=Configure Service Settings
+Exec=uwsm-app -- foot --app-id=horizon_tui python /home/dusk/user_scripts/horizon_tui/python/main/main.py /home/dusk/user_scripts/services/tui_service_toggle.py
+Terminal=false
+Categories=Settings;System;
+Keywords=horizon;service;network;nightlight;timeout;battery;toggle;
+Icon=preferences-system-power
+StartupNotify=true

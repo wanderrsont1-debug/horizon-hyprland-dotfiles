@@ -10,7 +10,7 @@ set -Eeuo pipefail
 
 # --- Configuration ---
 readonly WAYBAR_DIR="${XDG_CONFIG_HOME:-$HOME/.config}/waybar"
-readonly STATE_DIR="${XDG_CONFIG_HOME:-$HOME/.config}/dusky/settings"
+readonly STATE_DIR="${XDG_CONFIG_HOME:-$HOME/.config}/horizon/settings"
 readonly STATE_FILE="${STATE_DIR}/time_format"
 
 # --- Formatting ---

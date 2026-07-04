@@ -84,7 +84,7 @@ class IPCClient:
     async def send_request(self, method: str, params: Optional[Dict[str, Any]] = None) -> Dict[str, Any]:
         """Send an RPC request to the daemon and await its response."""
         if not os.path.exists(SOCKET_PATH):
-            return {"status": "error", "error": f"Dusky Network Limiter daemon is not running (socket {SOCKET_PATH} not found)."}
+            return {"status": "error", "error": f"Horizon Network Limiter daemon is not running (socket {SOCKET_PATH} not found)."}
             
         try:
             reader, writer = await asyncio.open_unix_connection(SOCKET_PATH)

@@ -360,7 +360,7 @@ Libadwaita GTK 4 Prompt
 > #!/usr/bin/env python3
 > """
 > ===============================================================================
-> DUSKY TUI: MASTER CONFIGURATION SCHEMA (INI PARADIGM)
+> HORIZON TUI: MASTER CONFIGURATION SCHEMA (INI PARADIGM)
 > ===============================================================================
 > 
 > TARGET MAPPING VISUALIZATION:
@@ -398,7 +398,7 @@ Libadwaita GTK 4 Prompt
 >      possible, ideally ONE WORD (e.g., use "Logging" instead of "Enable System Logging").
 > 
 > 3. The Theme File Axiom (CRITICAL):
->    - The `THEME_FILE` path must be exactly preserved (`~/.config/matugen/generated/dusky_tui.json`).
+>    - The `THEME_FILE` path must be exactly preserved (`~/.config/matugen/generated/horizon_tui.json`).
 >    - This file MUST ALWAYS exist at this exact path. Do not alter the string.
 > 
 > 4. Contiguous Grouping Rule (Do NOT interleave):
@@ -451,7 +451,7 @@ Libadwaita GTK 4 Prompt
 > # =============================================================================
 > ENGINE_TYPE = "ini"                        # STRICTLY: "ini"
 > TARGET_FILE = "~/.config/mako/config"      # Standard INI target path
-> APP_TITLE = "Dusky Config"                 # Displayed in the TUI border
+> APP_TITLE = "Horizon Config"                 # Displayed in the TUI border
 > 
 > # =============================================================================
 > # 2. UI & ENVIRONMENT BEHAVIOR
@@ -459,7 +459,7 @@ Libadwaita GTK 4 Prompt
 > DEFAULT_MODE = "auto"                      # "auto" (instant save) | "batch" (Ctrl+S required)
 > 
 > # STRICT REQUIREMENT: This exact path must always exist. Do not change.
-> THEME_FILE = "~/.config/matugen/generated/dusky_tui.json" 
+> THEME_FILE = "~/.config/matugen/generated/horizon_tui.json" 
 > 
 > ENABLE_USER_PRESETS = True                 # Allows users to save/delete profiles dynamically
 > USER_PRESETS_TAB = "Profiles"              # Must exactly match a ONE-WORD tab name below
@@ -673,7 +673,7 @@ Libadwaita GTK 4 Prompt
 > #!/usr/bin/env python3
 > """
 > ===============================================================================
-> DUSKY TUI: MASTER CONFIGURATION SCHEMA
+> HORIZON TUI: MASTER CONFIGURATION SCHEMA
 > ===============================================================================
 > 
 > TARGET MAPPING VISUALIZATION:
@@ -776,7 +776,7 @@ Libadwaita GTK 4 Prompt
 >    - Write it so users who have absolutely no idea what the setting does can easily configure it.
 > 
 > 22. The Theme File Axiom (CRITICAL REQUIREMENT):
->    - The `THEME_FILE` path must be EXACTLY preserved as `~/.config/matugen/generated/dusky_tui.json`.
+>    - The `THEME_FILE` path must be EXACTLY preserved as `~/.config/matugen/generated/horizon_tui.json`.
 >    - This file MUST ALWAYS exist at this exact path. Do not alter, abbreviate, or omit this string under any circumstances.
 > 
 > 23. Multi-File & Multi-Engine Overrides (NEW):
@@ -799,7 +799,7 @@ Libadwaita GTK 4 Prompt
 > # =============================================================================
 > ENGINE_TYPE = "lua"                        # STRICTLY: "ini" or "lua"
 > TARGET_FILE = "~/.config/hypr/edit_here/source/appearance.lua"   # Where the engine writes the data
-> APP_TITLE = "Dusky Appearance"             # Displayed in the TUI border
+> APP_TITLE = "Horizon Appearance"             # Displayed in the TUI border
 > 
 > # =============================================================================
 > # 2. UI & ENVIRONMENT BEHAVIOR
@@ -807,14 +807,14 @@ Libadwaita GTK 4 Prompt
 > DEFAULT_MODE = "auto"                      # "auto" (instant save) | "batch" (Ctrl+S required)
 > 
 > # STRICT REQUIREMENT: This exact path must always exist. Do not change or omit.
-> THEME_FILE = "~/.config/matugen/generated/dusky_tui.json"
+> THEME_FILE = "~/.config/matugen/generated/horizon_tui.json"
 > 
 > ENABLE_USER_PRESETS = True                 # Allows users to save/delete profiles dynamically
 > USER_PRESETS_TAB = "Profiles"              # Must exactly match a ONE-WORD tab name below
 > 
 > # OPTIONAL: Displays a popup when the TUI is first launched
 > GLOBAL_POPUP = {
->     "title": "Welcome to Dusky",
+>     "title": "Welcome to Horizon",
 >     "message": "Adjusting Wayland attributes directly interfaces with the compositor.",
 >     "level": "info",           # "info" | "warning" | "danger" | "success"
 >     "require_confirm": False,  # If True, shows Cancel/Confirm buttons
@@ -1047,7 +1047,7 @@ Libadwaita GTK 4 Prompt
 
 > [!NOTE]- engine router
 > ```ini
-> # Dusky TUI: Engine Routing Cheat Sheet
+> # Horizon TUI: Engine Routing Cheat Sheet
 > 
 > When you create a new schema, look at the target config file. Match its appearance to one of the visual examples below to know exactly what to set `ENGINE_TYPE` to.
 > 

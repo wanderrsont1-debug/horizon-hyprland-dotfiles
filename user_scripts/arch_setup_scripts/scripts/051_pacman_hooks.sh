@@ -39,11 +39,11 @@ readonly HOOK_DIR="/etc/pacman.d/hooks"
 #   'install' -> Sync file, verify syntax, set permissions
 #   'remove'  -> Delete from system hooks
 readonly HOOKS_CONFIG=(
-    # Dusky Waybar update counter hook
-#    "${REAL_HOME}/user_scripts/pacman/hooks/dusky_waybar_updates.hook | install"
+    # Horizon Waybar update counter hook
+#    "${REAL_HOME}/user_scripts/pacman/hooks/horizon_waybar_updates.hook | install"
 
-    # Dusky Waybar update counter hook
-    "${REAL_HOME}/user_scripts/pacman/hooks/dusky_waybar_updates.hook | remove"
+    # Horizon Waybar update counter hook
+    "${REAL_HOME}/user_scripts/pacman/hooks/horizon_waybar_updates.hook | remove"
 
     # Add future hooks here:
     # "${REAL_HOME}/user_scripts/pacman/hooks/clean-cache.hook | remove # Inline comments now supported"

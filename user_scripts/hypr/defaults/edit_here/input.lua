@@ -3,7 +3,7 @@
 -- ==============================================================================
 -- Add your custom input settings here.
 -- These will override or add to the defaults found in ~/.config/hypr/source/
--- This file can also be managed with dusky input from the rofi menu or
+-- This file can also be managed with horizon input from the rofi menu or
 -- from horizon control center.
 
 -- See: https://wiki.hypr.land/Configuring/Basics/Variables/

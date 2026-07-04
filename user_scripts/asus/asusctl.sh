@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # -----------------------------------------------------------------------------
-# Dusky TUI Engine - asusctl v6.3.4 Edition (Aura Supported)
+# Horizon TUI Engine - asusctl v6.3.4 Edition (Aura Supported)
 # -----------------------------------------------------------------------------
 # Target: Arch Linux / Hyprland / asusd
 # Purpose: Deep hardware control mapping for ASUS TUF (FX507ZE)

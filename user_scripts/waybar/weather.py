@@ -51,8 +51,8 @@ WEATHER_CODES: dict[int, tuple[str, str]] = {
 }
 
 IMPERIAL_COUNTRIES = {"US", "LR", "MM"}
-STATE_FILE = Path.home() / ".config" / "dusky" / "settings" / "waybar_weather"
-TIME_STATE_FILE = Path.home() / ".config" / "dusky" / "settings" / "waybar_weather_time"
+STATE_FILE = Path.home() / ".config" / "horizon" / "settings" / "waybar_weather"
+TIME_STATE_FILE = Path.home() / ".config" / "horizon" / "settings" / "waybar_weather_time"
 IS_BACKGROUND = False
 
 HTTP_HEADERS = {

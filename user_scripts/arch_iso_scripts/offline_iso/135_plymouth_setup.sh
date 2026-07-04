@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Arch Linux (EFI + Btrfs root) | Dusky Graphical Boot & LUKS Setup
+# Arch Linux (EFI + Btrfs root) | Horizon Graphical Boot & LUKS Setup
 # CHROOT DEPLOYMENT EDITION - 100% SELF-CONTAINED (SYNTHETIC GEOMETRY)
 # ORCHESTRATOR ALIGNED: Defers initramfs generation to Phase 158.
 
@@ -10,7 +10,7 @@ export LC_ALL=C
 readonly SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" &>/dev/null && pwd)"
 
 # --- Configuration ---
-readonly THEME_NAME="dusky"
+readonly THEME_NAME="horizon"
 readonly THEME_DIR="/usr/share/plymouth/themes/${THEME_NAME}"
 readonly MKINITCPIO_CONF="/etc/mkinitcpio.conf.d/10-arch-btrfs-luks.conf"
 
@@ -63,8 +63,8 @@ EOF
 # Generate .plymouth configuration
 cat << EOF > "${THEME_DIR}/${THEME_NAME}.plymouth"
 [Plymouth Theme]
-Name=Dusky
-Description=Dusky elegant synthetic graphical LUKS prompt and splash.
+Name=Horizon
+Description=Horizon elegant synthetic graphical LUKS prompt and splash.
 ModuleName=script
 
 [script]
@@ -87,8 +87,8 @@ screen_h = Window.GetHeight();
 if (screen_w == 0) screen_w = 1920;
 if (screen_h == 0) screen_h = 1080;
 
-// --- DUSKY Text Logo (Lowercase, Smaller, Thinner) ---
-logo.image = Image.Text("dusky", 0.9, 0.9, 0.9, 1.0, "Sans Light 32");
+// --- HORIZON Text Logo (Lowercase, Smaller, Thinner) ---
+logo.image = Image.Text("horizon", 0.9, 0.9, 0.9, 1.0, "Sans Light 32");
 logo.sprite = Sprite(logo.image);
 logo.x = screen_w / 2 - logo.image.GetWidth() / 2;
 logo.y = screen_h / 2 - logo.image.GetHeight() / 2 - 40;
@@ -240,5 +240,5 @@ else
     warn "$MKINITCPIO_CONF not found. Ensure 120_mkintcpip_optimizer.sh is run before this script."
 fi
 
-info "Dusky Plymouth deployment successful."
+info "Horizon Plymouth deployment successful."
 info "Initramfs hooks are configured. Generation is deferred to 158_mkinitcpio_restore_and_generate.sh."

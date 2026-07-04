@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # =============================================================================
-# Dusky RAM Analyzer
+# Horizon RAM Analyzer
 # Target: Arch Linux Cutting-Edge (Python 3.14+, systemd 260+)
 # Scope: Interactive, mouse-driven TUI for ZRAM and memory forensic analysis.
 # =============================================================================
@@ -40,7 +40,7 @@ class MemoryHog:
         static_size = one_mb - random_size
         
         random_part = os.urandom(random_size)
-        static_part = (b"DUSKY_ZRAM_" * (static_size // 11 + 1))[:static_size]
+        static_part = (b"HORIZON_ZRAM_" * (static_size // 11 + 1))[:static_size]
         
         # Base chunk is now mathematically guaranteed to be exactly 1,048,576 bytes
         base_1mb = random_part + static_part
@@ -218,8 +218,8 @@ def build_vm_panel() -> Panel:
 
 
 # --- Main Textual Application ---
-class DuskyRAMAnalyzer(App):
-    TITLE = "DUSKY RAM ANALYZER"
+class HorizonRAMAnalyzer(App):
+    TITLE = "HORIZON RAM ANALYZER"
     
     CSS = """
     Screen {
@@ -300,7 +300,7 @@ class DuskyRAMAnalyzer(App):
 
     def compose(self) -> ComposeResult:
         # Ultra-minimalist 1-line header
-        yield Label("DUSKY RAM ANALYZER", id="custom_header")
+        yield Label("HORIZON RAM ANALYZER", id="custom_header")
         
         with Horizontal(id="main_container"):
             # Left Column
@@ -364,6 +364,6 @@ class DuskyRAMAnalyzer(App):
 
 
 if __name__ == "__main__":
-    app = DuskyRAMAnalyzer()
+    app = HorizonRAMAnalyzer()
     app.run()
-    print("\n[OK] Dusky RAM Analyzer terminated. Artificial memory loads released successfully.")
+    print("\n[OK] Horizon RAM Analyzer terminated. Artificial memory loads released successfully.")

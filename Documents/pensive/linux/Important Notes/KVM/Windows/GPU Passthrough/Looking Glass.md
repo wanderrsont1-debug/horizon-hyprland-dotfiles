@@ -155,8 +155,8 @@ These **must** be added in a single editing session. Saving after adding only th
 # Confirm your VM name first
 sudo virsh list --all
 
-# Open the XML — replace win_10_dusky with your VM name
-sudo EDITOR=nvim virsh edit win_10_dusky
+# Open the XML — replace win_10_horizon with your VM name
+sudo EDITOR=nvim virsh edit win_10_horizon
 ```
 
 ### 2.2 Add the QEMU Namespace to the Root Domain Tag
@@ -239,12 +239,12 @@ Save the XML and exit the editor. libvirt will validate the syntax.
 
 Start the VM to test:
 ```bash
-sudo virsh start win_10_dusky
+sudo virsh start win_10_horizon
 ```
 
 Confirm it boots successfully:
 ```bash
-sudo virsh domstate win_10_dusky
+sudo virsh domstate win_10_horizon
 # Expected: running
 ```
 
@@ -385,7 +385,7 @@ The `looking-glass-client` binary reads its settings from `~/.config/looking-gla
 > [!TIP] Automated Client Configuration
 > If you prefer not to configure this manually, you can run the following helper script to automatically create or merge your `client.ini` with all optimal settings (including `F6` escape key and SPICE clipboard sharing):
 > ```bash
-> /home/new/user_scripts/dusky_vm/passthrough/60_configure_client_ini.py
+> /home/new/user_scripts/horizon_vm/passthrough/60_configure_client_ini.py
 > ```
 
 Otherwise, execute the manual setup below:
@@ -473,8 +473,8 @@ Looking Glass opens but the window is black. The NVIDIA GPU is not sending frame
 
 **Fix:**
 
-1. Force shutdown the VM: `sudo virsh destroy win_10_dusky`
-2. Start it again: `sudo virsh start win_10_dusky`
+1. Force shutdown the VM: `sudo virsh destroy win_10_horizon`
+2. Start it again: `sudo virsh start win_10_horizon`
 3. Launch the client: `looking-glass-client`
 4. Click the black LG window to focus it.
 5. Press `F6` to enter capture mode (cursor disappears).
@@ -488,7 +488,7 @@ This navigates the Windows "Project" menu from "PC screen only" to "Extend", wak
 
 **Fix:**
 Host systems with `fs.protected_regular = 1` block writing to or truncating an existing `/dev/shm/looking-glass` file owned by another user.
-1. Force stop the VM: `sudo virsh destroy win_10_dusky`
+1. Force stop the VM: `sudo virsh destroy win_10_horizon`
 2. Delete the file: `sudo rm -f /dev/shm/looking-glass`
 3. Re-create and pre-allocate the memory to restore proper permissions:
    ```bash

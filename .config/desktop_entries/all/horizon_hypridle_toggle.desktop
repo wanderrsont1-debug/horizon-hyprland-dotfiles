@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=horizon Toggle Hypridle
+Comment=Enable/Disable Hypridle
+Exec=uwsm-app -- /home/dusk/user_scripts/waybar/toggle_hypridle.sh
+Terminal=false
+Categories=System;
+Keywords=horizon;hypridle;toggle;switch;
+Icon=system-suspend
+StartupNotify=true

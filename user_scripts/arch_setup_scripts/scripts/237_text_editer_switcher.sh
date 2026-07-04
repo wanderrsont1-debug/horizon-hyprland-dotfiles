@@ -3,7 +3,7 @@
 # ELITE HYPRLAND TEXT EDITOR SWITCHER - PLATINUM EDITION (v6.8)
 # =============================================================================
 #
-# BASED ON: Dusky TUI Engine v5.9 (Fully Armored)
+# BASED ON: Horizon TUI Engine v5.9 (Fully Armored)
 # TARGET:   Arch Linux / Hyprland / UWSM / Wayland
 
 set -Eeuo pipefail
@@ -33,11 +33,11 @@ declare -ra EDITOR_CATALOG=(
 # Paths
 declare -r CONF_VARS="${HOME}/.config/hypr/edit_here/source/default_apps.lua"
 declare -r CONF_BINDS="${HOME}/.config/hypr/edit_here/source/keybinds.lua"
-declare -r STATE_FILE="${HOME}/.config/dusky/settings/texteditor_switch"
-declare -r LOCK_FILE="${XDG_RUNTIME_DIR:-/tmp}/dusky_editor_switch_${UID}.lock"
+declare -r STATE_FILE="${HOME}/.config/horizon/settings/texteditor_switch"
+declare -r LOCK_FILE="${XDG_RUNTIME_DIR:-/tmp}/horizon_editor_switch_${UID}.lock"
 
 # UI Configuration
-declare -r APP_TITLE="Dusky Text Editor Switcher"
+declare -r APP_TITLE="Horizon Text Editor Switcher"
 declare -r APP_VERSION="v6.8 (Armored TUI Engine)"
 declare -ri BOX_INNER_WIDTH=60
 declare -ri MAX_DISPLAY_ROWS=10

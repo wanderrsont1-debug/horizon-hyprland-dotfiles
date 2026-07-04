@@ -8,8 +8,8 @@ from textual.reactive import reactive
 from src.ipc import IPCClient
 from src.utils import format_bytes, format_rate, BRAND_NAME
 
-class DuskyTuiApp(App):
-    """Modern Textual TUI for Dusky Network Limiter dashboard, process traffic viewer, and rule manager."""
+class HorizonTuiApp(App):
+    """Modern Textual TUI for Horizon Network Limiter dashboard, process traffic viewer, and rule manager."""
     
     TITLE = BRAND_NAME
     SUB_TITLE = "Real-time Network Traffic Control Console"
@@ -255,7 +255,7 @@ class DuskyTuiApp(App):
                 await self.refresh_data()
 
 def main():
-    DuskyTuiApp().run()
+    HorizonTuiApp().run()
 
 if __name__ == "__main__":
     main()

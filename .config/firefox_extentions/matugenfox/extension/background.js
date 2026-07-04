@@ -21,7 +21,7 @@ const state = {
 // === Config (from storage) ===
 const DEFAULT_CONFIG = {
     colorsPath: "~/.config/matugen/generated/firefox_websites.css",
-    websitesDir: "~/.config/dusky_sites",
+    websitesDir: "~/.config/horizon_sites",
     ecoMode: true,
     smoothTransitions: false,
     showSyncIndicator: true,

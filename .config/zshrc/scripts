@@ -5,7 +5,7 @@
 
 function scripts() {
     # 1. State Management & Weight Initialization
-    local state_dir="$HOME/.config/dusky/settings/scripts_fzf"
+    local state_dir="$HOME/.config/horizon/settings/scripts_fzf"
     local state_file="$state_dir/state"
     
     typeset -A weights
@@ -84,7 +84,7 @@ function scripts() {
             --tiebreak=index \
             --style=full \
             --border=rounded \
-            --border-label=" 󰟆 dusky scripts " \
+            --border-label=" 󰟆 horizon scripts " \
             --border-label-pos=center \
             --prompt=" " \
             --marker="󰐕" \

@@ -43,11 +43,11 @@ declare -ra BROWSER_CATALOG=(
 # Paths
 declare -r CONF_VARS="${HOME}/.config/hypr/edit_here/source/default_apps.lua"
 declare -r CONF_BINDS="${HOME}/.config/hypr/edit_here/source/keybinds.lua"
-declare -r STATE_FILE="${HOME}/.config/dusky/settings/browser_switch"
-declare -r LOCK_FILE="${XDG_RUNTIME_DIR:-/tmp}/dusky_browser_switch.lock"
+declare -r STATE_FILE="${HOME}/.config/horizon/settings/browser_switch"
+declare -r LOCK_FILE="${XDG_RUNTIME_DIR:-/tmp}/horizon_browser_switch.lock"
 
 # UI Configuration (Template Aligned)
-declare -r APP_TITLE="Dusky Browser Switcher"
+declare -r APP_TITLE="Horizon Browser Switcher"
 declare -r APP_VERSION="v6.8 (Armored TUI Engine)"
 declare -ri BOX_INNER_WIDTH=60
 declare -ri MAX_DISPLAY_ROWS=10

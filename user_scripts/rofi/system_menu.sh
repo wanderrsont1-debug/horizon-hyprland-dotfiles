@@ -355,7 +355,7 @@ show_utils_menu() {
 
         case "$choice" in
             '  Horizon Control Center')
-                run_app "$SCRIPTS_DIR/dusky_system/control_center/horizon_control_center.py"
+                run_app "$SCRIPTS_DIR/horizon_system/control_center/horizon_control_center.py"
                 ;;
             '󰖩  Wi-Fi (TUI)')
                 run_term "wifitui" wifitui

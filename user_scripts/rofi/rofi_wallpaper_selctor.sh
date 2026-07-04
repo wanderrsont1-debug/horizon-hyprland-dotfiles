@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # -----------------------------------------------------------------------------
 # Rofi Wallpaper Selector (Matugen V4 Aligned & UWSM Patched)
-# Target: Arch Linux / Hyprland / Dusky / UWSM
+# Target: Arch Linux / Hyprland / Horizon / UWSM
 # -----------------------------------------------------------------------------
 # Updates:
 # - Synchronized with theme_ctl.sh state machine.
@@ -22,10 +22,10 @@ readonly SCRIPT_NAME="${0##*/}"
 readonly LOCK_FILE="${XDG_RUNTIME_DIR:-/run/user/$(id -u)}/rofi-wallpaper-selector.lock"
 
 readonly WALLPAPER_DIR="$HOME/Pictures/wallpapers"
-readonly SETTINGS_DIR="$HOME/.config/dusky/settings"
-readonly FAVORITES_FILE="$SETTINGS_DIR/dusky_theme/wal_fav_list"
-readonly STATE_FILE="$SETTINGS_DIR/dusky_theme/state.conf"
-readonly FAV_STATE_FILE="$SETTINGS_DIR/dusky_theme/current_fav"
+readonly SETTINGS_DIR="$HOME/.config/horizon/settings"
+readonly FAVORITES_FILE="$SETTINGS_DIR/horizon_theme/wal_fav_list"
+readonly STATE_FILE="$SETTINGS_DIR/horizon_theme/state.conf"
+readonly FAV_STATE_FILE="$SETTINGS_DIR/horizon_theme/current_fav"
 readonly THEME_CTL="${HOME}/user_scripts/theme_matugen/theme_ctl.sh"
 
 readonly THUMB_SIZE=300
@@ -230,7 +230,7 @@ validate_config() {
     "$SETTINGS_DIR" \
     "$(dirname -- "$LOCK_FILE")" \
     "$LOG_DIR" \
-    "${SETTINGS_DIR}/dusky_theme"
+    "${SETTINGS_DIR}/horizon_theme"
 }
 
 ensure_placeholder() {
@@ -747,11 +747,11 @@ update_tracker() {
   local rel_path="$1"
   local mode
   mode=$(get_theme_mode)
-  local track_file="${SETTINGS_DIR}/dusky_theme/${mode}_wal"
+  local track_file="${SETTINGS_DIR}/horizon_theme/${mode}_wal"
   
   # Atomic write ported from theme_ctl.sh
   local tmp_track
-  tmp_track=$(mktemp "${SETTINGS_DIR}/dusky_theme/track.tmp.XXXXXX")
+  tmp_track=$(mktemp "${SETTINGS_DIR}/horizon_theme/track.tmp.XXXXXX")
   register_temp "$tmp_track"
 
   printf "%s\n" "${rel_path##*/}" > "$tmp_track"
@@ -763,7 +763,7 @@ update_fav_state() {
   
   # Atomic write ported from theme_ctl.sh
   local tmp_state
-  tmp_state=$(mktemp "${SETTINGS_DIR}/dusky_theme/current_fav.tmp.XXXXXX")
+  tmp_state=$(mktemp "${SETTINGS_DIR}/horizon_theme/current_fav.tmp.XXXXXX")
   register_temp "$tmp_state"
   
   printf '%s\n' "${fav_rel##*/}" > "$tmp_state"

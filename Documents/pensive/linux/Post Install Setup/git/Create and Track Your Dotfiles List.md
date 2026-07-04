@@ -4,7 +4,7 @@ To avoid adding files one-by-one, we will create a master list of all files and 
 
 1.  **Create the list file** in your home directory.
 ```bash
-nvim ~/.git_dusky_list
+nvim ~/.git_horizon_list
 ```
 
 2.  **Populate the file** with the paths to your desired dotfiles and directories. List one entry per line, with no extra spaces or comments. This file will also track itself.
@@ -41,7 +41,7 @@ nvim ~/.git_dusky_list
 .config/zathura/
 .config/autostart/
 .zshrc
-.git_dusky_list
+.git_horizon_list
 .config/starship.toml
 .config/mimeapps.list
 .local/share/errands/data.json
@@ -68,17 +68,17 @@ nvim ~/.zshrc
 ```
     And add the following alias:
 ```bash
-alias git_dusky_add_list='git_dusky add --pathspec-from-file=.git_dusky_list'
+alias git_horizon_add_list='git_horizon add --pathspec-from-file=.git_horizon_list'
 ```
     Remember to `source ~/.zshrc` again after saving.
 
 4.  **Run the new alias** to stage your files for the first time.
 ```bash
-git_dusky_add_list
+git_horizon_add_list
 ```
 
-5.  **Verify and commit.** Run `git_dusky status` to see all your specified files listed under "Changes to be committed." This confirms the system is working. Now, commit them to the repository's history.
+5.  **Verify and commit.** Run `git_horizon status` to see all your specified files listed under "Changes to be committed." This confirms the system is working. Now, commit them to the repository's history.
 ```bash
-git_dusky status
-git_dusky commit -m "Initial Commit: Fresh Dotfiles Backup"
+git_horizon status
+git_horizon commit -m "Initial Commit: Fresh Dotfiles Backup"
 ```

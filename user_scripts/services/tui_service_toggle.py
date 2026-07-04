@@ -3,9 +3,9 @@ from python.frontend.core_types import ConfigItem
 
 ENGINE_TYPE = "systemd"
 TARGET_FILE = "/etc/systemd/system"
-APP_TITLE = "Dusky Service Manager"
+APP_TITLE = "Horizon Service Manager"
 DEFAULT_MODE = "auto"
-THEME_FILE = "~/.config/matugen/generated/dusky_tui.json"
+THEME_FILE = "~/.config/matugen/generated/horizon_tui.json"
 
 
 TABS = [
@@ -34,13 +34,13 @@ CORE_USER_DEFS = {
         "Waybar Network Traffic Monitor",
         "Service to track network traffic. Often used in conjunction with Waybar to display real-time upload and download speeds."
     ),
-    "dusky.service": (
-        "Dusky Background Service",
-        "The primary Dusky ecosystem background service. Handles core daemon tasks required for the environment."
+    "horizon.service": (
+        "Horizon Background Service",
+        "The primary Horizon ecosystem background service. Handles core daemon tasks required for the environment."
     ),
-    "dusky_quickpanal.service": (
-        "Dusky quickpanal Service",
-        "Manages the Dusky quick access panel (Quickpanal) overlay."
+    "horizon_quickpanal.service": (
+        "Horizon quickpanal Service",
+        "Manages the Horizon quick access panel (Quickpanal) overlay."
     ),
     "update_checker.timer": (
         "Automatic Update Checker",
@@ -58,8 +58,8 @@ CORE_USER_DEFS = {
         "(Polkit) Root Password Prompt",
         "The authentication agent for Hyprland. This is what prompts you for a password when an app requests root access (like pkexec)."
     ),
-    "dusky_ram_monitor.service": (
-        "Dusky RAM Monitor Daemon",
+    "horizon_ram_monitor.service": (
+        "Horizon RAM Monitor Daemon",
         "Background monitor that alerts you if physical RAM usage exceeds 95% or ZRAM swap occupancy exceeds 90%. Clicking the alert opens an interactive Rofi menu to select and terminate memory-heavy processes before a system crash."
     )
 }
@@ -73,8 +73,8 @@ CORE_SYSTEM_DEFS = {
         "TLP Power Management",
         "Advanced power management for Linux. Applies various battery-saving tweaks to the kernel, PCI, and USB devices."
     ),
-    "dusky_cpu.service": (
-        "Dusky CPU Cores & Power Restorer",
+    "horizon_cpu.service": (
+        "Horizon CPU Cores & Power Restorer",
         "Restores your custom CPU core states and package power limit adjustments dynamically on system boot."
     ),
 
@@ -98,7 +98,7 @@ CORE_SYSTEM_DEFS = {
         "Tailscaled",
         "Allows remote access"
     ),
-    "dusky_snapshot.timer": (
+    "horizon_snapshot.timer": (
         "3 Day Auto Snapshots (Backup)",
         "Triggers a snapshot automaticaly every 3 days, while automatically cleaning up the oldest snapshot (max 6)."
     ),
@@ -106,7 +106,7 @@ CORE_SYSTEM_DEFS = {
         "ZRAM 15M Cold Pages Compressor",
         "Auto compresses cold pages in both zram0 and zram1 with zstd level 3 every 15 minutes to reclaim memory"
     ),
-    "dusky_boot_mem_reclaim.timer": (
+    "horizon_boot_mem_reclaim.timer": (
         "1Min Boot Memory Reclaimer",
         "Oneshot boot reclaimer timer. Triggers exactly 1 minute after boot to compress and swap cold initialization memory to ZRAM swap, reducing the startup memory footprint."
     ),

@@ -9,7 +9,7 @@ class FirewallManager:
     """Manages nftables rulesets and cgroup v2 directories for blocking, allowing, or marking packets."""
     
     def __init__(self, cgroup_root: str = "/sys/fs/cgroup/netctl"):
-        self.table_name = "dusky_netctl"
+        self.table_name = "horizon_netctl"
         self.cgroup_root = cgroup_root
         os.makedirs(self.cgroup_root, exist_ok=True)
         # Track active block/allow/throttle definitions

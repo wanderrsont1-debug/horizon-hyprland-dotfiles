@@ -97,7 +97,7 @@
 		"format-icons": [
 			"󰤟", "󰤢", "󰤥", "󰤨"
 		],
-		"on-click": "foot --app-id=dusky_tui python $HOME/user_scripts/dusky_tui/python/main/main.py $HOME/user_scripts/network_manager/tui_dusky_network.py",
+		"on-click": "foot --app-id=horizon_tui python $HOME/user_scripts/horizon_tui/python/main/main.py $HOME/user_scripts/network_manager/tui_horizon_network.py",
 		"on-click-right": "nmcli radio wifi off && notify-send 'Turned OFF WiFi'",
 		"tooltip-format": "<b>Gateway</b>: {gwaddr}",
 		"tooltip-format-ethernet": "<b>Interface</b>: {ifname}",
@@ -159,8 +159,8 @@
 
 	"custom/distro": {
 		"format": "󰣇",
-		"on-click": "gdbus call --session --dest com.github.dusky.controlcenter --object-path /com/github/dusky/controlcenter --method org.freedesktop.Application.Activate '{}'",
-		"on-click-right": "gdbus call --session --dest org.dusky.quickpanal --object-path /org/dusky/quickpanal --method org.freedesktop.Application.Activate '{}'",
+		"on-click": "gdbus call --session --dest com.github.horizon.controlcenter --object-path /com/github/horizon/controlcenter --method org.freedesktop.Application.Activate '{}'",
+		"on-click-right": "gdbus call --session --dest org.horizon.quickpanal --object-path /org/horizon/quickpanal --method org.freedesktop.Application.Activate '{}'",
 		"tooltip-format": "Control Center"
 	},
 
@@ -241,17 +241,17 @@
   "custom/updates-trigger": {
     "format": "",
     "exec": "echo ''",
-    "exec-if": "grep -q '\"class\":\"pending\"' ~/.config/dusky/settings/waybar_update_counter_h 2>/dev/null",
+    "exec-if": "grep -q '\"class\":\"pending\"' ~/.config/horizon/settings/waybar_update_counter_h 2>/dev/null",
     "interval": 5,
     "tooltip": false
   },
 
 	"custom/updates": {
-		"exec": "tail -F ~/.config/dusky/settings/waybar_update_counter_h 2>/dev/null",
+		"exec": "tail -F ~/.config/horizon/settings/waybar_update_counter_h 2>/dev/null",
 		"return-type": "json",
 		"format": "{}",
 		"tooltip": true,
-		"on-click": "uwsm-app -- kitty --class system_update.sh --hold -e ~/user_scripts/update_dusky/system_update.sh --all"
+		"on-click": "uwsm-app -- kitty --class system_update.sh --hold -e ~/user_scripts/update_horizon/system_update.sh --all"
 	},
 
   "custom/notifications": {
@@ -357,8 +357,8 @@
 		"format-icons": [
 			"", "", "", "", "", "", "", "", ""
 		],
-		"on-click": "uwsm-app -- ~/user_scripts/dusky_system/quickpanal/dusky_quickpanal.py",
-		"on-click-right": "uwsm-app -- ~/user_scripts/dusky_system/quickpanal/dusky_quickpanal.py",
+		"on-click": "uwsm-app -- ~/user_scripts/horizon_system/quickpanal/horizon_quickpanal.py",
+		"on-click-right": "uwsm-app -- ~/user_scripts/horizon_system/quickpanal/horizon_quickpanal.py",
 		"on-scroll-up": "brightnessctl set +5%",
 		"on-scroll-down": "brightnessctl set 5%-",
 		"tooltip": false
@@ -424,9 +424,10 @@
 
 	"custom/right_inv#1": { "format": "", "tooltip": false }
 
-    "temperature": {
-        "hwmon-path-guess": true,
-        "critical-threshold": 80,
+    ,
+	\"temperature\": {
+        "thermal-zone": 0,
+		        "critical-threshold": 80,
         "format": " {temperatureC}°C {icon} ",
         "format-icons": ["", "", ""]
     },

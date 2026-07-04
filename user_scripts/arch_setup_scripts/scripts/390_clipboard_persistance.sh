@@ -19,7 +19,7 @@ declare -r C_BOLD=$'\033[1m'
 # =============================================================================
 # Configuration
 # =============================================================================
-declare -r STATE_DIR="${HOME}/.config/dusky/settings"
+declare -r STATE_DIR="${HOME}/.config/horizon/settings"
 declare -r STATE_FILE="${STATE_DIR}/clipboard_persistance"
 declare -r DB_ENV_FILE="${STATE_DIR}/cliphist_db_env"
 

@@ -7,7 +7,7 @@
 
 # --- 1. CONFIGURATION ---
 
-# Group 0: Dusky ISO packages
+# Group 0: Horizon ISO packages
 declare -ar pkgs_offline=(
   "mkinitcpio" "glaze" "python-cssselect" "base" "base-devel" "python-lxml" "python-certifi" "python-charset-normalizer" "python-idna" "python-requests" "python-urllib3" "deno" "yt-dlp" "yt-dlp-ejs" "hunspell" "xf86-input-libinput" "xorg-xauth" "boost-libs" "plymouth"
  )
@@ -93,7 +93,7 @@ declare -ar pkgs_btrfs_snapshot=(
 )
 
 declare -ar GROUP_LABELS=(
-  "Dusky ISO packages"
+  "Horizon ISO packages"
   "Graphics & Drivers"
   "Hyprland Core"
   "GUI Appearance"

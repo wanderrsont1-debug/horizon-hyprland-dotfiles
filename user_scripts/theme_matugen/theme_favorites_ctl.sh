@@ -3,7 +3,7 @@ set -euo pipefail
 # ---------------- CONFIG ----------------
 
 WALL_DIR="$HOME/Pictures/wallpapers/active_theme"
-STATE_DIR="$HOME/.config/dusky/settings/dusky_theme"
+STATE_DIR="$HOME/.config/horizon/settings/horizon_theme"
 FAV_FILE="$STATE_DIR/favorites.list"
 CACHE_FILE="$STATE_DIR/current_wallpaper.cache"
 INDEX_FILE="$STATE_DIR/favorites.index"

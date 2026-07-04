@@ -111,9 +111,9 @@ post_hook   = '''
   pkill -SIGUSR1 -x kitty || :
 '''
 
-[templates.dusky_tui]
-input_path  = '~/.config/matugen/templates/dusky_tui.json'
-output_path = '~/.config/matugen/generated/dusky_tui.json'
+[templates.horizon_tui]
+input_path  = '~/.config/matugen/templates/horizon_tui.json'
+output_path = '~/.config/matugen/generated/horizon_tui.json'
 
 [templates.foot]
 input_path  = '~/.config/matugen/templates/foot-colors.ini'
@@ -304,16 +304,16 @@ post_hook   = '''
 # input_path  = '/dev/null'
 # output_path = '/dev/null'
 # post_hook   = '''
-#   systemctl --user reset-failed dusky.service || :
-#   systemctl --user restart dusky.service || :
+#   systemctl --user reset-failed horizon.service || :
+#   systemctl --user restart horizon.service || :
 # '''
 
-# [templates.dusky_quickpanal]
+# [templates.horizon_quickpanal]
 # input_path  = '/dev/null'
 # output_path = '/dev/null'
 # post_hook   = '''
-#   systemctl --user reset-failed dusky_quickpanal.service || :
-#   systemctl --user restart dusky_quickpanal.service || :
+#   systemctl --user reset-failed horizon_quickpanal.service || :
+#   systemctl --user restart horizon_quickpanal.service || :
 # '''
 
 [templates.hyprpolkitagent]

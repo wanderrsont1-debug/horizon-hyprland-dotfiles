@@ -130,7 +130,7 @@ def deploy_systemd_units() -> None:
     info("Deploying boot-time memory reclaim systemd units...")
     
     # Secure Self-Installation prevents dead systemd units if the source file is moved/deleted
-    install_path = Path("/usr/local/bin/dusky_boot_mem_reclaim")
+    install_path = Path("/usr/local/bin/horizon_boot_mem_reclaim")
     current_script = Path(os.path.abspath(__file__))
     
     if current_script != install_path:
@@ -139,7 +139,7 @@ def deploy_systemd_units() -> None:
         os.chmod(install_path, 0o755)
         ok(f"Binary securely installed to {install_path}")
     
-    service_path = Path("/etc/systemd/system/dusky_boot_mem_reclaim.service")
+    service_path = Path("/etc/systemd/system/horizon_boot_mem_reclaim.service")
     service_content = f"""[Unit]
 Description=Boot-time Cold Memory Reclaimer
 After=local-fs.target
@@ -151,7 +151,7 @@ ExecStart={sys.executable} {install_path} --run
     write_file_atomic(service_path, service_content)
     ok(f"Service unit written to {service_path}")
     
-    timer_path = Path("/etc/systemd/system/dusky_boot_mem_reclaim.timer")
+    timer_path = Path("/etc/systemd/system/horizon_boot_mem_reclaim.timer")
     timer_content = """[Unit]
 Description=Trigger Boot-time Cold Memory Reclaimer 1 minute after boot
 
@@ -167,8 +167,8 @@ WantedBy=timers.target
     info("Reloading systemd daemon...")
     subprocess.run(["systemctl", "daemon-reload"], check=True)
     
-    info("Enabling and starting dusky_boot_mem_reclaim.timer...")
-    subprocess.run(["systemctl", "enable", "--now", "dusky_boot_mem_reclaim.timer"], check=True)
+    info("Enabling and starting horizon_boot_mem_reclaim.timer...")
+    subprocess.run(["systemctl", "enable", "--now", "horizon_boot_mem_reclaim.timer"], check=True)
     
     ok("Boot-time reclaimer timer is active. Cold memory will be purged 1 minute after boot.")
 

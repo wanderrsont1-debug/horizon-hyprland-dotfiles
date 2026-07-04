@@ -2,7 +2,7 @@
 # ==============================================================================
 # Script: mouse_button_reverse.sh
 # Purpose: Toggles mouse handedness in Hyprland (Lua & Conf Hybrid Support)
-# Engine: Dusky TUI Engine (Advanced Hybrid Core)
+# Engine: Horizon TUI Engine (Advanced Hybrid Core)
 # Usage:  ./mouse_button_reverse.sh [ --left | --right | --toggle ]
 #         No args = interactive TUI toggle
 # ==============================================================================

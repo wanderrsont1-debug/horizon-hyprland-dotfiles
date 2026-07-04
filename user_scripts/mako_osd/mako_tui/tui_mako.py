@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 """
 ===============================================================================
-DUSKY TUI: MAKO MATUGEN TEMPLATE SCHEMA (INI PARADIGM)
+HORIZON TUI: MAKO MATUGEN TEMPLATE SCHEMA (INI PARADIGM)
 ===============================================================================
 Targeting the Matugen pre-processor template. Allows granular control over 
-base geometry, urgency states, and all Dusky custom applet modules.
+base geometry, urgency states, and all Horizon custom applet modules.
 ===============================================================================
 """
 
@@ -21,7 +21,7 @@ APP_TITLE = "Mako Template Config"
 # 2. UI & ENVIRONMENT BEHAVIOR
 # =============================================================================
 DEFAULT_MODE = "auto"                      
-THEME_FILE = "~/.config/matugen/generated/dusky_tui.json" 
+THEME_FILE = "~/.config/matugen/generated/horizon_tui.json" 
 
 ENABLE_USER_PRESETS = True                 
 USER_PRESETS_TAB = "Profiles"              
@@ -519,7 +519,7 @@ SCHEMA = {
     ],
 
     # -------------------------------------------------------------------------
-    # TAB 4: MODULES (Dusky App Specific Configurations)
+    # TAB 4: MODULES (Horizon App Specific Configurations)
     # -------------------------------------------------------------------------
     4: [
         # =====================================================================
@@ -554,10 +554,10 @@ SCHEMA = {
 
         ConfigItem(
             label="Updater", key="menu_updater", scope="DEFAULT", type_="menu", default=None, is_parent=True, group="Apps",
-            extended_help="**Dusky Updater**\n\nHandles update alerts spawned by the system dotfile synchronization scripts."
+            extended_help="**Horizon Updater**\n\nHandles update alerts spawned by the system dotfile synchronization scripts."
         ),
-        ConfigItem(label="Layer", key="layer", scope='summary="Dusky Dotfiles"', type_="cycle", default="overlay", options=["background", "bottom", "top", "overlay"], parent_ref="menu_updater", extended_help="**Updater Layer**\n\nArranges the update notification at a specific Wayland surface layer."),
-        ConfigItem(label="OnClick", key="on-button-left", scope='summary="Dusky Dotfiles"', type_="string", default="exec kitty --class update_dusky.sh --hold ~/user_scripts/update_dusky/update_dusky.sh", parent_ref="menu_updater", extended_help="**Trigger Update**\n\nShell script executed on interaction to launch the update terminal."),
+        ConfigItem(label="Layer", key="layer", scope='summary="Horizon Dotfiles"', type_="cycle", default="overlay", options=["background", "bottom", "top", "overlay"], parent_ref="menu_updater", extended_help="**Updater Layer**\n\nArranges the update notification at a specific Wayland surface layer."),
+        ConfigItem(label="OnClick", key="on-button-left", scope='summary="Horizon Dotfiles"', type_="string", default="exec kitty --class update_horizon.sh --hold ~/user_scripts/update_horizon/update_horizon.sh", parent_ref="menu_updater", extended_help="**Trigger Update**\n\nShell script executed on interaction to launch the update terminal."),
 
         # =====================================================================
         # GROUP: OSD (On-Screen Display for Volume/Brightness)
@@ -589,65 +589,65 @@ SCHEMA = {
         # =====================================================================
         ConfigItem(
             label="Keys", key="menu_keys", scope="DEFAULT", type_="menu", default=None, is_parent=True, group="Keys",
-            extended_help="**Keyboard Layout Display**\n\nThe quick popup indicating language or keyboard layout swaps. Targets notifications pushed with `app-name=dusky-keys`."
+            extended_help="**Keyboard Layout Display**\n\nThe quick popup indicating language or keyboard layout swaps. Targets notifications pushed with `app-name=horizon-keys`."
         ),
-        ConfigItem(label="Anchor", key="anchor", scope="app-name=dusky-keys", type_="cycle", default="bottom-center", options=["top-right", "top-center", "top-left", "bottom-right", "bottom-center", "bottom-left", "center-right", "center-left", "center"], parent_ref="menu_keys", extended_help="**Keys Position**\n\nScreen anchor for the layout notification."),
-        ConfigItem(label="Layer", key="layer", scope="app-name=dusky-keys", type_="cycle", default="overlay", options=["background", "bottom", "top", "overlay"], parent_ref="menu_keys", extended_help="**Keys Layer**\n\nArranges the layout indicator at a specific Wayland surface layer."),
-        ConfigItem(label="Width", key="width", scope="app-name=dusky-keys", type_="int", default=200, min_val=50, max_val=800, step=10, parent_ref="menu_keys", extended_help="**Keys Width**\n\nWidth of the layout text box."),
-        ConfigItem(label="Height", key="height", scope="app-name=dusky-keys", type_="int", default=40, min_val=10, max_val=200, step=2, parent_ref="menu_keys", extended_help="**Keys Height**\n\nHeight of the layout text box."),
-        ConfigItem(label="Margin", key="margin", scope="app-name=dusky-keys", type_="string", default="0,0,0,0", parent_ref="menu_keys", extended_help="**Keys Margin**\n\nMargin parameters controlling placement offset."),
-        ConfigItem(label="Padding", key="padding", scope="app-name=dusky-keys", type_="string", default="0", parent_ref="menu_keys", extended_help="**Keys Padding**\n\nInternal spacing inside the layout text box."),
-        ConfigItem(label="Size", key="border-size", scope="app-name=dusky-keys", type_="int", default=0, min_val=0, max_val=10, step=1, parent_ref="menu_keys", extended_help="**Keys Border Thickness**\n\nStroke thickness for the popup."),
-        ConfigItem(label="Radius", key="border-radius", scope="app-name=dusky-keys", type_="int", default=20, min_val=0, max_val=50, step=1, parent_ref="menu_keys", extended_help="**Keys Corner Smoothing**\n\nRounding applied to the layout indicator."),
-        ConfigItem(label="Icons", key="icons", scope="app-name=dusky-keys", type_="bool", default=False, parent_ref="menu_keys", extended_help="**Keys Icons**\n\nToggles display of keyboard/language icons."),
-        ConfigItem(label="Align", key="text-alignment", scope="app-name=dusky-keys", type_="cycle", default="center", options=["left", "center", "right"], parent_ref="menu_keys", extended_help="**Keys Text Alignment**\n\nJustification of the layout string."),
-        ConfigItem(label="Font", key="font", scope="app-name=dusky-keys", type_="string", default="monospace 14", parent_ref="menu_keys", extended_help="**Keys Font Override**\n\nCustom typography solely for this specific popup."),
-        ConfigItem(label="Format", key="format", scope="app-name=dusky-keys", type_="string", default="%s", parent_ref="menu_keys", extended_help="**Keys Text Format**\n\nStructures the text payload (e.g., %s = summary only)."),
-        ConfigItem(label="Timeout", key="default-timeout", scope="app-name=dusky-keys", type_="int", default=1500, min_val=0, max_val=10000, step=100, parent_ref="menu_keys", extended_help="**Keys Lifespan**\n\nHow rapidly the layout popup clears."),
-        ConfigItem(label="Background", key="background-color", scope="app-name=dusky-keys", type_="color", default="{{colors.surface.default.hex}}66", options=COLOR_OPTIONS, hints=COLOR_HINTS, parent_ref="menu_keys", extended_help="**Keys Background Fill**" + ALPHA_HELP),
-        ConfigItem(label="Text", key="text-color", scope="app-name=dusky-keys", type_="color", default="{{colors.on_surface.default.hex}}", options=COLOR_OPTIONS, hints=COLOR_HINTS, parent_ref="menu_keys", extended_help="**Keys Text Color**" + ALPHA_HELP),
-        ConfigItem(label="Border", key="border-color", scope="app-name=dusky-keys", type_="color", default="{{colors.outline_variant.default.hex}}66", options=COLOR_OPTIONS, hints=COLOR_HINTS, parent_ref="menu_keys", extended_help="**Keys Border Color**" + ALPHA_HELP),
+        ConfigItem(label="Anchor", key="anchor", scope="app-name=horizon-keys", type_="cycle", default="bottom-center", options=["top-right", "top-center", "top-left", "bottom-right", "bottom-center", "bottom-left", "center-right", "center-left", "center"], parent_ref="menu_keys", extended_help="**Keys Position**\n\nScreen anchor for the layout notification."),
+        ConfigItem(label="Layer", key="layer", scope="app-name=horizon-keys", type_="cycle", default="overlay", options=["background", "bottom", "top", "overlay"], parent_ref="menu_keys", extended_help="**Keys Layer**\n\nArranges the layout indicator at a specific Wayland surface layer."),
+        ConfigItem(label="Width", key="width", scope="app-name=horizon-keys", type_="int", default=200, min_val=50, max_val=800, step=10, parent_ref="menu_keys", extended_help="**Keys Width**\n\nWidth of the layout text box."),
+        ConfigItem(label="Height", key="height", scope="app-name=horizon-keys", type_="int", default=40, min_val=10, max_val=200, step=2, parent_ref="menu_keys", extended_help="**Keys Height**\n\nHeight of the layout text box."),
+        ConfigItem(label="Margin", key="margin", scope="app-name=horizon-keys", type_="string", default="0,0,0,0", parent_ref="menu_keys", extended_help="**Keys Margin**\n\nMargin parameters controlling placement offset."),
+        ConfigItem(label="Padding", key="padding", scope="app-name=horizon-keys", type_="string", default="0", parent_ref="menu_keys", extended_help="**Keys Padding**\n\nInternal spacing inside the layout text box."),
+        ConfigItem(label="Size", key="border-size", scope="app-name=horizon-keys", type_="int", default=0, min_val=0, max_val=10, step=1, parent_ref="menu_keys", extended_help="**Keys Border Thickness**\n\nStroke thickness for the popup."),
+        ConfigItem(label="Radius", key="border-radius", scope="app-name=horizon-keys", type_="int", default=20, min_val=0, max_val=50, step=1, parent_ref="menu_keys", extended_help="**Keys Corner Smoothing**\n\nRounding applied to the layout indicator."),
+        ConfigItem(label="Icons", key="icons", scope="app-name=horizon-keys", type_="bool", default=False, parent_ref="menu_keys", extended_help="**Keys Icons**\n\nToggles display of keyboard/language icons."),
+        ConfigItem(label="Align", key="text-alignment", scope="app-name=horizon-keys", type_="cycle", default="center", options=["left", "center", "right"], parent_ref="menu_keys", extended_help="**Keys Text Alignment**\n\nJustification of the layout string."),
+        ConfigItem(label="Font", key="font", scope="app-name=horizon-keys", type_="string", default="monospace 14", parent_ref="menu_keys", extended_help="**Keys Font Override**\n\nCustom typography solely for this specific popup."),
+        ConfigItem(label="Format", key="format", scope="app-name=horizon-keys", type_="string", default="%s", parent_ref="menu_keys", extended_help="**Keys Text Format**\n\nStructures the text payload (e.g., %s = summary only)."),
+        ConfigItem(label="Timeout", key="default-timeout", scope="app-name=horizon-keys", type_="int", default=1500, min_val=0, max_val=10000, step=100, parent_ref="menu_keys", extended_help="**Keys Lifespan**\n\nHow rapidly the layout popup clears."),
+        ConfigItem(label="Background", key="background-color", scope="app-name=horizon-keys", type_="color", default="{{colors.surface.default.hex}}66", options=COLOR_OPTIONS, hints=COLOR_HINTS, parent_ref="menu_keys", extended_help="**Keys Background Fill**" + ALPHA_HELP),
+        ConfigItem(label="Text", key="text-color", scope="app-name=horizon-keys", type_="color", default="{{colors.on_surface.default.hex}}", options=COLOR_OPTIONS, hints=COLOR_HINTS, parent_ref="menu_keys", extended_help="**Keys Text Color**" + ALPHA_HELP),
+        ConfigItem(label="Border", key="border-color", scope="app-name=horizon-keys", type_="color", default="{{colors.outline_variant.default.hex}}66", options=COLOR_OPTIONS, hints=COLOR_HINTS, parent_ref="menu_keys", extended_help="**Keys Border Color**" + ALPHA_HELP),
 
         # =====================================================================
         # GROUP: CAVA (Audio Visualizer Applets)
         # =====================================================================
         ConfigItem(
             label="Cava", key="menu_cava", scope="DEFAULT", type_="menu", default=None, is_parent=True, group="Cava",
-            extended_help="**Audio Visualizer Block**\n\nThe primary animated audio visualizer popup block. Configures notifications pushed with `app-name=dusky-cava`."
+            extended_help="**Audio Visualizer Block**\n\nThe primary animated audio visualizer popup block. Configures notifications pushed with `app-name=horizon-cava`."
         ),
-        ConfigItem(label="Anchor", key="anchor", scope="app-name=dusky-cava", type_="cycle", default="bottom-center", options=["top-right", "top-center", "top-left", "bottom-right", "bottom-center", "bottom-left", "center-right", "center-left", "center"], parent_ref="menu_cava", extended_help="**Cava Position**\n\nAnchoring target for the visualizer block."),
-        ConfigItem(label="Layer", key="layer", scope="app-name=dusky-cava", type_="cycle", default="overlay", options=["background", "bottom", "top", "overlay"], parent_ref="menu_cava", extended_help="**Cava Layer**\n\nArranges the visualizer block at a specific Wayland surface layer."),
-        ConfigItem(label="Width", key="width", scope="app-name=dusky-cava", type_="int", default=380, min_val=100, max_val=800, step=10, parent_ref="menu_cava", extended_help="**Cava Box Width**\n\nHorizontal size of the visualizer spectrum box."),
-        ConfigItem(label="Height", key="height", scope="app-name=dusky-cava", type_="int", default=40, min_val=10, max_val=200, step=2, parent_ref="menu_cava", extended_help="**Cava Box Height**\n\nVertical limit for the audio spectrum output."),
-        ConfigItem(label="Margin", key="margin", scope="app-name=dusky-cava", type_="string", default="0,0,20,0", parent_ref="menu_cava", extended_help="**Cava Offset Margin**\n\nSpacing pushing the visualizer away from the screen boundaries."),
-        ConfigItem(label="Padding", key="padding", scope="app-name=dusky-cava", type_="string", default="0", parent_ref="menu_cava", extended_help="**Cava Internal Padding**\n\nSpace between the animation bars and the bounding box."),
-        ConfigItem(label="Size", key="border-size", scope="app-name=dusky-cava", type_="int", default=2, min_val=0, max_val=10, step=1, parent_ref="menu_cava", extended_help="**Cava Border Thickness**\n\nThickness of the framing surrounding the visualization."),
-        ConfigItem(label="Radius", key="border-radius", scope="app-name=dusky-cava", type_="int", default=20, min_val=0, max_val=50, step=1, parent_ref="menu_cava", extended_help="**Cava Corner Smoothing**\n\nApplies rounded arcs to the visualizer box."),
-        ConfigItem(label="Icons", key="icons", scope="app-name=dusky-cava", type_="bool", default=False, parent_ref="menu_cava", extended_help="**Cava Icon Block**\n\nUsually set to OFF to prevent icons from disrupting the spectrum text formatting."),
-        ConfigItem(label="Align", key="text-alignment", scope="app-name=dusky-cava", type_="cycle", default="center", options=["left", "center", "right"], parent_ref="menu_cava", extended_help="**Cava Alignment**\n\nCenters the bouncing visualizer text blocks."),
-        ConfigItem(label="Font", key="font", scope="app-name=dusky-cava", type_="string", default="monospace 22", parent_ref="menu_cava", extended_help="**Cava Block Font**\n\nSpecifically scales the font used for the block characters simulating the spectrum."),
-        ConfigItem(label="Format", key="format", scope="app-name=dusky-cava", type_="string", default="%s", parent_ref="menu_cava", extended_help="**Cava Payload**\n\nDetermines exactly what data the visualizer displays."),
-        ConfigItem(label="Timeout", key="default-timeout", scope="app-name=dusky-cava", type_="int", default=0, min_val=0, max_val=10000, step=100, parent_ref="menu_cava", extended_help="**Cava Refresh Sync**\n\nUsually 0, dictating that the script handles the timeout frames."),
-        ConfigItem(label="Background", key="background-color", scope="app-name=dusky-cava", type_="color", default="{{colors.surface_container.default.hex}}ff", options=COLOR_OPTIONS, hints=COLOR_HINTS, parent_ref="menu_cava", extended_help="**Cava Fill Color**" + ALPHA_HELP),
-        ConfigItem(label="Text", key="text-color", scope="app-name=dusky-cava", type_="color", default="{{colors.primary.default.hex}}", options=COLOR_OPTIONS, hints=COLOR_HINTS, parent_ref="menu_cava", extended_help="**Cava Animation Color**\n\nThe color of the active spectrum bars." + ALPHA_HELP),
-        ConfigItem(label="Border", key="border-color", scope="app-name=dusky-cava", type_="color", default="{{colors.primary_container.default.hex}}", options=COLOR_OPTIONS, hints=COLOR_HINTS, parent_ref="menu_cava", extended_help="**Cava Border Color**" + ALPHA_HELP),
+        ConfigItem(label="Anchor", key="anchor", scope="app-name=horizon-cava", type_="cycle", default="bottom-center", options=["top-right", "top-center", "top-left", "bottom-right", "bottom-center", "bottom-left", "center-right", "center-left", "center"], parent_ref="menu_cava", extended_help="**Cava Position**\n\nAnchoring target for the visualizer block."),
+        ConfigItem(label="Layer", key="layer", scope="app-name=horizon-cava", type_="cycle", default="overlay", options=["background", "bottom", "top", "overlay"], parent_ref="menu_cava", extended_help="**Cava Layer**\n\nArranges the visualizer block at a specific Wayland surface layer."),
+        ConfigItem(label="Width", key="width", scope="app-name=horizon-cava", type_="int", default=380, min_val=100, max_val=800, step=10, parent_ref="menu_cava", extended_help="**Cava Box Width**\n\nHorizontal size of the visualizer spectrum box."),
+        ConfigItem(label="Height", key="height", scope="app-name=horizon-cava", type_="int", default=40, min_val=10, max_val=200, step=2, parent_ref="menu_cava", extended_help="**Cava Box Height**\n\nVertical limit for the audio spectrum output."),
+        ConfigItem(label="Margin", key="margin", scope="app-name=horizon-cava", type_="string", default="0,0,20,0", parent_ref="menu_cava", extended_help="**Cava Offset Margin**\n\nSpacing pushing the visualizer away from the screen boundaries."),
+        ConfigItem(label="Padding", key="padding", scope="app-name=horizon-cava", type_="string", default="0", parent_ref="menu_cava", extended_help="**Cava Internal Padding**\n\nSpace between the animation bars and the bounding box."),
+        ConfigItem(label="Size", key="border-size", scope="app-name=horizon-cava", type_="int", default=2, min_val=0, max_val=10, step=1, parent_ref="menu_cava", extended_help="**Cava Border Thickness**\n\nThickness of the framing surrounding the visualization."),
+        ConfigItem(label="Radius", key="border-radius", scope="app-name=horizon-cava", type_="int", default=20, min_val=0, max_val=50, step=1, parent_ref="menu_cava", extended_help="**Cava Corner Smoothing**\n\nApplies rounded arcs to the visualizer box."),
+        ConfigItem(label="Icons", key="icons", scope="app-name=horizon-cava", type_="bool", default=False, parent_ref="menu_cava", extended_help="**Cava Icon Block**\n\nUsually set to OFF to prevent icons from disrupting the spectrum text formatting."),
+        ConfigItem(label="Align", key="text-alignment", scope="app-name=horizon-cava", type_="cycle", default="center", options=["left", "center", "right"], parent_ref="menu_cava", extended_help="**Cava Alignment**\n\nCenters the bouncing visualizer text blocks."),
+        ConfigItem(label="Font", key="font", scope="app-name=horizon-cava", type_="string", default="monospace 22", parent_ref="menu_cava", extended_help="**Cava Block Font**\n\nSpecifically scales the font used for the block characters simulating the spectrum."),
+        ConfigItem(label="Format", key="format", scope="app-name=horizon-cava", type_="string", default="%s", parent_ref="menu_cava", extended_help="**Cava Payload**\n\nDetermines exactly what data the visualizer displays."),
+        ConfigItem(label="Timeout", key="default-timeout", scope="app-name=horizon-cava", type_="int", default=0, min_val=0, max_val=10000, step=100, parent_ref="menu_cava", extended_help="**Cava Refresh Sync**\n\nUsually 0, dictating that the script handles the timeout frames."),
+        ConfigItem(label="Background", key="background-color", scope="app-name=horizon-cava", type_="color", default="{{colors.surface_container.default.hex}}ff", options=COLOR_OPTIONS, hints=COLOR_HINTS, parent_ref="menu_cava", extended_help="**Cava Fill Color**" + ALPHA_HELP),
+        ConfigItem(label="Text", key="text-color", scope="app-name=horizon-cava", type_="color", default="{{colors.primary.default.hex}}", options=COLOR_OPTIONS, hints=COLOR_HINTS, parent_ref="menu_cava", extended_help="**Cava Animation Color**\n\nThe color of the active spectrum bars." + ALPHA_HELP),
+        ConfigItem(label="Border", key="border-color", scope="app-name=horizon-cava", type_="color", default="{{colors.primary_container.default.hex}}", options=COLOR_OPTIONS, hints=COLOR_HINTS, parent_ref="menu_cava", extended_help="**Cava Border Color**" + ALPHA_HELP),
 
         ConfigItem(
             label="Alert", key="menu_cava_alert", scope="DEFAULT", type_="menu", default=None, is_parent=True, group="Cava",
             extended_help="**Cava System Prompts**\n\nNotification alerts originating directly from the visualizer scripts (e.g. Script errors or toggle confirmations)."
         ),
-        ConfigItem(label="Anchor", key="anchor", scope="app-name=dusky-cava-alert", type_="cycle", default="bottom-center", options=["top-right", "top-center", "top-left", "bottom-right", "bottom-center", "bottom-left", "center-right", "center-left", "center"], parent_ref="menu_cava_alert", extended_help="**Cava Alert Position**\n\nWhere visualizer error/info popups display."),
-        ConfigItem(label="Layer", key="layer", scope="app-name=dusky-cava-alert", type_="cycle", default="overlay", options=["background", "bottom", "top", "overlay"], parent_ref="menu_cava_alert", extended_help="**Cava Alert Layer**\n\nArranges the system prompt at a specific Wayland surface layer."),
-        ConfigItem(label="Width", key="width", scope="app-name=dusky-cava-alert", type_="int", default=300, min_val=50, max_val=800, step=10, parent_ref="menu_cava_alert", extended_help="**Cava Alert Width**\n\nWidth of the alert text box."),
-        ConfigItem(label="Height", key="height", scope="app-name=dusky-cava-alert", type_="int", default=40, min_val=10, max_val=200, step=2, parent_ref="menu_cava_alert", extended_help="**Cava Alert Height**\n\nVertical limit for the alert box."),
-        ConfigItem(label="Margin", key="margin", scope="app-name=dusky-cava-alert", type_="string", default="0,0,20,0", parent_ref="menu_cava_alert", extended_help="**Cava Alert Margin**\n\nScreen offset parameters."),
-        ConfigItem(label="Padding", key="padding", scope="app-name=dusky-cava-alert", type_="string", default="0", parent_ref="menu_cava_alert", extended_help="**Cava Alert Padding**\n\nInternal spacing for alert text."),
-        ConfigItem(label="Radius", key="border-radius", scope="app-name=dusky-cava-alert", type_="int", default=20, min_val=0, max_val=50, step=1, parent_ref="menu_cava_alert", extended_help="**Cava Alert Smoothing**\n\nRounded corners for the alert box."),
-        ConfigItem(label="Align", key="text-alignment", scope="app-name=dusky-cava-alert", type_="cycle", default="center", options=["left", "center", "right"], parent_ref="menu_cava_alert", extended_help="**Cava Alert Justification**\n\nCenters the prompt text."),
-        ConfigItem(label="Font", key="font", scope="app-name=dusky-cava-alert", type_="string", default="monospace 12", parent_ref="menu_cava_alert", extended_help="**Cava Alert Font**\n\nTypography settings for prompt text."),
-        ConfigItem(label="Timeout", key="default-timeout", scope="app-name=dusky-cava-alert", type_="int", default=3000, min_val=0, max_val=10000, step=100, parent_ref="menu_cava_alert", extended_help="**Cava Alert Lifespan**\n\nHow long informational prompts stay visible."),
-        ConfigItem(label="Background", key="background-color", scope="app-name=dusky-cava-alert", type_="color", default="{{colors.tertiary_container.default.hex}}ff", options=COLOR_OPTIONS, hints=COLOR_HINTS, parent_ref="menu_cava_alert", extended_help="**Cava Alert Fill**" + ALPHA_HELP),
-        ConfigItem(label="Text", key="text-color", scope="app-name=dusky-cava-alert", type_="color", default="{{colors.on_tertiary_container.default.hex}}", options=COLOR_OPTIONS, hints=COLOR_HINTS, parent_ref="menu_cava_alert", extended_help="**Cava Alert Text Color**" + ALPHA_HELP),
+        ConfigItem(label="Anchor", key="anchor", scope="app-name=horizon-cava-alert", type_="cycle", default="bottom-center", options=["top-right", "top-center", "top-left", "bottom-right", "bottom-center", "bottom-left", "center-right", "center-left", "center"], parent_ref="menu_cava_alert", extended_help="**Cava Alert Position**\n\nWhere visualizer error/info popups display."),
+        ConfigItem(label="Layer", key="layer", scope="app-name=horizon-cava-alert", type_="cycle", default="overlay", options=["background", "bottom", "top", "overlay"], parent_ref="menu_cava_alert", extended_help="**Cava Alert Layer**\n\nArranges the system prompt at a specific Wayland surface layer."),
+        ConfigItem(label="Width", key="width", scope="app-name=horizon-cava-alert", type_="int", default=300, min_val=50, max_val=800, step=10, parent_ref="menu_cava_alert", extended_help="**Cava Alert Width**\n\nWidth of the alert text box."),
+        ConfigItem(label="Height", key="height", scope="app-name=horizon-cava-alert", type_="int", default=40, min_val=10, max_val=200, step=2, parent_ref="menu_cava_alert", extended_help="**Cava Alert Height**\n\nVertical limit for the alert box."),
+        ConfigItem(label="Margin", key="margin", scope="app-name=horizon-cava-alert", type_="string", default="0,0,20,0", parent_ref="menu_cava_alert", extended_help="**Cava Alert Margin**\n\nScreen offset parameters."),
+        ConfigItem(label="Padding", key="padding", scope="app-name=horizon-cava-alert", type_="string", default="0", parent_ref="menu_cava_alert", extended_help="**Cava Alert Padding**\n\nInternal spacing for alert text."),
+        ConfigItem(label="Radius", key="border-radius", scope="app-name=horizon-cava-alert", type_="int", default=20, min_val=0, max_val=50, step=1, parent_ref="menu_cava_alert", extended_help="**Cava Alert Smoothing**\n\nRounded corners for the alert box."),
+        ConfigItem(label="Align", key="text-alignment", scope="app-name=horizon-cava-alert", type_="cycle", default="center", options=["left", "center", "right"], parent_ref="menu_cava_alert", extended_help="**Cava Alert Justification**\n\nCenters the prompt text."),
+        ConfigItem(label="Font", key="font", scope="app-name=horizon-cava-alert", type_="string", default="monospace 12", parent_ref="menu_cava_alert", extended_help="**Cava Alert Font**\n\nTypography settings for prompt text."),
+        ConfigItem(label="Timeout", key="default-timeout", scope="app-name=horizon-cava-alert", type_="int", default=3000, min_val=0, max_val=10000, step=100, parent_ref="menu_cava_alert", extended_help="**Cava Alert Lifespan**\n\nHow long informational prompts stay visible."),
+        ConfigItem(label="Background", key="background-color", scope="app-name=horizon-cava-alert", type_="color", default="{{colors.tertiary_container.default.hex}}ff", options=COLOR_OPTIONS, hints=COLOR_HINTS, parent_ref="menu_cava_alert", extended_help="**Cava Alert Fill**" + ALPHA_HELP),
+        ConfigItem(label="Text", key="text-color", scope="app-name=horizon-cava-alert", type_="color", default="{{colors.on_tertiary_container.default.hex}}", options=COLOR_OPTIONS, hints=COLOR_HINTS, parent_ref="menu_cava_alert", extended_help="**Cava Alert Text Color**" + ALPHA_HELP),
     ],
 
 

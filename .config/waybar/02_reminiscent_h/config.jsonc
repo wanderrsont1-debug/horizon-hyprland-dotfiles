@@ -291,4 +291,12 @@
         "on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ -5%",
         "tooltip-format": "Volume: {volume}%\nLMB: Pavucontrol"
     }
+
+    "temperature": {
+        "hwmon-path-guess": true,
+        "critical-threshold": 80,
+        "format": " {temperatureC}°C {icon} ",
+        "format-icons": ["", "", ""]
+    },
+
 }

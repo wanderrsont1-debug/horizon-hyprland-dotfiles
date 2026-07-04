@@ -31,6 +31,7 @@
     "pulseaudio#output",
     "backlight",
     "cpu",
+		\"temperature\",
     "memory",
     "battery",
     "group/power-drawer"
@@ -322,4 +323,12 @@
     "escape": true,
     "min-length": 1
   }
+
+    "temperature": {
+        "hwmon-path-guess": true,
+        "critical-threshold": 80,
+        "format": " {temperatureC}°C {icon} ",
+        "format-icons": ["", "", ""]
+    },
+
 }

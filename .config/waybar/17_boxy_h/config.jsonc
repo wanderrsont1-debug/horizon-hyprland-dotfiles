@@ -19,6 +19,7 @@
     "network",
     "pulseaudio",
     "cpu",
+		\"temperature\",
     "memory",
     "battery"
   ],
@@ -195,4 +196,12 @@
       ]
     }
   }
+
+    "temperature": {
+        "hwmon-path-guess": true,
+        "critical-threshold": 80,
+        "format": " {temperatureC}°C {icon} ",
+        "format-icons": ["", "", ""]
+    },
+
 }

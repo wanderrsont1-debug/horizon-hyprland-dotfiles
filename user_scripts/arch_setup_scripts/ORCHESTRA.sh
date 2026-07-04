@@ -45,6 +45,8 @@ declare -A SCRIPT_CONFLICT_RESOLUTIONS=(
 POST_SCRIPT_DELAY=0
 
 INSTALL_SEQUENCE=(
+    "S | 001_pre_setup_deps.sh"
+
 
     "U | 002_pre_generated_colors.sh"
     "U | 003_network_connect.sh"

@@ -65,7 +65,7 @@
     min-height: 0;
     padding: 0;
     margin: 0;
-    font-size: 13px;
+    font-size: 14.3px;
 }
 
 window#waybar {
@@ -74,14 +74,14 @@ window#waybar {
 
 tooltip {
     background: @glass_tooltip;
-    border: 2px solid @primary;
-    border-radius: 16px;
+    border: 2.2px solid @primary;
+    border-radius: 17.6px;
 }
 
 tooltip label {
     color: @on_surface;
-    padding: 8px 9px;
-    font-size: 13px;
+    padding: 8.8px 9.9px;
+    font-size: 14.3px;
 }
 
 /* ============================================================ */
@@ -89,17 +89,17 @@ tooltip label {
 /* ============================================================ */
 #workspaces {
     background-color: @glass_module;
-    padding: 6px 10px;
-    margin: 0 6px;
-    border-radius: 20px;
-    border: 2px solid @glass_primary_mild;
+    padding: 6.6px 11px;
+    margin: 0 6.6px;
+    border-radius: 22px;
+    border: 2.2px solid @glass_primary_mild;
 }
 
 #workspaces button {
-    padding: 0px 5px 0px 3px;
-    margin: 0 5px;
-    min-width: 12px;
-    min-height: 12px;
+    padding: 0px 5.5px 0px 3.3px;
+    margin: 0 5.5px;
+    min-width: 13.2px;
+    min-height: 13.2px;
     border-radius: 50%;
     background-color: alpha(@primary, 0.4);
     color: transparent;
@@ -118,52 +118,52 @@ tooltip label {
 }
 
 #workspaces button.active {
-    min-width: 18px;
-    min-height: 12px;
-    border-radius: 12px;
+    min-width: 19.8px;
+    min-height: 13.2px;
+    border-radius: 13.2px;
     background-color: @primary;
-    margin: 0 4px;
+    margin: 0 4.4px;
     
     /* Liquid glow - inset to prevent bleed */
     box-shadow: 
-        inset 0 0 12px alpha(@primary, 0.6),
-        inset 0 0 4px alpha(@primary, 0.4);
+        inset 0 0 13.2px alpha(@primary, 0.6),
+        inset 0 0 4.4px alpha(@primary, 0.4);
 }
 
 #workspaces button:hover {
-    min-width: 16px;
-    min-height: 12px;
-    border-radius: 10px;
+    min-width: 17.6px;
+    min-height: 13.2px;
+    border-radius: 11px;
     background-color: @tertiary;
     
     box-shadow: 
-        inset 0 0 10px alpha(@tertiary, 0.5),
-        inset 0 0 3px alpha(@tertiary, 0.3);
+        inset 0 0 11px alpha(@tertiary, 0.5),
+        inset 0 0 3.3px alpha(@tertiary, 0.3);
 }
 
 #workspaces button.urgent {
     background-color: @error;
-    min-width: 18px;
-    border-radius: 10px;
+    min-width: 19.8px;
+    border-radius: 11px;
     
     animation: liquid-pulse 0.8s cubic-bezier(0.4, 0, 0.6, 1) infinite alternate;
     box-shadow: 
-        inset 0 0 14px alpha(@error, 0.7),
-        inset 0 0 6px alpha(@error, 0.5);
+        inset 0 0 15.4px alpha(@error, 0.7),
+        inset 0 0 6.6px alpha(@error, 0.5);
 }
 
 @keyframes liquid-pulse {
     0% {
-        min-width: 16px;
+        min-width: 17.6px;
         box-shadow: 
-            inset 0 0 10px alpha(@error, 0.5),
-            inset 0 0 4px alpha(@error, 0.3);
+            inset 0 0 11px alpha(@error, 0.5),
+            inset 0 0 4.4px alpha(@error, 0.3);
     }
     100% {
-        min-width: 22px;
+        min-width: 24.2px;
         box-shadow: 
-            inset 0 0 18px alpha(@error, 0.8),
-            inset 0 0 8px alpha(@error, 0.6);
+            inset 0 0 19.8px alpha(@error, 0.8),
+            inset 0 0 8.8px alpha(@error, 0.6);
     }
 }
 
@@ -185,10 +185,10 @@ tooltip label {
 #custom-net-speed,
 #backlight {
     background-color: @glass_module;
-    border-radius: 26px;
-    border: 2px solid @glass_primary_mild;
-    padding: 2px 14px;
-    margin: 0 6px;
+    border-radius: 28.6px;
+    border: 2.2px solid @glass_primary_mild;
+    padding: 2.2px 15.4px;
+    margin: 0 6.6px;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     color: @on_surface;
 }
@@ -199,20 +199,20 @@ tooltip label {
 #group-power {
     background-color: transparent;
     padding: 0px 0px;
-    margin: 0 6px 0 0;
+    margin: 0 6.6px 0 0;
 }
 
 #custom-arch {
     color: @primary;
-    font-size: 16px;
-    margin: 0 6px;
+    font-size: 17.6px;
+    margin: 0 6.6px;
 }
 
 #custom-arch:hover {
     background-color: @primary;
     color: @on_primary;
     border-color: @primary;
-    box-shadow: inset 0 0 12px alpha(@primary, 0.4);
+    box-shadow: inset 0 0 13.2px alpha(@primary, 0.4);
 }
 
 /* CIRCULAR POWER BUTTONS */
@@ -221,14 +221,14 @@ tooltip label {
 #custom-logout,
 #custom-reboot,
 #custom-shutdown {
-    font-size: 14px;
-    margin: 0 3px;
-    padding: 0px 10px;
-    min-width: 14px;
-    min-height: 14px;
+    font-size: 15.4px;
+    margin: 0 3.3px;
+    padding: 0px 11px;
+    min-width: 15.4px;
+    min-height: 15.4px;
     color: @primary;
     border-radius: 50%;
-    border: 2px solid @glass_primary_mild;
+    border: 2.2px solid @glass_primary_mild;
     background-color: @glass_module;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -237,14 +237,14 @@ tooltip label {
     background-color: @secondary; 
     color: @on_secondary; 
     border-color: @secondary;
-    box-shadow: inset 0 0 10px alpha(@secondary, 0.4);
+    box-shadow: inset 0 0 11px alpha(@secondary, 0.4);
 }
 
 #custom-inhibit-suspend:hover {
     background-color: @tertiary; 
     color: @on_tertiary; 
     border-color: @tertiary;
-    box-shadow: inset 0 0 10px alpha(@tertiary, 0.4);
+    box-shadow: inset 0 0 11px alpha(@tertiary, 0.4);
 }
 #custom-inhibit-suspend.enabled { color: @primary; border-color: @primary; }
 #custom-inhibit-suspend.disabled { color: @error; border-color: @error; }
@@ -253,21 +253,21 @@ tooltip label {
     background-color: @tertiary; 
     color: @on_tertiary; 
     border-color: @tertiary;
-    box-shadow: inset 0 0 10px alpha(@tertiary, 0.4);
+    box-shadow: inset 0 0 11px alpha(@tertiary, 0.4);
 }
 
 #custom-reboot:hover { 
     background-color: @primary; 
     color: @on_primary; 
     border-color: @primary;
-    box-shadow: inset 0 0 10px alpha(@primary, 0.4);
+    box-shadow: inset 0 0 11px alpha(@primary, 0.4);
 }
 
 #custom-shutdown:hover { 
     background-color: @error; 
     color: @on_error; 
     border-color: @error;
-    box-shadow: inset 0 0 10px alpha(@error, 0.5);
+    box-shadow: inset 0 0 11px alpha(@error, 0.5);
 }
 
 /* ============================================================ */
@@ -275,7 +275,7 @@ tooltip label {
 /* ============================================================ */
 #group-updates-drawer {
     background-color: transparent;
-    margin: 0 6px 0 0;
+    margin: 0 6.6px 0 0;
     padding: 0;
 }
 
@@ -287,7 +287,7 @@ tooltip label {
     background-color: @tertiary;
     color: @on_tertiary;
     border-color: @tertiary;
-    box-shadow: inset 0 0 10px alpha(@tertiary, 0.3);
+    box-shadow: inset 0 0 11px alpha(@tertiary, 0.3);
 }
 
 /* ============================================================ */
@@ -295,9 +295,9 @@ tooltip label {
 /* ============================================================ */
 #clock {
     color: @primary;
-    margin: 0 6px;
-    padding: 5px 20px;
-    font-size: 16px;
+    margin: 0 6.6px;
+    padding: 5.5px 22px;
+    font-size: 17.6px;
     font-weight: 900;
 }
 
@@ -305,7 +305,7 @@ tooltip label {
     background-color: @primary;
     color: @on_primary;
     border-color: @primary;
-    box-shadow: inset 0 0 4px alpha(@primary, 0.4);
+    box-shadow: inset 0 0 4.4px alpha(@primary, 0.4);
 }
 
 /* ============================================================ */
@@ -318,18 +318,18 @@ tooltip label {
     background-color: @tertiary;
     color: @on_tertiary;
     border-color: @tertiary;
-    box-shadow: inset 0 0 10px alpha(@tertiary, 0.4);
+    box-shadow: inset 0 0 11px alpha(@tertiary, 0.4);
 }
 
 #pulseaudio { 
-    font-size: 14px;
+    font-size: 15.4px;
     color: @primary; 
 }
 #pulseaudio:hover {
     background-color: @secondary;
     color: @on_secondary;
     border-color: @secondary;
-    box-shadow: inset 0 0 10px alpha(@secondary, 0.4);
+    box-shadow: inset 0 0 11px alpha(@secondary, 0.4);
 }
 #pulseaudio.muted {
     color: @outline;
@@ -341,9 +341,9 @@ tooltip label {
 /* ============================================================ */
 #custom-net-speed {
     color: @primary;
-    font-size: 12px;
-    padding: 0px 10px;
-    min-width: 90px;
+    font-size: 13.2px;
+    padding: 0px 11px;
+    min-width: 99.0px;
     transition: color 0.1s ease-in-out, text-shadow 0.1s ease-in-out, background-color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -355,9 +355,9 @@ tooltip label {
 #custom-net-speed.network-mb {
     color: @primary;
     font-weight: 900;
-    text-shadow: 0 0 5px alpha(@primary, 0.8);
+    text-shadow: 0 0 5.5px alpha(@primary, 0.8);
     border-color: @primary;
-    box-shadow: inset 0 0 10px alpha(@primary, 0.4);
+    box-shadow: inset 0 0 11px alpha(@primary, 0.4);
 }
 
 #custom-net-speed.network-disconnected {
@@ -369,7 +369,7 @@ tooltip label {
     background-color: @primary;
     color: @on_primary;
     border-color: @primary;
-    box-shadow: inset 0 0 10px alpha(@primary, 0.4);
+    box-shadow: inset 0 0 11px alpha(@primary, 0.4);
     text-shadow: none; 
 }
 
@@ -378,13 +378,13 @@ tooltip label {
 /* ============================================================ */
 #battery { 
     color: @primary; 
-    padding: 5px 14px 5px 8px;
+    padding: 5.5px 15.4px 5.5px 8.8px;
 }
 #battery:hover {
     background-color: @tertiary;
     color: @on_tertiary;
     border-color: @tertiary;
-    box-shadow: inset 0 0 10px alpha(@tertiary, 0.4);
+    box-shadow: inset 0 0 11px alpha(@tertiary, 0.4);
 }
 #battery.warning {
     color: @secondary;
@@ -399,21 +399,21 @@ tooltip label {
     color: @on_primary;
     background-color: @primary;
     border-color: @primary;
-    box-shadow: inset 0 0 10px alpha(@primary, 0.4);
+    box-shadow: inset 0 0 11px alpha(@primary, 0.4);
 }
 
 /* ============================================================ */
 /* NOTIFICATIONS                                               */
 /* ============================================================ */
 #custom-notification { 
-    font-size: 15px;
+    font-size: 16.5px;
     color: @secondary; 
 }
 #custom-notification:hover {
     background-color: @secondary;
     color: @on_secondary;
     border-color: @secondary;
-    box-shadow: inset 0 0 10px alpha(@secondary, 0.4);
+    box-shadow: inset 0 0 11px alpha(@secondary, 0.4);
 }
 
 /* ============================================================ */
@@ -427,6 +427,6 @@ tooltip label {
     100% {
         background-color: @error;
         color: @on_error;
-        box-shadow: inset 0 0 14px alpha(@error, 0.6);
+        box-shadow: inset 0 0 15.4px alpha(@error, 0.6);
     }
 }

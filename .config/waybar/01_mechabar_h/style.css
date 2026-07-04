@@ -42,7 +42,7 @@
 * {
 	font-family: "Commit Mono Nerd Font";
 	font-weight: bold;
-	font-size: 16px;
+	font-size: 17.6px;
 }
 
 #window label,
@@ -55,11 +55,11 @@ tooltip label {
 #workspaces button.active label,
 #workspaces button.focused label,
 #custom-distro {
-	font-size: 20px;
+	font-size: 22px;
 }
 
 #custom-power {
-	font-size: 16px;
+	font-size: 17.6px;
 }
 
 #custom-left_div,
@@ -67,7 +67,7 @@ tooltip label {
 #custom-right_div,
 #custom-right_inv {
 	font-family: "JetBrainsMono Nerd Font";
-	font-size: 22px;
+	font-size: 24.2px;
 }
 
 /*---------------
@@ -76,7 +76,7 @@ tooltip label {
 
 #keyboard-state label,
 #language {
-	margin-right: 12px;
+	margin-right: 13.2px;
 	color: @hover-fg;
 }
 
@@ -97,7 +97,7 @@ tooltip label {
 #custom-updates-trigger,
 #custom-updates {
 	background-color: @glass_tier_low;
-	padding: 0 6px;
+	padding: 0 6.6px;
 }
 
 /*-----------------------------------
@@ -113,7 +113,7 @@ tooltip label {
 #memory,
 #clock.date {
 	background-color: @glass_tier_mid;
-	padding: 0 6px;
+	padding: 0 6.6px;
 }
 
 /*-----------------------------------
@@ -129,7 +129,7 @@ tooltip label {
 #cpu,
 #clock.time {
 	background-color: @glass_tier_high;
-	padding: 0 6px;
+	padding: 0 6.6px;
 }
 
 /*-----------------------------------
@@ -149,7 +149,7 @@ tooltip label {
 #custom-distro {
 	background-color: @glass_apex;
 	color: @background;
-	padding: 0 5px 0 5px;
+	padding: 0 5.5px 0 5.5px;
 }
 
 /*-----------------
@@ -162,7 +162,7 @@ tooltip label {
 }
 #workspaces {
 	background-color: @glass_tier_low;
-	padding: 0 1px;
+	padding: 0 1.1px;
 }
 #workspaces button.active label,
 #workspaces button.focused label {
@@ -171,19 +171,19 @@ tooltip label {
 
 #custom-notifications {
 	background-color: @glass_tier_low;
-	padding: 0 6px;
+	padding: 0 6.6px;
 }
 
 #cava {
 	font-family: "JetBrainsMono Nerd Font";
-	letter-spacing: 2px;
-	padding-right: 8px;
+	letter-spacing: 2.2px;
+	padding-right: 8.8px;
 }
 
 #mpris,
 #custom-mpris-trigger {
 	background-color: @glass_tier_low;
-	padding: 0 5px;
+	padding: 0 5.5px;
 }
 
 #custom-left_div.6 {
@@ -200,7 +200,7 @@ tooltip label {
 }
 #backlight {
 	background-color: @glass_tier_high;
-	padding: 0 6px;
+	padding: 0 6.6px;
 }
 
 #custom-left_div.8 {
@@ -209,7 +209,7 @@ tooltip label {
 }
 #battery {
 	background-color: @glass_tier_high;
-	padding: 0 6px;
+	padding: 0 6.6px;
 }
 #custom-left_inv.2 {
 	color: @glass_tier_high;
@@ -218,11 +218,11 @@ tooltip label {
 #custom-power {
 	background-color: @glass_bar;
 	color: @secondary;
-	padding: 0 10px 0 10px;
+	padding: 0 11px 0 11px;
 }
 
 #custom-inhibit-suspend {
-	padding: 0 6px;
+	padding: 0 6.6px;
 }
 
 /*-----------------
@@ -278,21 +278,21 @@ tooltip label {
 }
 
 .module {
-	margin-bottom: -1px;
+	margin-bottom: -1.1px;
 }
 
 #waybar {
 	background-color: @glass_outline;
 }
 #waybar > box {
-	margin: 4px;
+	margin: 4.4px;
 	background-color: @glass_bar;
 }
 
 button {
-	border-radius: 16px;
-	min-width: 16px;
-	padding: 0 10px;
+	border-radius: 17.6px;
+	min-width: 17.6px;
+	padding: 0 11px;
 }
 button:hover {
 	background-color: @surface;
@@ -300,16 +300,16 @@ button:hover {
 }
 
 tooltip {
-	border: 2px solid @on_background;
-	border-radius: 10px;
+	border: 2.2px solid @on_background;
+	border-radius: 11px;
 	background-color: @glass_tooltip;
 }
 tooltip > box {
-	padding: 0 6px;
+	padding: 0 6.6px;
 }
 
 menu {
 	background-color: @glass_menu;
-	border: 2px solid @on_background;
-	border-radius: 10px;
+	border: 2.2px solid @on_background;
+	border-radius: 11px;
 }

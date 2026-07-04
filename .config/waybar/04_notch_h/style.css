@@ -22,9 +22,9 @@
 
     font-family: "Adwaita Sans", "JetBrainsMono Nerd Font Propo", sans-serif;
     font-weight: 700;
-    font-size: 13px;
+    font-size: 14.3px;
 
-    min-height: 16px;
+    min-height: 17.6px;
     margin: 0;
 }
 
@@ -34,8 +34,8 @@ window#waybar {
 
 .modules-center {
     background: @glass_surface_dark;
-    border-radius: 20px;
-    padding: 0 6px;
+    border-radius: 22px;
+    padding: 0 6.6px;
 }
 
 tooltip,
@@ -52,19 +52,19 @@ tooltip decoration,
 tooltip label {
     color: @primary;
     background-color: @glass_tooltip;
-    padding: 4px 10px;
-    border-radius: 12px;
+    padding: 4.4px 11px;
+    border-radius: 13.2px;
 }
 
 #workspaces {
-    padding: 6px 2px;
-    margin: 0 0 0 4px;
+    padding: 6.6px 2.2px;
+    margin: 0 0 0 4.4px;
 }
 
 #workspaces button {
-    padding: 0px 2px;
-    margin: 0px 2px;
-    border-radius: 45px;
+    padding: 0px 2.2px;
+    margin: 0px 2.2px;
+    border-radius: 49.5px;
     background-color: @glass_surface;
     color: alpha(@tertiary, 0.45);
     transition: all 0.3s ease-in-out;
@@ -73,15 +73,15 @@ tooltip label {
 #workspaces button.active {
     background: linear-gradient(135deg, @primary 0%, @secondary 100%);
     color: @on_primary;
-    min-height: 16px;
-    min-width: 24px;
+    min-height: 17.6px;
+    min-width: 26.4px;
     transition: all 0.3s ease-in-out;
 }
 
 #workspaces button:hover {
     background: linear-gradient(135deg, @primary 50%, @secondary 100%);
     color: @on_primary;
-    min-width: 20px;
+    min-width: 22px;
     background-size: 400% 400%;
 }
 
@@ -100,25 +100,25 @@ tooltip label {
 #custom-updates-trigger,
 #custom-updates {
     background-color: @glass_surface;
-    padding: 0px 6px;
-    margin: 3px 4px;
-    border-radius: 45px;
+    padding: 0px 6.6px;
+    margin: 3.3px 4.4px;
+    border-radius: 49.5px;
     border: none;
     box-shadow: none;
 }
 
 #clock {
     color: @tertiary;
-    font-size: 12px;
+    font-size: 13.2px;
 }
 
 #mpris {
     color: @tertiary;
-    font-size: 12px;
+    font-size: 13.2px;
     background-color: @glass_surface;
-    padding: 0 6px;
-    margin: 3px 4px;
-    border-radius: 45px;
+    padding: 0 6.6px;
+    margin: 3.3px 4.4px;
+    border-radius: 49.5px;
 }
 
 #pulseaudio,
@@ -126,56 +126,56 @@ tooltip label {
 #backlight,
 #custom-inhibit-suspend {
     color: @tertiary;
-    font-size: 12px;
+    font-size: 13.2px;
 }
 
 #network {
     color: @secondary;
-    font-size: 12px;
+    font-size: 13.2px;
 }
 
 #battery {
     color: @secondary;
-    font-size: 12px;
+    font-size: 13.2px;
 }
 
 #custom-notification {
     color: @tertiary;
-    font-size: 12px;
+    font-size: 13.2px;
 }
 
 #custom-updates-trigger,
 #custom-updates {
     color: @secondary;
-    font-size: 12px;
+    font-size: 13.2px;
 }
 
 #custom-cava {
     color: @tertiary;
-    padding: 0 6px;
-    margin: 3px 4px;
-    border-radius: 45px;
+    padding: 0 6.6px;
+    margin: 3.3px 4.4px;
+    border-radius: 49.5px;
     background-color: @glass_surface;
 }
 
 #custom-mpris-trigger {
     color: @tertiary;
-    padding: 0 6px;
-    margin: 3px 0 3px 4px;
-    border-radius: 45px;
+    padding: 0 6.6px;
+    margin: 3.3px 0 3.3px 4.4px;
+    border-radius: 49.5px;
     background-color: @glass_surface;
-    font-size: 12px;
+    font-size: 13.2px;
 }
 
 #custom-dropdown {
-    padding: 0 6px 0 12px;
+    padding: 0 6.6px 0 13.2px;
 }
 
 #tray {
     background-color: @glass_surface;
-    padding: 0 6px;
-    margin: 3px 0;
-    border-radius: 45px;
+    padding: 0 6.6px;
+    margin: 3.3px 0;
+    border-radius: 49.5px;
 }
 
 #tray .passive {
@@ -189,8 +189,8 @@ tooltip label {
 
 .hide-tray-drawer {
     background-color: @glass_surface;
-    border-radius: 20px;
-    margin-right: 8px;
+    border-radius: 22px;
+    margin-right: 8.8px;
 }
 
 .cava-mpris-drawer,
@@ -202,7 +202,7 @@ tooltip label {
 
 #hide-tray {
     background: transparent;
-    border-radius: 20px;
-    margin-right: 8px;
-    padding: 4px 0;
+    border-radius: 22px;
+    margin-right: 8.8px;
+    padding: 4.4px 0;
 }

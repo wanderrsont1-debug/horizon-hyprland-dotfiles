@@ -2,7 +2,7 @@
    COMPACT HORIZONTAL WAYBAR THEME - GTK CSS COMPATIBLE
    Uses Matugen colors via @import
    
-   OPTIMIZED FOR MINIMAL HEIGHT - Target: ~28px
+   OPTIMIZED FOR MINIMAL HEIGHT - Target: ~30.8px
    ═══════════════════════════════════════════════════════════════════════════ */
 
 @import url("../../.config/matugen/generated/waybar-colors.css");
@@ -36,7 +36,7 @@
    ═══════════════════════════════════════════════════════════════════════════ */
 * {
     font-family: "JetBrains Mono Nerd Font Propo", "JetBrainsMono Nerd Font", "JetBrains Mono NF", "JetBrains Mono", "Symbols Nerd Font", sans-serif;
-    font-size: 11px;
+    font-size: 12.1px;
     font-weight: 500;
     min-height: 0;
     border: none;
@@ -60,14 +60,14 @@ window#waybar.hidden {
 tooltip {
     background-color: @glass_tooltip;
     color: @on_surface;
-    border: 1px solid @glass_border;
-    border-radius: 8px;
-    padding: 6px 10px;
+    border: 1.1px solid @glass_border;
+    border-radius: 8.8px;
+    padding: 6.6px 11px;
 }
 
 tooltip label {
     color: @on_surface;
-    padding: 2px;
+    padding: 2.2px;
 }
 
 /* ═══════════════════════════════════════════════════════════════════════════
@@ -77,9 +77,9 @@ tooltip label {
 .modules-center,
 .modules-right {
     background-color: @glass_bar;
-    border-radius: 8px;
-    padding: 0 2px;
-    margin: 2px 0;
+    border-radius: 8.8px;
+    padding: 0 2.2px;
+    margin: 2.2px 0;
 }
 
 /* ═══════════════════════════════════════════════════════════════════════════
@@ -110,9 +110,9 @@ tooltip label {
 #custom-power,
 #custom-separator,
 #custom-separator-2 {
-    padding: 0 6px;
-    margin: 2px 1px;
-    border-radius: 6px;
+    padding: 0 6.6px;
+    margin: 2.2px 1.1px;
+    border-radius: 6.6px;
     background: transparent;
     color: @on_surface;
 }
@@ -145,9 +145,9 @@ tooltip label {
 #custom-separator,
 #custom-separator-2 {
     color: @outline_variant;
-    font-size: 10px;
-    padding: 0 2px;
-    margin: 2px 2px;
+    font-size: 11px;
+    padding: 0 2.2px;
+    margin: 2.2px 2.2px;
     opacity: 0.3;
 }
 
@@ -155,12 +155,12 @@ tooltip label {
    LAUNCHER - COMPACT
    ═══════════════════════════════════════════════════════════════════════════ */
 #custom-launcher {
-    font-size: 14px;
+    font-size: 15.4px;
     color: @primary;
     background-color: @primary_container;
-    border-radius: 6px;
-    margin-left: 2px;
-    margin-right: 4px;
+    border-radius: 6.6px;
+    margin-left: 2.2px;
+    margin-right: 4.4px;
 }
 
 #custom-launcher:hover {
@@ -173,20 +173,20 @@ tooltip label {
    ═══════════════════════════════════════════════════════════════════════════ */
 #workspaces {
     background-color: @glass_workspaces;
-    padding: 0 2px;
-    margin: 2px 1px;
-    border-radius: 6px;
+    padding: 0 2.2px;
+    margin: 2.2px 1.1px;
+    border-radius: 6.6px;
 }
 
 #workspaces button {
-    padding: 0px 1px 0px 2px;
-    margin: 2px 1px;
-    border-radius: 4px;
+    padding: 0px 1.1px 0px 2.2px;
+    margin: 2.2px 1.1px;
+    border-radius: 4.4px;
     color: @on_surface_variant;
     background: transparent;
-    min-width: 16px;
-    min-height: 16px;
-    font-size: 10px;
+    min-width: 17.6px;
+    min-height: 17.6px;
+    font-size: 11px;
     font-weight: 600;
 }
 
@@ -208,7 +208,7 @@ tooltip label {
 #workspaces button.special {
     background-color: @tertiary_container;
     color: @on_tertiary_container;
-    font-size: 11px;
+    font-size: 12.1px;
 }
 
 #workspaces button.empty {
@@ -222,16 +222,16 @@ tooltip label {
 #submap {
     background-color: @tertiary_container;
     color: @on_tertiary_container;
-    padding: 0 8px;
-    border-radius: 6px;
+    padding: 0 8.8px;
+    border-radius: 6.6px;
     font-weight: 600;
-    font-size: 10px;
+    font-size: 11px;
 }
 
 #window {
     color: @on_surface_variant;
-    padding: 0 8px;
-    font-size: 11px;
+    padding: 0 8.8px;
+    font-size: 12.1px;
     opacity: 0.85;
 }
 
@@ -241,9 +241,9 @@ tooltip label {
 #custom-net-speed {
     color: @tertiary;
     font-family: "JetBrainsMono Nerd Font Mono", monospace;
-    font-size: 10px;
-    padding: 0 6px;
-    min-width: 70px;
+    font-size: 11px;
+    padding: 0 6.6px;
+    min-width: 77px;
 }
 
 /* ═══════════════════════════════════════════════════════════════════════════
@@ -252,11 +252,11 @@ tooltip label {
 #clock {
     background-color: @primary_container;
     color: @on_primary_container;
-    font-size: 11px;
+    font-size: 12.1px;
     font-weight: 600;
-    padding: 0px 12px 0px 7px;
-    border-radius: 6px;
-    margin: 2px 4px;
+    padding: 0px 13.2px 0px 7.7px;
+    border-radius: 6.6px;
+    margin: 2.2px 4.4px;
 }
 
 #clock:hover {
@@ -273,13 +273,13 @@ tooltip label {
    PRIVACY
    ═══════════════════════════════════════════════════════════════════════════ */
 #privacy {
-    padding: 0 4px;
-    margin: 2px 1px;
+    padding: 0 4.4px;
+    margin: 2.2px 1.1px;
 }
 
 #privacy-item {
     color: @error;
-    padding: 0 2px;
+    padding: 0 2.2px;
 }
 
 /* ═══════════════════════════════════════════════════════════════════════════
@@ -289,10 +289,10 @@ tooltip label {
 #memory,
 #disk,
 #temperature {
-    padding: 0px 5px;
-    margin: 2px 1px;
-    font-size: 10px;
-    border-radius: 4px;
+    padding: 0px 5.5px;
+    margin: 2.2px 1.1px;
+    font-size: 11px;
+    border-radius: 4.4px;
 }
 
 #cpu {
@@ -355,10 +355,10 @@ tooltip label {
 #network,
 #pulseaudio,
 #battery {
-    font-size: 10px;
-    padding: 0 5px;
-    margin: 2px 0;
-    border-radius: 4px;
+    font-size: 11px;
+    padding: 0 5.5px;
+    margin: 2.2px 0;
+    border-radius: 4.4px;
 }
 
 #backlight {
@@ -395,10 +395,10 @@ tooltip label {
 
 #bluetooth {
     color: @secondary;
-    font-size: 11px;
-    padding: 0px 5px 0px 4px;
-    margin: 2px 0;
-    border-radius: 4px;
+    font-size: 12.1px;
+    padding: 0px 5.5px 0px 4.4px;
+    margin: 2.2px 0;
+    border-radius: 4.4px;
 }
 
 #bluetooth:hover {
@@ -467,15 +467,15 @@ tooltip label {
    ═══════════════════════════════════════════════════════════════════════════ */
 #custom-theme,
 #custom-inhibit-suspend {
-    font-size: 12px;
-    padding: 0px 3px 0px 4px;
+    font-size: 13.2px;
+    padding: 0px 3.3px 0px 4.4px;
 }
 
 #custom-notification {
-    font-size: 12px;
-    padding: 0px 4px 0px 4px;
-    margin: 2px 0;
-    border-radius: 4px;
+    font-size: 13.2px;
+    padding: 0px 4.4px 0px 4.4px;
+    margin: 2.2px 0;
+    border-radius: 4.4px;
 }
 
 #custom-theme {
@@ -513,8 +513,8 @@ tooltip label {
    SYSTEM TRAY - COMPACT
    ═══════════════════════════════════════════════════════════════════════════ */
 #tray {
-    padding: 0 4px;
-    margin: 2px 2px;
+    padding: 0 4.4px;
+    margin: 2.2px 2.2px;
 }
 
 #tray > .passive {
@@ -524,19 +524,19 @@ tooltip label {
 #tray > .needs-attention {
     -gtk-icon-effect: highlight;
     background-color: @error_container;
-    border-radius: 4px;
+    border-radius: 4.4px;
 }
 
 #tray menu {
     background-color: @glass_tooltip;
-    border: 1px solid @glass_border;
-    border-radius: 8px;
-    padding: 4px;
+    border: 1.1px solid @glass_border;
+    border-radius: 8.8px;
+    padding: 4.4px;
 }
 
 #tray menu menuitem {
-    padding: 4px 10px;
-    border-radius: 4px;
+    padding: 4.4px 11px;
+    border-radius: 4.4px;
     color: @on_surface;
 }
 
@@ -548,11 +548,11 @@ tooltip label {
    POWER BUTTON - COMPACT
    ═══════════════════════════════════════════════════════════════════════════ */
 #custom-power {
-    font-size: 12px;
-    margin: 2px 2px 2px 4px;
+    font-size: 13.2px;
+    margin: 2.2px 2.2px 2.2px 4.4px;
     color: @error;
     background-color: @error_container;
-    border-radius: 6px;
+    border-radius: 6.6px;
 }
 
 #custom-power:hover {

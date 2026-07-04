@@ -39,7 +39,7 @@
 
 * {
     font-family: "JetBrainsMono Nerd Font Propo", "JetBrainsMono Nerd Font", sans-serif;
-    font-size: 10px;
+    font-size: 11px;
     font-weight: 600;
     font-feature-settings: "tnum"; 
     min-height: 0;
@@ -53,18 +53,18 @@
 window#waybar {
     background: @glass_bar; 
     color: @on_surface;
-    border-right: 1px solid @glass_border; 
+    border-right: 1.1px solid @glass_border; 
 }
 
 tooltip {
     background: @glass_tooltip;
     color: @on_surface;
-    border: 1px solid @glass_border;
-    border-radius: 4px;
+    border: 1.1px solid @glass_border;
+    border-radius: 4.4px;
 }
 
 tooltip label {
-    padding: 5px;
+    padding: 5.5px;
 }
 
 /* ===================================================================
@@ -74,15 +74,15 @@ tooltip label {
 .modules-left > widget > *,
 .modules-center > widget > *,
 .modules-right > widget > * {
-    margin: 4px 0px;
+    margin: 4.4px 0px;
 }
 
 /* --- Group Pill Backgrounds (Fixed Visibility) --- */
 box#group-media, box#group-hardware, box#group-updates-drawer, box#group-utils, box#group-connections, box#group-bottom {
     background-color: @glass_group;
-    border-radius: 12px;
-    padding: 6px 0px;
-    margin: 4px 0px;
+    border-radius: 13.2px;
+    padding: 6.6px 0px;
+    margin: 4.4px 0px;
 }
 
 /* --- Internal Module Spacing --- */
@@ -92,7 +92,7 @@ box#group-media, box#group-hardware, box#group-updates-drawer, box#group-utils, 
 #custom-app-tray, #custom-network, #custom-audiorouter, #custom-cava, 
 #custom-updates, #custom-updates-trigger {
     padding: 0px;
-    margin: 3px 0px; 
+    margin: 3.3px 0px; 
     background-color: transparent;
     transition: all 0.2s ease-in-out;
 }
@@ -109,8 +109,8 @@ box#group-media, box#group-hardware, box#group-updates-drawer, box#group-utils, 
 }
 
 #workspaces button {
-    padding: 2px 0px;
-    margin: 2px 0px;
+    padding: 2.2px 0px;
+    margin: 2.2px 0px;
     background-color: transparent;
     color: @on_surface_variant;
     transition: all 0.2s ease-in-out;
@@ -125,7 +125,7 @@ box#group-media, box#group-hardware, box#group-updates-drawer, box#group-utils, 
 #workspaces button.active {
     background-color: @glass_active_ws;
     color: @primary;
-    border-radius: 4px;
+    border-radius: 4.4px;
     font-weight: 900;
 }
 
@@ -138,17 +138,17 @@ box#group-media, box#group-hardware, box#group-updates-drawer, box#group-utils, 
 #clock {
     font-weight: 900;
     background-color: @glass_module; 
-    border-radius: 6px;
+    border-radius: 6.6px;
     color: @primary;
-    padding: 4px 0px;
-    margin-top: 3px;
+    padding: 4.4px 0px;
+    margin-top: 3.3px;
     margin-bottom: 0px; 
-    margin-left: 2px;
-    margin-right: 2px;
+    margin-left: 2.2px;
+    margin-right: 2.2px;
 }
 
 box#group-bottom {
-    margin-top: 2px; 
+    margin-top: 2.2px; 
 }
 
 /* --- Hardware Group (Tertiary Color Map) --- */
@@ -175,7 +175,7 @@ box#group-bottom {
 
 /* --- NETWORK METER DYNAMIC CLASSES --- */
 #custom-network {
-    font-size: 9px;
+    font-size: 9.9px;
     transition: color 0.1s ease-in-out, text-shadow 0.1s ease-in-out;
 }
 /* Subtle when idling or browsing lightly */
@@ -187,7 +187,7 @@ box#group-bottom {
 #custom-network.network-mb { 
     color: @primary; 
     font-weight: 900;
-    text-shadow: 0 0 5px alpha(@primary, 0.7);
+    text-shadow: 0 0 5.5px alpha(@primary, 0.7);
 }
 /* Absolute disconnect */
 #custom-network.network-disconnected { 
@@ -196,7 +196,7 @@ box#group-bottom {
 
 /* --- Other Custom Modules --- */
 #bluetooth { color: @secondary; }
-#custom-power { color: @error; font-size: 12px; }
+#custom-power { color: @error; font-size: 13.2px; }
 #custom-updates, #custom-updates-trigger { color: @tertiary; font-weight: bold; }
 #custom-theme { color: @secondary; }
 #custom-notification, #custom-inhibit-suspend, #custom-app-tray { color: @on_surface_variant; }
@@ -211,7 +211,7 @@ box#group-bottom {
 #custom-audiorouter:hover, #custom-app-tray:hover, #custom-cava:hover,
 #custom-updates:hover, #custom-updates-trigger:hover {
     color: @primary;
-    text-shadow: 0 0 4px alpha(@primary, 0.5);
+    text-shadow: 0 0 4.4px alpha(@primary, 0.5);
 }
 
 /* ===================================================================

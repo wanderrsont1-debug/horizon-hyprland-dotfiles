@@ -9,6 +9,7 @@
             "hyprland/workspaces",
             "memory",
             "cpu",
+		\"temperature\",
             "group/hide-tray",
             "group/battery-drawer",
             "custom/notification",

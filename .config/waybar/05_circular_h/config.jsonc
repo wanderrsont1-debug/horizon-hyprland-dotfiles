@@ -191,4 +191,12 @@
         "escape": true,
         "tooltip-format": "Notifications\n\n LMB  Toggle Panel\n MMB  Clear All\n RMB  Do Not Disturb"
     }
+
+    "temperature": {
+        "hwmon-path-guess": true,
+        "critical-threshold": 80,
+        "format": " {temperatureC}°C {icon} ",
+        "format-icons": ["", "", ""]
+    },
+
 }

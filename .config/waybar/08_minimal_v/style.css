@@ -32,7 +32,7 @@
 
 * {
     font-family: "JetBrainsMono Nerd Font", "Noto Sans", sans-serif;
-    font-size: 13px;
+    font-size: 14.3px;
     font-weight: bold;
     min-height: 0;
     border: none;
@@ -58,9 +58,9 @@ window#waybar {
 #custom-inhibit-suspend {
     background-color: @glass_module;
     color: @on_surface;
-    border-radius: 100px;
-    margin: 3px 1px; 
-    padding: 6px 0px;
+    border-radius: 110.0px;
+    margin: 3.3px 1.1px; 
+    padding: 6.6px 0px;
     
     /* FIX: Box-shadow and background-image removed completely to fix the compositor blur bleeding artifact */
     box-shadow: none;
@@ -72,23 +72,23 @@ window#waybar {
 #clock {
     background-color: @glass_primary;
     color: @on_primary;
-    font-size: 10px; 
-    padding-bottom: 7px;
+    font-size: 11px; 
+    padding-bottom: 7.7px;
 }
 
 #group-stats {
     background-color: @glass_module_low;
-    padding: 8px 0;
+    padding: 8.8px 0;
 }
 
 #cpu, #memory, #temperature {
     background: transparent;
     box-shadow: none;
-    margin: 4px 0;
+    margin: 4.4px 0;
     padding: 0;
-    font-size: 10px;
+    font-size: 11px;
     color: @on_surface_variant;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 1.0);
+    text-shadow: 1.1px 1.1px 2.2px rgba(0, 0, 0, 1.0);
 }
 
 #cpu.critical, 
@@ -100,14 +100,14 @@ window#waybar {
 /* --- CENTER SECTION --- */
 #workspaces {
     background-color: @glass_module_high;
-    padding: 2px 0;
+    padding: 2.2px 0;
 }
 
 #workspaces button {
     padding: 0;
-    margin: 2px 4px;
-    padding: 2px 0;
-    border-radius: 16px;
+    margin: 2.2px 4.4px;
+    padding: 2.2px 0;
+    border-radius: 17.6px;
     color: @on_surface_variant;
     background-color: alpha(@on_surface, 0.12);
     transition: all 0.2s ease;
@@ -116,7 +116,7 @@ window#waybar {
 
 #workspaces button.active {
     background-color: @glass_workspace_active;
-    padding: 8px 0;
+    padding: 8.8px 0;
     color: @on_primary;
 }
 
@@ -138,18 +138,18 @@ window#waybar {
 #backlight,
 #bluetooth,
 #custom-inhibit-suspend {
-    font-size: 10px; 
-    padding: 8px 0;
+    font-size: 11px; 
+    padding: 8.8px 0;
 }
 
 #battery.charging { color: @tertiary; }
 #battery.warning { color: @error; }
 
 #custom-power {
-    font-size: 16px; 
-    border-radius: 100px;
-    margin: 3px 1px;
-    padding: 3px 4px 3px 0px;
+    font-size: 17.6px; 
+    border-radius: 110.0px;
+    margin: 3.3px 1.1px;
+    padding: 3.3px 4.4px 3.3px 0px;
     box-shadow: none;
 }
 
@@ -162,15 +162,15 @@ window#waybar {
 tooltip {
     /* Lowered alpha for purely transparent background, letting Hyprland blur handle the rest */
     background-color: alpha(@surface, 0.4); 
-    border: 1px solid alpha(@outline_variant, 0.4);
-    border-radius: 12px;
+    border: 1.1px solid alpha(@outline_variant, 0.4);
+    border-radius: 13.2px;
     /* Kill GTK's native shadow and images to completely stop the blur bleed effect */
     box-shadow: none;
     background-image: none;
 }
 
 tooltip label {
-    padding: 6px 10px;
+    padding: 6.6px 11px;
     color: @on_surface;
-    font-size: 12px;
+    font-size: 13.2px;
 }

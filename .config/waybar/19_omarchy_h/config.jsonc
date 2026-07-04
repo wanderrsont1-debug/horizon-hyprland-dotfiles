@@ -147,4 +147,12 @@
     "on-click": "uwsm-app -- ~/user_scripts/wlogout/wlogout_scale.sh",
     "tooltip-format": "Power Menu"
   }
+
+    "temperature": {
+        "hwmon-path-guess": true,
+        "critical-threshold": 80,
+        "format": " {temperatureC}°C {icon} ",
+        "format-icons": ["", "", ""]
+    },
+
 }

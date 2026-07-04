@@ -20,9 +20,9 @@
 
     font-family: "Space Grotesk", "JetBrainsMono Nerd Font Propo", sans-serif;
     font-weight: 700;
-    font-size: 13px;
+    font-size: 14.3px;
 
-    min-height: 16px;
+    min-height: 17.6px;
     margin: 0;
 }
 
@@ -32,9 +32,9 @@ window#waybar {
 
 .modules-center {
     background: @glass_surface;
-    border: 2px solid alpha(@primary, 0.5);
-    border-radius: 6px;
-    padding: 0 12px;
+    border: 2.2px solid alpha(@primary, 0.5);
+    border-radius: 6.6px;
+    padding: 0 13.2px;
 }
 
 tooltip,
@@ -51,19 +51,19 @@ tooltip decoration,
 tooltip label {
     color: @primary;
     background-color: @glass_tooltip;
-    padding: 4px 10px;
-    border-radius: 12px;
+    padding: 4.4px 11px;
+    border-radius: 13.2px;
 }
 
 #workspaces {
-    padding: 6px 2px;
-    margin: 0 0 0 4px;
+    padding: 6.6px 2.2px;
+    margin: 0 0 0 4.4px;
 }
 
 #workspaces button {
-    padding: 0px 4px;
-    margin: 0px 2px;
-    border-radius: 45px;
+    padding: 0px 4.4px;
+    margin: 0px 2.2px;
+    border-radius: 49.5px;
     background-color: alpha(@tertiary, 0.18);
     color: alpha(@tertiary, 0.8);
     transition: background 0.3s ease-in-out, color 0.3s ease-in-out, min-width 0.3s ease-in-out;
@@ -77,15 +77,15 @@ tooltip label {
 #workspaces button.active {
     background: linear-gradient(135deg, @primary 0%, @secondary 100%);
     color: @on_primary;
-    min-height: 16px;
-    min-width: 24px;
+    min-height: 17.6px;
+    min-width: 26.4px;
     transition: background 0.3s ease-in-out, color 0.3s ease-in-out, min-width 0.3s ease-in-out;
 }
 
 #workspaces button:hover {
     background: linear-gradient(135deg, @primary 50%, @secondary 100%);
     color: @on_primary;
-    min-width: 20px;
+    min-width: 22px;
     background-size: 400% 400%;
 }
 
@@ -106,22 +106,22 @@ tooltip label {
 #custom-updates-trigger,
 #custom-updates {
     background-color: transparent;
-    padding: 0px 6px;
-    margin: 3px 4px;
-    border-radius: 45px;
+    padding: 0px 6.6px;
+    margin: 3.3px 4.4px;
+    border-radius: 49.5px;
     border: none;
     box-shadow: none;
 }
 
 #clock {
     color: @tertiary;
-    font-size: 12px;
+    font-size: 13.2px;
 }
 
 #custom-arch {
     color: @tertiary;
-    font-size: 14px;
-    padding: 0 4px 0 8px;
+    font-size: 15.4px;
+    padding: 0 4.4px 0 8.8px;
 }
 
 #pulseaudio,
@@ -129,22 +129,22 @@ tooltip label {
 #backlight,
 #custom-inhibit-suspend {
     color: @tertiary;
-    font-size: 12px;
+    font-size: 13.2px;
 }
 
 #network {
     color: @secondary;
-    font-size: 12px;
+    font-size: 13.2px;
 }
 
 #memory {
     color: @tertiary;
-    font-size: 12px;
+    font-size: 13.2px;
 }
 
 #cpu {
     color: @tertiary;
-    font-size: 12px;
+    font-size: 13.2px;
 }
 
 #taskbar {
@@ -156,32 +156,32 @@ tooltip label {
 #taskbar button {
     background: transparent;
     border: none;
-    padding: 0 4px;
+    padding: 0 4.4px;
     margin: 0;
     border-radius: 0;
 }
 
 #battery {
     color: @secondary;
-    font-size: 12px;
+    font-size: 13.2px;
 }
 
 #custom-notification {
     color: @tertiary;
-    font-size: 12px;
+    font-size: 13.2px;
 }
 
 #custom-updates-trigger,
 #custom-updates {
     color: @secondary;
-    font-size: 12px;
+    font-size: 13.2px;
 }
 
 #tray {
     background-color: transparent;
-    padding: 0 6px;
-    margin: 3px 0;
-    border-radius: 45px;
+    padding: 0 6.6px;
+    margin: 3.3px 0;
+    border-radius: 49.5px;
 }
 
 #tray .passive {
@@ -195,15 +195,15 @@ tooltip label {
 
 .hide-tray-drawer {
     background-color: transparent;
-    border-radius: 20px;
-    margin-right: 8px;
+    border-radius: 22px;
+    margin-right: 8.8px;
 }
 
 #hide-tray {
     background: transparent;
-    border-radius: 20px;
-    margin-right: 8px;
-    padding: 4px 0;
+    border-radius: 22px;
+    margin-right: 8.8px;
+    padding: 4.4px 0;
 }
 
 .battery-drawer,

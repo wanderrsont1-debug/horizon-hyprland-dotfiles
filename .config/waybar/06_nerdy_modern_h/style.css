@@ -46,7 +46,7 @@
 
 * {
     font-family: "JetBrains Mono Nerd Font Propo", "JetBrainsMono Nerd Font", "JetBrains Mono NF", "JetBrains Mono", "Symbols Nerd Font", "Noto Sans", "DejaVu Sans", sans-serif;
-    font-size: 13px;
+    font-size: 14.3px;
     font-weight: 600;
     min-height: 0;
     border: none;
@@ -68,14 +68,14 @@ window#waybar.hidden {
 tooltip {
     background-color: @bg_tooltip;
     color: @on_surface;
-    border: 2px solid @outline_variant;
-    border-radius: 12px;
-    padding: 8px 12px;
+    border: 2.2px solid @outline_variant;
+    border-radius: 13.2px;
+    padding: 8.8px 13.2px;
 }
 
 tooltip label {
     color: @on_surface;
-    padding: 4px;
+    padding: 4.4px;
 }
 
 /* ═══════════════════════════════════════════════════════════════════════════
@@ -85,19 +85,19 @@ tooltip label {
 .modules-center,
 .modules-right {
     background-color: @bg_modules;
-    border-radius: 12px;
-    padding: 0 6px;
-    margin: 2px 0;
+    border-radius: 13.2px;
+    padding: 0 6.6px;
+    margin: 2.2px 0;
 }
 
 .modules-left {
-    margin-left: 2px;
-    padding-left: 3px;
+    margin-left: 2.2px;
+    padding-left: 3.3px;
 }
 
 .modules-right {
-    margin-right: 2px;
-    padding-right: 3px;
+    margin-right: 2.2px;
+    padding-right: 3.3px;
 }
 
 /* ═══════════════════════════════════════════════════════════════════════════
@@ -130,9 +130,9 @@ tooltip label {
 #custom-updates-trigger,
 #mpris,
 #custom-mpris-trigger {
-    padding: 0 10px;
-    margin: 2px 2px;
-    border-radius: 8px;
+    padding: 0 11px;
+    margin: 2.2px 2.2px;
+    border-radius: 8.8px;
     background: transparent;
     color: @on_surface;
 }
@@ -166,9 +166,9 @@ tooltip label {
 #custom-separator,
 #custom-separator-2 {
     color: @outline_variant;
-    font-size: 12px;
-    padding: 0 2px;
-    margin: 3px 0;
+    font-size: 13.2px;
+    padding: 0 2.2px;
+    margin: 3.3px 0;
     opacity: 0.4;
 }
 
@@ -176,12 +176,12 @@ tooltip label {
    LEFT SECTION - LAUNCHER
    ═══════════════════════════════════════════════════════════════════════════ */
 #custom-launcher {
-    font-size: 16px;
+    font-size: 17.6px;
     color: @primary;
     background-color: @bg_primary_container;
-    border-radius: 10px;
-    margin-left: 2px;
-    margin-right: 2px;
+    border-radius: 11px;
+    margin-left: 2.2px;
+    margin-right: 2.2px;
 }
 
 #custom-launcher:hover {
@@ -194,19 +194,19 @@ tooltip label {
    ═══════════════════════════════════════════════════════════════════════════ */
 #workspaces {
     background-color: @bg_surface_low;
-    padding: 0 4px;
-    border-radius: 10px;
+    padding: 0 4.4px;
+    border-radius: 11px;
 }
 
 #workspaces button {
-    padding: 0px 3px 0px 3px;
-    margin: 3px 2px;
-    border-radius: 50px;
+    padding: 0px 3.3px 0px 3.3px;
+    margin: 3.3px 2.2px;
+    border-radius: 55.0px;
     color: @on_surface_variant;
     background: transparent;
-    min-width: 22px;
-    min-height: 22px;
-    font-size: 11px;
+    min-width: 24.2px;
+    min-height: 24.2px;
+    font-size: 12.1px;
     font-weight: 700;
 }
 
@@ -229,7 +229,7 @@ tooltip label {
 #workspaces button.special {
     background-color: @bg_tertiary_container;
     color: @on_tertiary_container;
-    font-size: 12px;
+    font-size: 13.2px;
 }
 
 #workspaces button.empty {
@@ -243,24 +243,24 @@ tooltip label {
 #submap {
     background-color: @bg_tertiary_container;
     color: @on_tertiary_container;
-    padding: 0 12px;
-    border-radius: 8px;
+    padding: 0 13.2px;
+    border-radius: 8.8px;
     font-weight: 700;
-    font-size: 11px;
+    font-size: 12.1px;
 }
 
 #window {
     color: @on_surface_variant;
-    padding: 0 12px;
-    font-size: 14px;
+    padding: 0 13.2px;
+    font-size: 15.4px;
     opacity: 0.9;
 }
 
 #custom-net-speed {
     color: @tertiary;
     font-family: "JetBrainsMono Nerd Font Mono", monospace;
-    font-size: 11px;
-    padding: 0px 8px 0px 7px;
+    font-size: 12.1px;
+    padding: 0px 8.8px 0px 7.7px;
     transition: color 0.1s ease-in-out, text-shadow 0.1s ease-in-out;
 }
 
@@ -275,7 +275,7 @@ tooltip label {
 #custom-net-speed.network-mb {
     color: @primary;
     font-weight: 900;
-    text-shadow: 0 0 5px alpha(@primary, 0.7);
+    text-shadow: 0 0 5.5px alpha(@primary, 0.7);
 }
 
 #custom-net-speed.network-disconnected {
@@ -288,9 +288,9 @@ tooltip label {
 #clock {
     background-color: @bg_primary_container;
     color: @on_primary_container;
-    font-size: 13px;
+    font-size: 14.3px;
     font-weight: 700;
-    border-radius: 10px;
+    border-radius: 11px;
 }
 
 #clock:hover {
@@ -299,13 +299,13 @@ tooltip label {
 }
 
 #privacy {
-    padding: 0 4px;
-    margin: 2px 2px;
+    padding: 0 4.4px;
+    margin: 2.2px 2.2px;
 }
 
 #privacy-item {
     color: @error;
-    padding: 0 2px;
+    padding: 0 2.2px;
 }
 
 /* ═══════════════════════════════════════════════════════════════════════════
@@ -327,9 +327,9 @@ tooltip label {
 #memory,
 #disk,
 #temperature {
-    padding: 0px 4px 0px 5px; 
-    font-size: 11px;
-    border-radius: 10px;
+    padding: 0px 4.4px 0px 5.5px; 
+    font-size: 12.1px;
+    border-radius: 11px;
 }
 
 #cpu {
@@ -384,9 +384,9 @@ tooltip label {
    ═══════════════════════════════════════════════════════════════════════════ */
 #backlight {
     color: @tertiary;
-    font-size: 11px;
+    font-size: 12.1px;
     min-width: 0;
-    padding: 0px 4px 0px 3px;
+    padding: 0px 4.4px 0px 3.3px;
 }
 
 #backlight:hover {
@@ -396,9 +396,9 @@ tooltip label {
 
 #network {
     color: @primary;
-    font-size: 11px;
+    font-size: 12.1px;
     min-width: 0;
-    padding: 0px 3px 0px 4px;
+    padding: 0px 3.3px 0px 4.4px;
 }
 
 #network:hover {
@@ -421,8 +421,8 @@ tooltip label {
 
 #bluetooth {
     color: @secondary;
-    font-size: 11px;
-    padding: 0px 3px 0px 2px;
+    font-size: 12.1px;
+    padding: 0px 3.3px 0px 2.2px;
 }
 
 #bluetooth:hover {
@@ -442,9 +442,9 @@ tooltip label {
 
 #pulseaudio {
     color: @tertiary;
-    font-size: 11px;
+    font-size: 12.1px;
     min-width: 0;
-    padding: 0px 3px 0px 4px;
+    padding: 0px 3.3px 0px 4.4px;
 }
 
 #pulseaudio:hover {
@@ -459,9 +459,9 @@ tooltip label {
 
 #battery {
     color: @primary;
-    font-size: 11px;
+    font-size: 12.1px;
     min-width: 0;
-    padding: 0 4px;
+    padding: 0 4.4px;
 }
 
 #battery:hover {
@@ -497,8 +497,8 @@ tooltip label {
    ═══════════════════════════════════════════════════════════════════════════ */
 #custom-theme {
     color: @secondary;
-    font-size: 14px;
-    padding: 0px 4px 0px 4px;
+    font-size: 15.4px;
+    padding: 0px 4.4px 0px 4.4px;
 }
 
 #custom-theme:hover {
@@ -507,8 +507,8 @@ tooltip label {
 }
 
 #custom-inhibit-suspend {
-    font-size: 12px;
-    padding: 0px 3px 0px 4px;
+    font-size: 13.2px;
+    padding: 0px 3.3px 0px 4.4px;
 }
 
 #custom-inhibit-suspend.enabled {
@@ -518,7 +518,7 @@ tooltip label {
 #custom-inhibit-suspend.disabled {
     color: @tertiary;
     background-color: @bg_tertiary_container;
-    border-radius: 2px 8px;
+    border-radius: 2.2px 8.8px;
 }
 
 #custom-inhibit-suspend:hover {
@@ -526,8 +526,8 @@ tooltip label {
 }
 
 #custom-notification {
-    font-size: 13px;
-    padding: 2px 4px 0px 4px;
+    font-size: 14.3px;
+    padding: 2.2px 4.4px 0px 4.4px;
     color: @secondary;
 }
 
@@ -540,8 +540,8 @@ tooltip label {
    SYSTEM TRAY
    ═══════════════════════════════════════════════════════════════════════════ */
 #tray {
-    padding: 0px 4px 0px 3px;
-    margin: 0px 4px 0px 3px;
+    padding: 0px 4.4px 0px 3.3px;
+    margin: 0px 4.4px 0px 3.3px;
 }
 
 #tray > .passive {
@@ -551,19 +551,19 @@ tooltip label {
 #tray > .needs-attention {
     -gtk-icon-effect: highlight;
     background-color: @bg_error_container;
-    border-radius: 8px;
+    border-radius: 8.8px;
 }
 
 #tray menu {
     background-color: @bg_tooltip;
-    border: 2px solid @outline_variant;
-    border-radius: 12px;
-    padding: 8px;
+    border: 2.2px solid @outline_variant;
+    border-radius: 13.2px;
+    padding: 8.8px;
 }
 
 #tray menu menuitem {
-    padding: 6px 12px;
-    border-radius: 6px;
+    padding: 6.6px 13.2px;
+    border-radius: 6.6px;
     color: @on_surface;
 }
 
@@ -575,12 +575,12 @@ tooltip label {
    POWER BUTTON
    ═══════════════════════════════════════════════════════════════════════════ */
 #custom-power {
-    font-size: 14px;
-    margin-right: 2px;
-    margin-left: 3px;
+    font-size: 15.4px;
+    margin-right: 2.2px;
+    margin-left: 3.3px;
     color: @error;
     background-color: @bg_error_container;
-    border-radius: 8px;
+    border-radius: 8.8px;
 }
 
 #custom-power:hover {

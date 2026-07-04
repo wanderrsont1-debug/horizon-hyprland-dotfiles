@@ -52,7 +52,7 @@
     border: none;
     border-radius: 0;
     font-family: "Atkinson Hyperlegible Next", "JetBrainsMono Nerd Font";
-    font-size: 14px;
+    font-size: 15.4px;
     min-height: 0;
 }
 
@@ -62,9 +62,9 @@ window#waybar {
 }
 
 tooltip {
-     border-radius: 12px;
+     border-radius: 13.2px;
      background-color: @surface_container;
-     border: 1px solid @tertiary;
+     border: 1.1px solid @tertiary;
 }
 
 /* =========================================================
@@ -95,11 +95,11 @@ tooltip {
 #custom-reboot,
 #custom-quit {
     background: @glass_module;
-    padding: 2px 14px;
-    margin: 4px;
+    padding: 2.2px 15.4px;
+    margin: 4.4px;
     color: @on_surface;
-    border-radius: 25px; 
-    border: 3px solid transparent;
+    border-radius: 27.5px; 
+    border: 3.3px solid transparent;
     transition: all 0.3s ease-out;
 }
 
@@ -108,9 +108,9 @@ tooltip {
    ========================================================= */
 
 #custom-firefox {
-    border-radius: 25px 0 0 25px;
-    margin-right: 2px;
-    padding-right: 10px;
+    border-radius: 27.5px 0 0 27.5px;
+    margin-right: 2.2px;
+    padding-right: 11px;
 }
 
 #custom-terminal, 
@@ -118,12 +118,12 @@ tooltip {
 #custom-files {
     border-radius: 0px;
     margin-left: 0px;
-    margin-right: 2px;
+    margin-right: 2.2px;
 }
 
 /* Snip serves as the right-cap of the pill when the drawer is closed */
 #custom-snip {
-    border-radius: 0 25px 25px 0;
+    border-radius: 0 27.5px 27.5px 0;
     margin-left: 0px;
     margin-right: 0px;
 }
@@ -131,12 +131,12 @@ tooltip {
 /* The expanding drawer elements that slide out */
 #custom-clip {
     border-radius: 0px;
-    margin-left: 2px;
-    margin-right: 2px;
+    margin-left: 2.2px;
+    margin-right: 2.2px;
 }
 
 #custom-calculator {
-    border-radius: 0 25px 25px 0;
+    border-radius: 0 27.5px 27.5px 0;
     margin-left: 0px;
     margin-right: 0px;
 }
@@ -146,15 +146,15 @@ tooltip {
    ========================================================= */
 
 #clock {
-    border-radius: 25px 0 0 25px;
+    border-radius: 27.5px 0 0 27.5px;
     margin-right: 0px;
-    padding-right: 8px;
+    padding-right: 8.8px;
 }
 
 #battery {
-    border-radius: 0 25px 25px 0;
+    border-radius: 0 27.5px 27.5px 0;
     margin-left: 0px;
-    padding-left: 8px;
+    padding-left: 8.8px;
 }
 
 /* =========================================================
@@ -211,7 +211,7 @@ tooltip {
     background: @glass_primary_bg;
     border-color: @glass_primary_border;
     font-weight: 900;
-    text-shadow: 0 0 5px @glass_primary_shadow;
+    text-shadow: 0 0 5.5px @glass_primary_shadow;
 }
 
 #custom-net-speed.network-disconnected { 
@@ -238,10 +238,10 @@ tooltip {
 
 #taskbar {
     background: @glass_module;
-    padding: 0 15px;
-    margin: 4px;
+    padding: 0 16.5px;
+    margin: 4.4px;
     border: transparent;
-    border-radius: 25px;
+    border-radius: 27.5px;
 }
 
 #taskbar.empty {
@@ -252,11 +252,11 @@ tooltip {
 
 #taskbar button {
     background: transparent;
-    padding: 0 8px;
-    margin: 0 2px;
-    border-bottom: 3px solid transparent;
+    padding: 0 8.8px;
+    margin: 0 2.2px;
+    border-bottom: 3.3px solid transparent;
     transition: all 0.3s ease-out;
-    border-radius: 4px;
+    border-radius: 4.4px;
 }
 
 #taskbar button:hover {

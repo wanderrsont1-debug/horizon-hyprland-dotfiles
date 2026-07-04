@@ -73,7 +73,7 @@
   min-height: 0;
   font-family: "JetBrainsMono Nerd Font", "Symbols Nerd Font", sans-serif;
   font-weight: 600;
-  font-size: 13px;
+  font-size: 14.3px;
   /* Nullify implicit GTK3 shadows to prevent compositor blur jaggedness */
   box-shadow: none;
   text-shadow: none;
@@ -89,9 +89,9 @@ window#waybar {
 
 window#waybar > box {
   background-color: @glass_bar;
-  border-radius: 14px;
+  border-radius: 15.4px;
   border: none;
-  margin: 4px 0;
+  margin: 4.4px 0;
 }
 
 /* ─────────────────────────────────────────────────────────────────────────────
@@ -112,12 +112,12 @@ window#waybar > box {
    ───────────────────────────────────────────────────────────────────────────── */
 
 #custom-launcher {
-  padding: 0px 13px 2px 8px;
-  margin: 5px 2px 5px 6px;
-  border-radius: 10px;
+  padding: 0px 14.3px 2.2px 8.8px;
+  margin: 5.5px 2.2px 5.5px 6.6px;
+  border-radius: 11px;
   background-image: linear-gradient(135deg, @primary_container 0%, @primary_fixed_dim 100%);
   color: @on_primary_container;
-  font-size: 19px;
+  font-size: 20.9px;
   transition: all 0.2s ease-in-out;
 }
 
@@ -129,9 +129,9 @@ window#waybar > box {
 #custom-updates-trigger, #custom-updates, #custom-mpris-trigger,
 #network, #custom-net-speed, #bluetooth, #pulseaudio.output,
 #backlight, #cpu, #memory, #battery {
-  padding: 0px 10px;
-  margin: 5px 2px;
-  border-radius: 10px;
+  padding: 0px 11px;
+  margin: 5.5px 2.2px;
+  border-radius: 11px;
   background-color: @glass_module;
   color: @on_surface_variant;
   transition: all 0.2s ease-in-out;
@@ -140,12 +140,12 @@ window#waybar > box {
 /* Base Overrides for specific colors */
 #clock { color: @on_surface; font-weight: 700; }
 #custom-weather, #backlight, #custom-net-speed { color: @tertiary; }
-#custom-notification { color: @on_surface; font-size: 14px; }
-#network { color: @on_surface; font-size: 14px; }
-#bluetooth { color: @on_surface; font-size: 11px; }
-#pulseaudio.output { color: @on_surface; font-size: 11px; }
+#custom-notification { color: @on_surface; font-size: 15.4px; }
+#network { color: @on_surface; font-size: 15.4px; }
+#bluetooth { color: @on_surface; font-size: 12.1px; }
+#pulseaudio.output { color: @on_surface; font-size: 12.1px; }
 #battery { color: @on_surface; font-weight: 700; }
-#custom-updates-trigger, #custom-updates, #custom-mpris-trigger { color: @secondary; font-size: 13px; }
+#custom-updates-trigger, #custom-updates, #custom-mpris-trigger { color: @secondary; font-size: 14.3px; }
 
 /* ─────────────────────────────────────────────────────────────────────────────
    DYNAMIC NETWORK CLASSES (Imported from Vertical Layout)
@@ -190,12 +190,12 @@ window#waybar > box {
    ───────────────────────────────────────────────────────────────────────────── */
 
 #custom-theme-toggle {
-  padding: 0 8px;
-  margin: 5px 2px;
-  border-radius: 10px;
+  padding: 0 8.8px;
+  margin: 5.5px 2.2px;
+  border-radius: 11px;
   background-color: transparent;
   color: @secondary;
-  font-size: 14px;
+  font-size: 15.4px;
   transition: all 0.2s ease-in-out;
 }
 
@@ -209,9 +209,9 @@ window#waybar > box {
    ───────────────────────────────────────────────────────────────────────────── */
 
 #tray {
-  padding: 0 8px;
-  margin: 5px 2px;
-  border-radius: 10px;
+  padding: 0 8.8px;
+  margin: 5.5px 2.2px;
+  border-radius: 11px;
   background-color: @glass_tray;
   transition: all 0.2s ease-in-out;
 }
@@ -224,19 +224,19 @@ window#waybar > box {
 #tray > .needs-attention {
   -gtk-icon-effect: highlight;
   background-color: @glass_tray_needs_attention;
-  border-radius: 6px;
+  border-radius: 6.6px;
 }
 
 #tray menu {
   background-color: @surface_container_high;
-  border: 1px solid @outline_variant;
-  border-radius: 8px;
-  padding: 8px;
+  border: 1.1px solid @outline_variant;
+  border-radius: 8.8px;
+  padding: 8.8px;
 }
 
 #tray menu menuitem {
-  padding: 6px 12px;
-  border-radius: 6px;
+  padding: 6.6px 13.2px;
+  border-radius: 6.6px;
   color: @on_surface;
 }
 
@@ -250,29 +250,29 @@ window#waybar > box {
 
 #workspaces {
   padding: 0px 0px 0px 0px;
-  margin: 1px 2px;
-  border-radius: 12px;
+  margin: 1.1px 2.2px;
+  border-radius: 13.2px;
   background-color: @glass_bar;
   border: none;
 }
 
 #workspaces button {
-  padding: 0px 8px 0px 8px;
-  margin: 3px 2px;
-  min-width: 12px;
-  border-radius: 20px;
+  padding: 0px 8.8px 0px 8.8px;
+  margin: 3.3px 2.2px;
+  min-width: 13.2px;
+  border-radius: 22px;
   background-color: @glass_workspace_btn;
   color: @on_surface_variant;
-  font-size: 12px;
+  font-size: 13.2px;
   transition: all 0.2s ease-in-out;
 }
 
 #workspaces button.empty {
-  padding: 0px 8px 0px 8px;
-  min-width: 12px;
-  border-radius: 20px;
+  padding: 0px 8.8px 0px 8.8px;
+  min-width: 13.2px;
+  border-radius: 22px;
   background-color: @glass_workspace_btn_empty;
-  font-size: 12px;
+  font-size: 13.2px;
   color: alpha(@on_surface_variant, 0.4);
 }
 
@@ -282,8 +282,8 @@ window#waybar > box {
 }
 
 #workspaces button.active {
-  padding: 0px 1px 0px 1px;
-  min-width: 28px;
+  padding: 0px 1.1px 0px 1.1px;
+  min-width: 30.8px;
   background-image: linear-gradient(135deg, @primary_container 0%, @primary_fixed_dim 100%);
   color: @on_primary_container;
   font-weight: 700;
@@ -315,19 +315,19 @@ window#waybar > box {
    ───────────────────────────────────────────────────────────────────────────── */
 
 #mpris {
-  padding: 0 10px;
-  margin: 5px 2px;
-  border-radius: 10px;
+  padding: 0 11px;
+  margin: 5.5px 2.2px;
+  border-radius: 11px;
   background-color: @glass_mpris;
   color: @on_secondary_container;
-  font-size: 12px;
-  border: 1px solid alpha(@secondary, 0.15);
+  font-size: 13.2px;
+  border: 1.1px solid alpha(@secondary, 0.15);
   transition: all 0.2s ease-in-out;
 }
 
 #mpris:hover {
   background-color: @glass_mpris_hover;
-  border: 1px solid alpha(@secondary, 0.3);
+  border: 1.1px solid alpha(@secondary, 0.3);
   color: @primary;
 }
 
@@ -349,7 +349,7 @@ window#waybar > box {
 #custom-inhibit-suspend.disabled {
   color: @tertiary;
   background-color: @glass_inhibit_disabled;
-  border: 1px solid alpha(@tertiary, 0.2);
+  border: 1.1px solid alpha(@tertiary, 0.2);
 }
 
 #custom-inhibit-suspend.enabled {
@@ -376,13 +376,13 @@ window#waybar > box {
 #battery.charging, #battery.plugged, #battery.full {
   color: @tertiary;
   background-color: @glass_battery_charging_bg;
-  border: 1px solid alpha(@tertiary, 0.15);
+  border: 1.1px solid alpha(@tertiary, 0.15);
 }
 
 #battery.warning:not(.charging) {
   color: @primary_fixed;
   background-color: @glass_battery_warning_bg;
-  border: 1px solid alpha(@primary, 0.2);
+  border: 1.1px solid alpha(@primary, 0.2);
 }
 
 /* ─────────────────────────────────────────────────────────────────────────────
@@ -390,12 +390,12 @@ window#waybar > box {
    ───────────────────────────────────────────────────────────────────────────── */
 
 #custom-power {
-  padding: 0px 12px 0px 9px;
-  margin: 5px 6px 5px 2px;
-  border-radius: 10px;
+  padding: 0px 13.2px 0px 9.9px;
+  margin: 5.5px 6.6px 5.5px 2.2px;
+  border-radius: 11px;
   background-image: linear-gradient(135deg, @primary_container 0%, @primary_fixed_dim 100%);
   color: @on_primary_container;
-  font-size: 14px;
+  font-size: 15.4px;
   transition: all 0.2s ease-in-out;
 }
 
@@ -410,12 +410,12 @@ window#waybar > box {
 
 tooltip {
   background-color: @glass_tooltip;
-  border: 1px solid alpha(@outline_variant, 0.3);
-  border-radius: 12px;
+  border: 1.1px solid alpha(@outline_variant, 0.3);
+  border-radius: 13.2px;
 }
 
 tooltip label {
-  padding: 6px 10px;
+  padding: 6.6px 11px;
   color: @on_surface;
-  font-size: 12px;
+  font-size: 13.2px;
 }

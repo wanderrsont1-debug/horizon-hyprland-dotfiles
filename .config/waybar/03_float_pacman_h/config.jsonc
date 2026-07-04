@@ -14,7 +14,8 @@
 
     "modules-left": ["custom/launcher", "hyprland/workspaces"],
     "modules-center": ["group/updates-drawer", "clock", "custom/notification"],
-    "modules-right": ["group/network-drawer", "cpu", "memory", "pulseaudio", "backlight", "battery", "tray", "group/power-drawer"],
+    "modules-right": ["group/network-drawer", "cpu",
+		\"temperature\", "memory", "pulseaudio", "backlight", "battery", "tray", "group/power-drawer"],
 
     "group/network-drawer": {
         "orientation": "horizontal",
@@ -250,4 +251,12 @@
       "on-click": "uwsm-app -- ~/user_scripts/wlogout/wlogout_scale.sh",
       "tooltip-format": "Power Menu"
     }
+
+    "temperature": {
+        "hwmon-path-guess": true,
+        "critical-threshold": 80,
+        "format": " {temperatureC}°C {icon} ",
+        "format-icons": ["", "", ""]
+    },
+
 }

@@ -31,6 +31,7 @@
     "pulseaudio#output",
     "group/backlight-drawer",
     "cpu",
+		\"temperature\",
     "memory",
     "battery",
     "group/power-drawer"
@@ -360,4 +361,12 @@
     "on-click": "uwsm-app -- ~/user_scripts/wlogout/wlogout_scale.sh",
     "tooltip-format": "Power Menu"
   }
+
+    "temperature": {
+        "hwmon-path-guess": true,
+        "critical-threshold": 80,
+        "format": " {temperatureC}°C {icon} ",
+        "format-icons": ["", "", ""]
+    },
+
 }

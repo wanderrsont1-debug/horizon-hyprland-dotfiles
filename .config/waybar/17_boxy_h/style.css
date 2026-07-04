@@ -15,7 +15,7 @@
 * {
   border: none;
   font-family: "JetBrains Mono Nerd Font Propo", "CaskaydiaMono Nerd Font Propo", monospace;
-  font-size: 13px;
+  font-size: 14.3px;
   min-height: 0;
 }
 
@@ -30,9 +30,9 @@ window#waybar {
 .modules-left,
 .modules-right,
 .modules-center {
-  border: 2px solid @border-accent;
+  border: 2.2px solid @border-accent;
   background-color: @surface;
-  box-shadow: 1px 1px 3px 2px alpha(#000000, 0.8);
+  box-shadow: 1.1px 1.1px 3.3px 2.2px alpha(#000000, 0.8);
 }
 
 .modules-left {
@@ -42,9 +42,9 @@ window#waybar {
 }
 
 #clock {
-  border: 2px solid @border-accent;
+  border: 2.2px solid @border-accent;
   background-color: @surface;
-  box-shadow: 1px 1px 3px 2px alpha(#000000, 0.8);
+  box-shadow: 1.1px 1.1px 3.3px 2.2px alpha(#000000, 0.8);
 }
 
 #hyprland-window,
@@ -67,8 +67,8 @@ window#waybar {
 #pulseaudio,
 #backlight,
 #custom-inhibit-suspend {
-  min-width: 12px;
-  margin: 0 8px;
+  min-width: 13.2px;
+  margin: 0 8.8px;
 }
 
 /* ========================================================================== */
@@ -86,27 +86,27 @@ window#waybar {
 /* Workspaces */
 /* ========================================================================== */
 #workspaces {
-  padding: 0px 2px;
-  margin: 2px 6px;
-  border-radius: 8px;
+  padding: 0px 2.2px;
+  margin: 2.2px 6.6px;
+  border-radius: 8.8px;
   background-color: alpha(@surface_container, 0.5);
 }
 
 #workspaces button {
-  padding: 0px 6px 0px 6px;
-  margin: 1px 2px;
-  min-width: 14px;
-  border-radius: 6px;
+  padding: 0px 6.6px 0px 6.6px;
+  margin: 1.1px 2.2px;
+  min-width: 15.4px;
+  border-radius: 6.6px;
   background-color: transparent;
   color: @on_surface_variant;
-  font-size: 12px;
+  font-size: 13.2px;
   font-weight: 600;
   transition: all 0.2s ease-in-out;
 }
 
 #workspaces button.empty {
-  padding: 0 6px;
-  min-width: 16px;
+  padding: 0 6.6px;
+  min-width: 17.6px;
   background-color: transparent;
   color: alpha(@on_surface_variant, 0.4);
 }
@@ -117,8 +117,8 @@ window#waybar {
 }
 
 #workspaces button.active {
-  padding: 0px 2px 0px 2px;
-  min-width: 24px;
+  padding: 0px 2.2px 0px 2.2px;
+  min-width: 26.4px;
   background-color: @primary_container;
   color: @on_primary_container;
   font-weight: 700;
@@ -148,9 +148,9 @@ window#waybar {
 tooltip {
   opacity: 0.95;
   background: @surface;
-  font-size: 9px;
-  border: 2px solid @border-accent;
-  padding: 4px;
+  font-size: 9.9px;
+  border: 2.2px solid @border-accent;
+  padding: 4.4px;
 }
 
 tooltip label {
@@ -163,12 +163,12 @@ tooltip label {
 .modules-left,
 .modules-right,
 .modules-center {
-  margin: 6px 8px 6px 8px;
-  padding: 1px;
+  margin: 6.6px 8.8px 6.6px 8.8px;
+  padding: 1.1px;
 }
 
 #clock {
-  margin: 0 10px 0 0px;
-  padding: 6px 10px;
+  margin: 0 11px 0 0px;
+  padding: 6.6px 11px;
 }
 

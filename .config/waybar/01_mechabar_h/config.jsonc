@@ -17,6 +17,7 @@
 		"memory",
 		"custom/left_div#4",
 		"cpu",
+		\"temperature\",
 		"custom/left_inv#1",
 		"custom/left_div#5",
 		"custom/distro",
@@ -422,4 +423,12 @@
 	"custom/right_div#5": { "format": "", "tooltip": false },
 
 	"custom/right_inv#1": { "format": "", "tooltip": false }
+
+    "temperature": {
+        "hwmon-path-guess": true,
+        "critical-threshold": 80,
+        "format": " {temperatureC}°C {icon} ",
+        "format-icons": ["", "", ""]
+    },
+
 }
